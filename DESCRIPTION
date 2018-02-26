@@ -1,0 +1,29 @@
+Package: addin.tools
+Type: Package
+Title: Helper Functions to Create RStudio Add-ins
+Version: 0.0.1
+Date: 2018-02-26
+Authors@R: person("Vilmantas", "Gegzna",
+                    email = "GegznaV@gmail.com",
+                    role = c("aut", "cre","cph")
+            )
+Description: Package `addin.tools` contains various functions that are wrappers 
+             arround package `rstudioapi`. They are used as the core functions 
+             for packages `addins.rmd`, `addins.rs` and other.
+URL: https://github.com/GegznaV/addin.tools
+BugReports: https://github.com/GegznaV/addin.tools/issues
+License: MIT + file LICENSE
+LazyData: TRUE
+ByteCompile: TRUE
+Encoding: UTF-8
+RoxygenNote: 6.0.1
+VignetteBuilder: knitr
+Depends:
+    R (>= 3.2)
+Imports:
+    rstudioapi,
+    magrittr,
+    stringi,
+    stringr
+Suggests:
+    knitr
