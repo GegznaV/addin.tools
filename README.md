@@ -29,9 +29,9 @@ impact](http://depsy.org/api/package/cran/addin.tools/badge.svg)](http://depsy.o
 
 -----
 
-<!-- <img src="http://gegznav.github.io/addin.tools/logo.png" align="right" width="15%" height="15%"/>  -->
+<img src="http://gegznav.github.io/addin.tools/logo.png" align="right" width="15%" height="15%"/>
 
-# R package `addin.tools`
+# R package **addin.tools**
 
 Package `addin.tools` contains various functions that help to construct
 *RStudio* addins. The functions are wrappers arround package
