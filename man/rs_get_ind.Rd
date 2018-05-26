@@ -6,6 +6,7 @@
 \alias{rs_get_ind_last_selected_col}
 \alias{rs_get_ind_first_selected_row}
 \alias{rs_get_ind_last_selected_row}
+\alias{rs_get_ind_selected_rows}
 \alias{rs_get_ind_selection_start}
 \alias{rs_get_ind_selection_end}
 \title{Get indices from the selection.}
@@ -17,6 +18,8 @@ rs_get_ind_last_selected_col(context = rs_get_context())
 rs_get_ind_first_selected_row(context = rs_get_context())
 
 rs_get_ind_last_selected_row(context = rs_get_context())
+
+rs_get_ind_selected_rows(context = rs_get_context())
 
 rs_get_ind_selection_start(context = rs_get_context())
 

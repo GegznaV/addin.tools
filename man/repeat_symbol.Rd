@@ -2,15 +2,20 @@
 % Please edit documentation in R/repeat_symbol.R
 \name{repeat_symbol}
 \alias{repeat_symbol}
+\alias{repeat_symbol_2}
 \title{Repeat sequence of symbols.}
 \usage{
 repeat_symbol(text, length.out)
+
+repeat_symbol_2(text = " ", times)
 }
 \arguments{
 \item{text}{(character) The symbol (or sequence of symbols) to be repeated
 until desired length is achieved.}
 
 \item{length.out}{(integer) The total length (in characters) of the sequence.}
+
+\item{times}{(integer) Times to repeat the sequence.}
 }
 \value{
 Sting of defined length.
