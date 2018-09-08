@@ -4,7 +4,8 @@
 \alias{rs_insert_text}
 \title{Insert text at the cursor position.}
 \usage{
-rs_insert_text(text = NULL, context = rs_get_context(), spaces = FALSE)
+rs_insert_text(text = NULL, context = rs_get_context(),
+  spaces = FALSE)
 }
 \arguments{
 \item{text}{(character) The text to insert.}

@@ -54,18 +54,5 @@ rs_get_ind_selection_end <- function(context = rs_get_context()) {
 }
 
 
-#' @name rs_get_text
-#' @title  Get indices from the selection.
-#' @description
-#' Get index of the first/last row/column in the selection.
-#'
-#' @param context Object with context of active RStudio document
-#'                (class \code{document_context}).
-NULL
 
-#' @rdname rs_get_text
-#' @export
-rs_get_selected_rows <- function(context = rs_get_context()) {
-    ind <- rs_get_ind_selected_rows(context)
-    structure(context$contents[ind], row_numbers = ind)
-}
+
