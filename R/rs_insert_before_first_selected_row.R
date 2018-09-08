@@ -7,22 +7,24 @@
 #'
 #' @inheritParams rs_get_ind
 #' @export
-rs_insert_before_first_selected_row <- function(text = "",
-                                                ensure_blank_above = FALSE,
-                                                context = rs_get_context()) {
+rs_insert_before_first_selected_row <-
+    function(text = "",
+             ensure_blank_above = FALSE,
+             context = rs_get_context()) {
 
-    row <- rs_get_ind_first_selected_row(context)
+        row <- rs_get_ind_first_selected_row(context)
 
-    location <- list(start = c(row, 1),
-                     end   = c(row, 1))
-    class(location) <- "document_range"
+        location <- list(start = c(row, 1),
+                         end   = c(row, 1))
+        class(location) <- "document_range"
 
-    text <- ensure_blank_line(text, context, above = ensure_blank_above)
+        text <- ensure_blank_line(text, context, above = ensure_blank_above)
 
-    rstudioapi::insertText(
-        location = location,
-        text = text,
-        id = context$id
-    )
-}
+        rstudioapi::insertText(
+            location = location,
+            text = text,
+            id = context$id
+        )
+    }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
