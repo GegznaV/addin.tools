@@ -18,13 +18,22 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Function reference" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -34,8 +43,7 @@
 <![endif]-->
 
 
-  	<link rel="icon" href="../favicon.png" />
-</head>
+  </head>
 
   <body>
     <div class="container template-reference-index">
@@ -48,8 +56,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">addin.tools | R package</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">addin.tools</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.3</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -71,6 +83,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -78,124 +91,132 @@
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9">
+<div class="row">
+  <div class="contents col-md-9">
     <div class="page-header">
-      <h1>
-        Reference
-        <small>version&nbsp;0.0.1</small>
-      </h1>
+      <h1>Reference</h1>
     </div>
 
-    <div class="contents">
-      <table class="ref-index">
+    <table class="ref-index">
 
-      <colgroup>
-        <col class="alias" />
-        <col class="title" />
-      </colgroup>
+    <colgroup>
+      
+      <col class="alias" />
+      <col class="title" />
+    </colgroup>
 
-      <tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="addin.tools.html">addin.tools</a></code> </p>
-          </td>
-          <td><p>Helper Functions to Create RStudio Add-ins</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ensure_blank_line.html">ensure_blank_line</a></code> </p>
-          </td>
-          <td><p>Add blank lines if needed.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="heplers.html">is_blank_line_needed_below</a></code> </p>
-          </td>
-          <td><p>' Check if a blank line is needed below.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="is_blank_line_needed_above.html">is_blank_line_needed_above</a></code> </p>
-          </td>
-          <td><p>Check if a blank line is needed above.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="repeat_symbol.html">repeat_symbol</a></code> </p>
-          </td>
-          <td><p>Repeat sequence of symbols.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rs_enclose_selection_with.html">rs_enclose_selection_with</a></code> </p>
-          </td>
-          <td><p>Enclose selection of text with indicated symbols.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rs_enclose_with_lines.html">rs_enclose_selected_rows_with</a></code> <code><a href="rs_enclose_with_lines.html">rs_enclose_first_row_with</a></code> </p>
-          </td>
-          <td><p>Enclose setected rows with text.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rs_get_context.html">rs_get_context</a></code> </p>
-          </td>
-          <td><p>Retrieve information about an active RStudio document.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rs_get_ind.html">rs_get_ind_first_selected_col</a></code> <code><a href="rs_get_ind.html">rs_get_ind_last_selected_col</a></code> <code><a href="rs_get_ind.html">rs_get_ind_first_selected_row</a></code> <code><a href="rs_get_ind.html">rs_get_ind_last_selected_row</a></code> <code><a href="rs_get_ind.html">rs_get_ind_selection_start</a></code> <code><a href="rs_get_ind.html">rs_get_ind_selection_end</a></code> </p>
-          </td>
-          <td><p>Get indices from the selection.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rs_get_text.html">rs_get_text</a></code> </p>
-          </td>
-          <td><p>Get text</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rs_insert_at_row_start.html">rs_insert_at_row_start</a></code> </p>
-          </td>
-          <td><p>Insert text at the beginning of the row.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rs_insert_before_first_selected_row.html">rs_insert_before_first_selected_row</a></code> </p>
-          </td>
-          <td><p>Insert text at the beginning of the first selected row.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rs_insert_symbol_seq.html">rs_insert_symbol_seq</a></code> </p>
-          </td>
-          <td><p>Insert a sequence of symbols.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rs_insert_text.html">rs_insert_text</a></code> </p>
-          </td>
-          <td><p>Insert text at the cursor position.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rs_replace_in_selection.html">rs_replace_in_selection</a></code> </p>
-          </td>
-          <td><p>Replace text in selection.</p></td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
+    <tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="addin.tools.html">addin.tools</a></code> </p>
+        </td>
+        <td><p>Helper Functions to Create RStudio Add-ins</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="ensure_blank_line.html">ensure_blank_line()</a></code> </p>
+        </td>
+        <td><p>Add blank lines if needed.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="heplers.html">is_blank_line_needed_below()</a></code> </p>
+        </td>
+        <td><p>' Check if a blank line is needed below.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="is_blank_line_needed_above.html">is_blank_line_needed_above()</a></code> </p>
+        </td>
+        <td><p>Check if a blank line is needed above.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="make_spaces.html">make_spaces()</a></code> </p>
+        </td>
+        <td><p>Generate spaces of certain length</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="repeat_symbol.html">repeat_symbol()</a></code> <code><a href="repeat_symbol.html">repeat_symbol_2()</a></code> </p>
+        </td>
+        <td><p>Repeat sequence of symbols.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_enclose_selection_with.html">rs_enclose_selection_with()</a></code> </p>
+        </td>
+        <td><p>Enclose selection of text with indicated symbols.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_enclose_with_lines.html">rs_enclose_selected_rows_with()</a></code> <code><a href="rs_enclose_with_lines.html">rs_enclose_first_row_with()</a></code> </p>
+        </td>
+        <td><p>Enclose setected rows with text.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_get_context.html">rs_get_context()</a></code> </p>
+        </td>
+        <td><p>Retrieve information about an active RStudio document.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_get_ind.html">rs_get_ind_first_selected_col()</a></code> <code><a href="rs_get_ind.html">rs_get_ind_last_selected_col()</a></code> <code><a href="rs_get_ind.html">rs_get_ind_first_selected_row()</a></code> <code><a href="rs_get_ind.html">rs_get_ind_last_selected_row()</a></code> <code><a href="rs_get_ind.html">rs_get_ind_selected_rows()</a></code> <code><a href="rs_get_ind.html">rs_get_ind_selection_start()</a></code> <code><a href="rs_get_ind.html">rs_get_ind_selection_end()</a></code> </p>
+        </td>
+        <td><p>Get indices from the selection.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_get_row_range.html">rs_get_row_range()</a></code> <code><a href="rs_get_row_range.html">rs_get_row_range_w_newline()</a></code> <code><a href="rs_get_row_range.html">rs_get_range_first_selected_row()</a></code> </p>
+        </td>
+        <td><p>Get row range of the indicated line</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_get_text.html">rs_get_text()</a></code> <code><a href="rs_get_text.html">rs_get_selected_rows()</a></code> </p>
+        </td>
+        <td><p>Get indicated lines</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_insert_at_row_start.html">rs_insert_at_row_start()</a></code> </p>
+        </td>
+        <td><p>Insert text at the beginning of the row.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_insert_before_first_selected_row.html">rs_insert_before_first_selected_row()</a></code> </p>
+        </td>
+        <td><p>Insert text at the beginning of the first selected row.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_insert_symbol_seq.html">rs_insert_symbol_seq()</a></code> </p>
+        </td>
+        <td><p>Insert a sequence of symbols.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_insert_text.html">rs_insert_text()</a></code> </p>
+        </td>
+        <td><p>Insert text at the cursor position.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rs_replace_in_selection.html">rs_replace_in_selection()</a></code> </p>
+        </td>
+        <td><p>Replace text in selection.</p></td>
+      </tr>
+    </tbody>
+    </table>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -218,5 +239,8 @@
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+

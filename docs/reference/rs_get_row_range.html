@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Retrieve information about an active RStudio document. — rs_get_context • addin.tools</title>
+<title>Get row range of the indicated line — rs_get_row_range • addin.tools</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,11 @@
 
 
 
-<meta property="og:title" content="Retrieve information about an active RStudio document. — rs_get_context" />
+<meta property="og:title" content="Get row range of the indicated line — rs_get_row_range" />
 
-<meta property="og:description" content="Wrapper for getActiveDocumentContext()." />
+<meta property="og:description" content="`rs_get_row_range()` gets range of the indicated row from the beginning to the end of the line (excluding the new line symbol).
+`rs_get_row_range_w_newline()` gets range of the indicated row from the beggining of the line to the beginning to the next line.
+`rs_get_range_first_selected_row()` gets range of the first selected line." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -97,25 +99,57 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Retrieve information about an active RStudio document.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/get_context.R'><code>R/get_context.R</code></a></small>
-    <div class="hidden name"><code>rs_get_context.Rd</code></div>
+    <h1>Get row range of the indicated line</h1>
+    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/rs_get_row_range.R'><code>R/rs_get_row_range.R</code></a></small>
+    <div class="hidden name"><code>rs_get_row_range.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Wrapper for <code><a href='http://www.rdocumentation.org/packages/rstudioapi/topics/rstudio-editors'>getActiveDocumentContext</a>()</code>.</p>
+    <p>`rs_get_row_range()` gets range of the indicated row from the beginning to the end of the line (excluding the new line symbol).<br />
+`rs_get_row_range_w_newline()` gets range of the indicated row from the beggining of the line to the beginning to the next line.<br />
+`rs_get_range_first_selected_row()` gets range of the first selected line.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>rs_get_context</span>()</pre>
-        
+    <pre class="usage"><span class='fu'>rs_get_row_range</span>(<span class='no'>row</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
+
+<span class='fu'>rs_get_row_range_w_newline</span>(<span class='no'>row</span>)
+
+<span class='fu'>rs_get_range_first_selected_row</span>(<span class='kw'>include_newline</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>row</th>
+      <td><p>(ineger) row index.</p></td>
+    </tr>
+    <tr>
+      <th>context</th>
+      <td><p>Object with context of active RStudio document
+(class <code>document_context</code>).</p></td>
+    </tr>
+    <tr>
+      <th>include_newline</th>
+      <td><p>(logical) indicates if the new line symbol should be included in the range</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>An object of class "document_range"</p>
+    
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-                </ul>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+          </ul>
 
   </div>
 </div>

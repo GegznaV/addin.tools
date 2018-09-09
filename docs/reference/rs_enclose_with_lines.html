@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Enclose setected rows with text. � rs_enclose_with_lines • addin.tools</title>
+<title>Enclose setected rows with text. — rs_enclose_with_lines • addin.tools</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -18,13 +18,28 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Enclose setected rows with text. — rs_enclose_with_lines" />
+
+<meta property="og:description" content="Enclose selected rows with text:
+rs_enclose_all_with_lines() - above and below all selected rows;
+rs_enclose_first_row_with_lines() - above and below the first selected row only.
+" />
+<meta name="twitter:card" content="summary" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -34,8 +49,7 @@
 <![endif]-->
 
 
-  	<link rel="icon" href="../favicon.png" />
-</head>
+  </head>
 
   <body>
     <div class="container template-reference-topic">
@@ -48,8 +62,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">addin.tools | R package</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">addin.tools</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.3</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -71,6 +89,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -78,18 +97,22 @@
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Enclose setected rows with text.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/rs_enclose_selected_rows.R'><code>R/rs_enclose_selected_rows.R</code></a></small>
+    <div class="hidden name"><code>rs_enclose_with_lines.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Enclose selected rows with text:</p><ul>
 <li><p><code>rs_enclose_all_with_lines()</code> - above and below all selected rows;</p></li>
 <li><p><code>rs_enclose_first_row_with_lines()</code> - above and below the first selected row only.</p></li>
 </ul>
     
+    </div>
 
     <pre class="usage"><span class='fu'>rs_enclose_selected_rows_with</span>(<span class='kw'>text_above</span> <span class='kw'>=</span> <span class='fl'>NA</span>, <span class='kw'>text_below</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
   <span class='kw'>ensure_blank_above</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
@@ -97,7 +120,7 @@
 <span class='fu'>rs_enclose_first_row_with</span>(<span class='kw'>text_above</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>text_below</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>ensure_blank_above</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
@@ -146,5 +169,8 @@ is added. If <code>FALSE</code>, blank line is not added.</p></td>
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+
