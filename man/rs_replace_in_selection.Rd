@@ -16,7 +16,8 @@ rs_replace_in_selection(pattern, replacement, fixed = TRUE,
 If \code{TRUE}, the pattern is a fixed expression.
 If \code{FALSE}, the pattern is a regular expression.}
 
-\item{keep_selected}{(logical) Flag indicating if the selection should be selected after add-in was applied.}
+\item{keep_selected}{(logical) Flag indicating if the selection should be
+kept after add-in was applied.}
 
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}

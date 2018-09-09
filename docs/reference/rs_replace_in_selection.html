@@ -109,7 +109,7 @@
     </div>
 
     <pre class="usage"><span class='fu'>rs_replace_in_selection</span>(<span class='no'>pattern</span>, <span class='no'>replacement</span>, <span class='kw'>fixed</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
+  <span class='kw'>keep_selected</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -127,6 +127,10 @@
       <td><p>(logical)
 If <code>TRUE</code>, the pattern is a fixed expression.
 If <code>FALSE</code>, the pattern is a regular expression.</p></td>
+    </tr>
+    <tr>
+      <th>keep_selected</th>
+      <td><p>(logical) Flag indicating if the selection should be selected after add-in was applied.</p></td>
     </tr>
     <tr>
       <th>context</th>
