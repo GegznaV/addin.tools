@@ -5,7 +5,7 @@
 \title{Replace text in selection.}
 \usage{
 rs_replace_in_selection(pattern, replacement, fixed = TRUE,
-  context = rs_get_context())
+  keep_selected = TRUE, context = rs_get_context())
 }
 \arguments{
 \item{pattern}{(character) A pattern of text to be replaced.}
@@ -15,6 +15,8 @@ rs_replace_in_selection(pattern, replacement, fixed = TRUE,
 \item{fixed}{(logical)
 If \code{TRUE}, the pattern is a fixed expression.
 If \code{FALSE}, the pattern is a regular expression.}
+
+\item{keep_selected}{(logical) Flag indicating if the selection should be selected after add-in was applied.}
 
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
