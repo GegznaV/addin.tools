@@ -3,23 +3,23 @@
 \name{rs_get_text}
 \alias{rs_get_text}
 \alias{rs_get_selected_rows}
-\title{Get indicated lines}
+\title{Get text in indicated lines}
 \usage{
-rs_get_text(start, end = start, context = rs_get_context())
+rs_get_text(row, end_row = row, context = rs_get_context())
 
 rs_get_selected_rows(context = rs_get_context())
 }
 \arguments{
-\item{start}{Either \code{"document_position"} object of vector with the coordinates (row and column) of the begining of the selection.}
+\item{row}{(integer) Index of the first row of interest.}
 
-\item{end}{Either \code{"document_position"} object of vector with the coordinates (row and column) of the end of the selection.}
+\item{end_row}{(integer) Index of the last row of interest.}
 
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 }
 \value{
-Character vector (extracted strings).
+Character vector with attribute `row_numbers` indicating which rows were returned.
 }
 \description{
-Get indicated lines
+Get text in all indicated consequtive lines.
 }
