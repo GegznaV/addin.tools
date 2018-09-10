@@ -3,14 +3,14 @@
 \name{rs_get_row_range}
 \alias{rs_get_row_range}
 \alias{rs_get_row_range_w_newline}
-\alias{rs_get_range_first_selected_row}
+\alias{rs_get_first_selected_row_range}
 \title{Get row range of the indicated line}
 \usage{
 rs_get_row_range(row, context = rs_get_context())
 
 rs_get_row_range_w_newline(row)
 
-rs_get_range_first_selected_row(include_newline = FALSE,
+rs_get_first_selected_row_range(include_newline = FALSE,
   context = rs_get_context())
 }
 \arguments{
@@ -27,5 +27,5 @@ An object of class "document_range"
 \description{
 `rs_get_row_range()` gets range of the indicated row from the beginning to the end of the line (excluding the new line symbol).\cr
 `rs_get_row_range_w_newline()` gets range of the indicated row from the beggining of the line to the beginning to the next line.\cr
-`rs_get_range_first_selected_row()` gets range of the first selected line.
+`rs_get_first_selected_row_range()` gets range of the first selected line.
 }

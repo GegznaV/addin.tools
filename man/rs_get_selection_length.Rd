@@ -2,7 +2,7 @@
 % Please edit documentation in R/rs_get_selection.R
 \name{rs_get_selection_length}
 \alias{rs_get_selection_length}
-\title{Length of selection}
+\title{Get length of selection}
 \usage{
 rs_get_selection_length(context = rs_get_context())
 }

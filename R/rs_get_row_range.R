@@ -3,11 +3,11 @@
 #'
 #' `rs_get_row_range()` gets range of the indicated row from the beginning to the end of the line (excluding the new line symbol).\cr
 #' `rs_get_row_range_w_newline()` gets range of the indicated row from the beggining of the line to the beginning to the next line.\cr
-#' `rs_get_range_first_selected_row()` gets range of the first selected line.
+#' `rs_get_first_selected_row_range()` gets range of the first selected line.
 #'
 #' @param row (ineger) row index.
 #' @param include_newline (logical) indicates if the new line symbol should be included in the range
-#' @inheritParams rs_get_ind
+#' @inheritParams rs_get_index
 #'
 #' @return An object of class "document_range"
 #'
@@ -26,12 +26,12 @@ rs_get_row_range_w_newline <- function(row) {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_row_range
 #' @export
-rs_get_range_first_selected_row <- function(
+rs_get_first_selected_row_range <- function(
     include_newline = FALSE,
     context = rs_get_context()
 ) {
 
-    row <- rs_get_ind_first_selected_row(context)
+    row <- rs_get_first_selected_row_index(context)
     if (include_newline) {
         rs_get_row_range_w_newline(row)
     } else {

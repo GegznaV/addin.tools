@@ -16,7 +16,7 @@
 #'      blank line above the selection. If line is not blank, a blank line
 #'      is added. If \code{FALSE}, blank line is not added.
 #'
-#' @inheritParams rs_get_ind
+#' @inheritParams rs_get_index
 #'
 #' @export
 #'

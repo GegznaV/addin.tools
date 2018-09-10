@@ -12,7 +12,7 @@
 #' below the last selected row and if it is missing, adds blank line after
 #' the \code{text}.
 #'
-#' @inheritParams rs_get_ind
+#' @inheritParams rs_get_index
 #'
 #' @return String.
 #' @export

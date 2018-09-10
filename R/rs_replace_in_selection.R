@@ -10,7 +10,7 @@
 #'        If \code{TRUE}, the pattern is a fixed expression.
 #'        If \code{FALSE}, the pattern is a regular expression.
 #'
-#' @inheritParams rs_get_ind
+#' @inheritParams rs_get_index
 #'
 #' @seealso \code{\link[base]{gsub}}
 #' @export

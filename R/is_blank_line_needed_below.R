@@ -8,7 +8,7 @@
 #'      If \code{"last"} - checks for a blank line below the last selected row.
 #' @rdname heplers
 #'
-#' @inheritParams rs_get_ind
+#' @inheritParams rs_get_index
 #'
 #' @export
 is_blank_line_needed_below <- function(where = c("last row", "first row"),
@@ -16,9 +16,9 @@ is_blank_line_needed_below <- function(where = c("last row", "first row"),
     where <- match.arg(where)
     row <- switch(where,
                   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                  "first" = rs_get_ind_first_selected_row(context),
+                  "first" = rs_get_first_selected_row_index(context),
                   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                  "last" = rs_get_ind_last_selected_row(context),
+                  "last" = rs_get_last_selected_row_index(context),
                   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                   stop("Incorrect choice of `where`"))
 

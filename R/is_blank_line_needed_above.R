@@ -5,11 +5,11 @@
 #' Check if a blank line should be added above the selection.
 #' @return Logical value.
 #'
-#' @inheritParams rs_get_ind
+#' @inheritParams rs_get_index
 #'
 #' @export
 is_blank_line_needed_above <- function(context = rs_get_context()) {
-    row <- rs_get_ind_first_selected_row(context)
+    row <- rs_get_first_selected_row_index(context)
 
     # Contents of row above the selection:
     txt <- context$contents[row - 1]

@@ -25,7 +25,7 @@ rs_insert_at_row_start <- function(row,
 #' @param spaces (logical) If \code{TRUE}, ensures that text is
 #'                         surrounded by spaces.
 #'
-#' @inheritParams rs_get_ind
+#' @inheritParams rs_get_index
 #'
 #' @inheritParams rstudioapi::insertText
 #' @export
@@ -33,8 +33,8 @@ rs_insert_text <- function(text = NULL,
                            context = rs_get_context(),
                            spaces = FALSE) {
 
-    start <- rs_get_ind_selection_start(context = context)
-    end   <- rs_get_ind_selection_end(context = context)
+    start <- rs_get_selection_start_index(context = context)
+    end   <- rs_get_selection_end_index(context = context)
 
     if (spaces) {
         spc_before <- check_space(postition = start - c(0, 1), context = context)
@@ -65,6 +65,6 @@ get_text <- function(start, end = start, context = rs_get_context()) {
 #
 # @param start Either \code{"document_position"} object or vector with the coordinates (row and column) of the begining of the selection.
 # @param end Either \code{"document_position"} object or vector with the coordinates (row and column) of the end of the selection.
-# @inheritParams rs_get_ind
+# @inheritParams rs_get_index
 #
 # @return Character vector (extracted strings).

@@ -5,14 +5,14 @@
 #'      If \code{TRUE}, inserts blank line above the selection if the line is not blank.
 #'      If \code{FALSE}, no blank line is added.
 #'
-#' @inheritParams rs_get_ind
+#' @inheritParams rs_get_index
 #' @export
 rs_insert_before_first_selected_row <-
     function(text = "",
              ensure_blank_above = FALSE,
              context = rs_get_context()) {
 
-        row <- rs_get_ind_first_selected_row(context)
+        row <- rs_get_first_selected_row_index(context)
 
         location <- list(start = c(row, 1),
                          end   = c(row, 1))
