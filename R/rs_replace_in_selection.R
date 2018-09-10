@@ -46,3 +46,4 @@ rs_replace_in_selection <- function(pattern, replacement, fixed = TRUE,
 
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

@@ -49,6 +49,22 @@ rs_insert_text <- function(text = NULL,
 
 # Check if the symbol is space at the indicated position
 check_space <- function(postition, context = rs_get_context()) {
-    txt <- rs_get_text(postition, context = context)
+    txt <- get_text(postition, context = context)
     isTRUE(stringr::str_detect(txt, " "))
 }
+
+# Get text
+get_text <- function(start, end = start, context = rs_get_context()) {
+    start[start < 0] <- 0
+    end[end < 0]     <- 0
+
+    text <- context$contents[start[1]:end[1]]
+    stringr::str_sub(text, start[2], end[2])
+}
+# Get text
+#
+# @param start Either \code{"document_position"} object or vector with the coordinates (row and column) of the begining of the selection.
+# @param end Either \code{"document_position"} object or vector with the coordinates (row and column) of the end of the selection.
+# @inheritParams rs_get_ind
+#
+# @return Character vector (extracted strings).
