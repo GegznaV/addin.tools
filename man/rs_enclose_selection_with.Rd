@@ -5,7 +5,7 @@
 \title{Enclose selection of text with indicated symbols.}
 \usage{
 rs_enclose_selection_with(symbol = "", symbol_before = symbol,
-  symbol_after = symbol, context = rs_get_context())
+  symbol_after = symbol, trim = FALSE, context = rs_get_context())
 }
 \arguments{
 \item{symbol}{(character) A sequence of symbols to add on both sides of selection.}
@@ -15,6 +15,8 @@ rs_enclose_selection_with(symbol = "", symbol_before = symbol,
 
 \item{symbol_after}{(character) A sequence of symbols to add after the selection
 (overrides value of \code{symbol}).}
+
+\item{trim}{(logical) Flag if whitespace should be trimmed from both sides of the selection.}
 
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
