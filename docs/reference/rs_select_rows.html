@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Insert text at the beginning of the row. — rs_insert_at_row_start • addin.tools</title>
+<title>Select rows — rs_select_rows • addin.tools</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Insert text at the beginning of the row. — rs_insert_at_row_start" />
+<meta property="og:title" content="Select rows — rs_select_rows" />
 
-<meta property="og:description" content="Insert text at the beginning of the row." />
+<meta property="og:description" content="Select rows" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -97,37 +97,34 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Insert text at the beginning of the row.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/rs_insert_at_row_start.R'><code>R/rs_insert_at_row_start.R</code></a></small>
-    <div class="hidden name"><code>rs_insert_at_row_start.Rd</code></div>
+    <h1>Select rows</h1>
+    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/rs_select_rows.R'><code>R/rs_select_rows.R</code></a></small>
+    <div class="hidden name"><code>rs_select_rows.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Insert text at the beginning of the row.</p>
+    <p>Select rows</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>rs_insert_at_row_start</span>(<span class='no'>row</span>, <span class='kw'>text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>rs_select_rows</span>(<span class='no'>first</span>, <span class='no'>last</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>row</th>
-      <td><p>(integer) The index of the row in the document.</p></td>
+      <th>first</th>
+      <td><p>(integer) Index of the first row to select.</p></td>
     </tr>
     <tr>
-      <th>text</th>
-      <td><p>(character) The text to insert.</p></td>
+      <th>last</th>
+      <td><p>(integer) Index of the last row to select.</p></td>
     </tr>
     <tr>
-      <th>id</th>
-      <td><p>The document id. When <code>NULL</code> or blank,
-the mutation will apply to the currently open, or last
-focused, RStudio document. Use the <code>id</code> returned
-from <code>getActiveDocumentContext()</code> to ensure
-that the operation is applied on the intended document.</p></td>
+      <th>context</th>
+      <td><p>Object with context of active RStudio document
+(class <code>document_context</code>).</p></td>
     </tr>
     </table>
     
