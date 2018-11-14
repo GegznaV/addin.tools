@@ -4,15 +4,16 @@
 \alias{rs_get_selection_length}
 \title{Get length of selection}
 \usage{
-rs_get_selection_length(context = rs_get_context())
+rs_get_selection_length(context = rs_get_context(), type = c("first",
+  "all"))
 }
 \arguments{
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 }
 \value{
-Integer with number of characters in the first selection.
+An integer vector with number of characters in each selection.
 }
 \description{
-Calculate number of characters in the first selection.
+Calculate number of characters in the each selection.
 }

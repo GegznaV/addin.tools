@@ -4,15 +4,16 @@
 \alias{rs_get_selection_range}
 \title{Get range of selection}
 \usage{
-rs_get_selection_range(context = rs_get_context())
+rs_get_selection_range(context = rs_get_context(), type = c("first",
+  "all"))
 }
 \arguments{
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 }
 \value{
-"document_range" object.
+Either a "document_range" object or a list of those objects.
 }
 \description{
-Get the range of the first selection.
+Get the range of the first/each selection.
 }

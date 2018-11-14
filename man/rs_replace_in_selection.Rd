@@ -2,10 +2,14 @@
 % Please edit documentation in R/rs_replace_in_selection.R
 \name{rs_replace_in_selection}
 \alias{rs_replace_in_selection}
+\alias{rs_replace_selection}
 \title{Replace text in selection.}
 \usage{
 rs_replace_in_selection(pattern, replacement, fixed = TRUE,
   keep_selected = TRUE, context = rs_get_context())
+
+rs_replace_selection(replacement, keep_selected = TRUE,
+  context = rs_get_context())
 }
 \arguments{
 \item{pattern}{(character) A pattern of text to be replaced.}

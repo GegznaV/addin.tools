@@ -4,15 +4,16 @@
 \alias{rs_get_selection_text}
 \title{Get selection text}
 \usage{
-rs_get_selection_text(context = rs_get_context())
+rs_get_selection_text(context = rs_get_context(), type = c("first",
+  "all"))
 }
 \arguments{
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 }
 \value{
-String.
+A character vector.
 }
 \description{
-Get the text in the first selection.
+Get the text in either the first selection or all selections
 }
