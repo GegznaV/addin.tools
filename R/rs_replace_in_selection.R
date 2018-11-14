@@ -33,7 +33,7 @@ rs_replace_in_selection <- function(pattern, replacement, fixed = TRUE,
         select_correct_range(new_text, current_range)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rd rs_replace_in_selection
+#' @rdname rs_replace_in_selection
 #' @export
 rs_replace_selection <- function(replacement, keep_selected = TRUE,
                                  context = rs_get_context()) {
