@@ -1,4 +1,4 @@
-#' Get text in indicated lines
+#' Get text in indicated lines.
 #'
 #' Get text in all indicated consequtive lines.
 #'
@@ -10,7 +10,7 @@
 #' @export
 #'
 rs_get_rows <- function(row, end_row = NULL, context = rs_get_context()) {
-    if (is.null(NULL)) {
+    if (is.null(end_row)) {
         ind <- row
     } else {
         ind <- row:end_row
