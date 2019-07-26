@@ -22,6 +22,9 @@ Depends:
     R (>= 3.2),
     rstudioapi
 Imports:
+    dplyr, 
+    tidyr,
+    tibble,
     magrittr,
     stringi,
     stringr,
