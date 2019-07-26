@@ -11,7 +11,7 @@
 \alias{rs_get_selected_row_indexes}
 \title{Get indices from the selection.}
 \usage{
-rs_get_selection_start_index(selection = c("last", "first"),
+rs_get_selection_start_index(selection = c("first", "last"),
   context = rs_get_context())
 
 rs_get_selection_end_index(selection = c("last", "first"),
@@ -23,7 +23,8 @@ rs_get_first_selected_col_index(selection = c("first", "last"),
 rs_get_last_selected_col_index(selection = c("last", "first"),
   context = rs_get_context())
 
-rs_get_first_selected_row_index(context = rs_get_context())
+rs_get_first_selected_row_index(selection = c("first", "last"),
+  context = rs_get_context())
 
 rs_get_last_selected_row_index(selection = c("last", "first"),
   context = rs_get_context())

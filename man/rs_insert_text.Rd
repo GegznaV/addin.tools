@@ -13,8 +13,7 @@ rs_insert_text(text = NULL, context = rs_get_context(),
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 
-\item{spaces}{(logical) If \code{TRUE}, ensures that text is
-surrounded by spaces.}
+\item{spaces}{(logical) If \code{TRUE}, ensures that text is surrounded by spaces.}
 }
 \description{
 Insert text at the cursor position.
