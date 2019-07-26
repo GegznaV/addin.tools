@@ -3,6 +3,8 @@
 export(ensure_blank_line)
 export(is_blank_line_needed_above)
 export(is_blank_line_needed_below)
+export(make_doc_position)
+export(make_doc_range)
 export(make_spaces)
 export(repeat_symbol)
 export(repeat_symbol_2)
