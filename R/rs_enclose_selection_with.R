@@ -45,7 +45,7 @@ rs_enclose_selection_with <- function(symbol = "",
         rng <- sel$range
         rng[[1]]["column"] <- rng[[1]]["column"] + nchar(symbol_before)
 
-        rstudioapi::setCursorPosition(position = rng[[1]], id = context$id)
+        setCursorPosition(position = rng[[1]], id = context$id)
     }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
