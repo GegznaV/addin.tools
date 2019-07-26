@@ -14,21 +14,20 @@
 #' @export
 rs_get_row_range <- function(row, context = rs_get_context()) {
     last_col <- nchar(context$contents[row]) + 1
-    rstudioapi::document_range(c(row, 1), c(row, last_col))
+    document_range(c(row, 1), c(row, last_col))
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_row_range
 #' @export
 rs_get_row_range_w_newline <- function(row) {
-    rstudioapi::document_range(c(row, 1), c(row + 1, 1))
+    document_range(c(row, 1), c(row + 1, 1))
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_row_range
 #' @export
-rs_get_first_selected_row_range <- function(
-    include_newline = FALSE,
-    context = rs_get_context()
+rs_get_first_selected_row_range <- function(include_newline = FALSE,
+                                            context = rs_get_context()
 ) {
 
     row <- rs_get_first_selected_row_index(context = context)
