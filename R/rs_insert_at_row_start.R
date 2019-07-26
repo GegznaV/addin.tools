@@ -7,21 +7,15 @@
 #' @export
 rs_insert_at_row_start <- function(row, text = NULL, id = NULL) {
     row <- row[1]
-    location <- list(start = c(row, 1),
-                     end   = c(row, 1))
-    class(location) <- "document_range"
-
-    rstudioapi::insertText(location = location,
-                           text = text,
-                           id = id)
+    location <- document_range(start = c(row, 1), end = c(row, 1))
+    insertText(location = location, text = text, id = id)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #' Insert text at the cursor position.
 #'
 #' @param text (character) The text to insert.
-#' @param spaces (logical) If \code{TRUE}, ensures that text is
-#'                         surrounded by spaces.
+#' @param spaces (logical) If \code{TRUE}, ensures that text is surrounded by spaces.
 #'
 #' @inheritParams rs_get_index
 #'
@@ -41,8 +35,7 @@ rs_insert_text <- function(text = NULL,
         text <- stringr::str_c(" "[!spc_before], text, " "[!spc_after])
     }
 
-    rstudioapi::insertText(text = text,
-                           id = context$id)
+    insertText(text = text, id = context$id)
 }
 
 # Check if the symbol is space at the indicated position
@@ -52,6 +45,11 @@ check_space <- function(postition, context = rs_get_context()) {
 }
 
 # Get text
+# @param start Either \code{"document_position"} object or vector with the coordinates (row and column) of the begining of the selection.
+# @param end Either \code{"document_position"} object or vector with the coordinates (row and column) of the end of the selection.
+# @inheritParams rs_get_index
+# @return Character vector (extracted strings).
+
 get_text <- function(start, end = start, context = rs_get_context()) {
     start[start < 0] <- 0
     end[end < 0]     <- 0
@@ -59,10 +57,4 @@ get_text <- function(start, end = start, context = rs_get_context()) {
     text <- context$contents[start[1]:end[1]]
     stringr::str_sub(text, start[2], end[2])
 }
-# Get text
-#
-# @param start Either \code{"document_position"} object or vector with the coordinates (row and column) of the begining of the selection.
-# @param end Either \code{"document_position"} object or vector with the coordinates (row and column) of the end of the selection.
-# @inheritParams rs_get_index
-#
-# @return Character vector (extracted strings).
+
