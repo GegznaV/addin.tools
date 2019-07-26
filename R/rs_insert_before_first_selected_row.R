@@ -12,19 +12,16 @@ rs_insert_before_first_selected_row <-
              ensure_blank_above = FALSE,
              context = rs_get_context()) {
 
-        row <- rs_get_first_selected_row_index(context)
+        row <- rs_get_first_selected_row_index(selection = "first", context = context)
 
-        location <- list(start = c(row, 1),
-                         end   = c(row, 1))
-        class(location) <- "document_range"
-
-        text <- ensure_blank_line(text, context, above = ensure_blank_above)
-
-        rstudioapi::insertText(
-            location = location,
-            text = text,
-            id = context$id
+        location <- document_range(
+            start = c(row, 1),
+            end   = c(row, 1)
         )
+
+        text <- ensure_blank_line(text, context = context, above = ensure_blank_above)
+
+        insertText(location = location, text = text, id = context$id)
     }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
