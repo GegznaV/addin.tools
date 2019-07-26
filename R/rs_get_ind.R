@@ -33,8 +33,6 @@ rs_get_first_selected_col_index <- function(selection = c("first", "last"),
                                             context = rs_get_context()) {
     selection <- match.arg(selection)
     rs_get_selection_start_index(selection, context = context)["column"]
-
-
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,10 +72,8 @@ rs_get_selected_row_indexes <- function(context = rs_get_context()) {
         purrr::map_dbl(ranges, ~ .[[1]]["row"]),
         purrr::map_dbl(ranges, ~ .[[2]]["row"]))
     ))
-
     # first <- min(rows)
     # last  <- max(rows)
     # rows <- first:last
-
     rows
 }
