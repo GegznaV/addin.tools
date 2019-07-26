@@ -38,17 +38,14 @@ rs_enclose_selection_with <- function(symbol = "",
 
     new_text <- paste0(symbol_before, new_text, symbol_after)
 
-    rstudioapi::insertText(location = sel$range,
-                           text = as.character(new_text),
-                           id = context$id)
+    insertText(location = sel$range, text = new_text, id = context$id)
 
     # If no text is selected, cursor is placed between the symbols.
     if (stringi::stri_isempty(old_text)) {
         rng <- sel$range
         rng[[1]]["column"] <- rng[[1]]["column"] + nchar(symbol_before)
 
-        rstudioapi::setCursorPosition(position = rng[[1]],
-                                      id = context$id)
+        rstudioapi::setCursorPosition(position = rng[[1]], id = context$id)
     }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
