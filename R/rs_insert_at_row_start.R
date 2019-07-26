@@ -5,9 +5,7 @@
 #' @param text (character) The text to insert.
 #' @inheritParams rstudioapi::insertText
 #' @export
-rs_insert_at_row_start <- function(row,
-                                   text = NULL,
-                                   id = NULL) {
+rs_insert_at_row_start <- function(row, text = NULL, id = NULL) {
     row <- row[1]
     location <- list(start = c(row, 1),
                      end   = c(row, 1))
