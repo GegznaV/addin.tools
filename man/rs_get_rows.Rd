@@ -8,7 +8,7 @@
 \alias{rs_get_first_selected_row_length}
 \alias{rs_get_last_selected_row}
 \alias{rs_get_last_selected_row_length}
-\title{Get text in indicated lines}
+\title{Get text in indicated lines.}
 \usage{
 rs_get_rows(row, end_row = NULL, context = rs_get_context())
 

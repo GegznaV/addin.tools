@@ -2,28 +2,33 @@
 % Please edit documentation in R/rs_get_ind.R
 \name{rs_get_index}
 \alias{rs_get_index}
+\alias{rs_get_selection_start_index}
+\alias{rs_get_selection_end_index}
 \alias{rs_get_first_selected_col_index}
 \alias{rs_get_last_selected_col_index}
 \alias{rs_get_first_selected_row_index}
 \alias{rs_get_last_selected_row_index}
 \alias{rs_get_selected_row_indexes}
-\alias{rs_get_selection_start_index}
-\alias{rs_get_selection_end_index}
 \title{Get indices from the selection.}
 \usage{
-rs_get_first_selected_col_index(context = rs_get_context())
+rs_get_selection_start_index(selection = c("last", "first"),
+  context = rs_get_context())
 
-rs_get_last_selected_col_index(context = rs_get_context())
+rs_get_selection_end_index(selection = c("last", "first"),
+  context = rs_get_context())
+
+rs_get_first_selected_col_index(selection = c("first", "last"),
+  context = rs_get_context())
+
+rs_get_last_selected_col_index(selection = c("last", "first"),
+  context = rs_get_context())
 
 rs_get_first_selected_row_index(context = rs_get_context())
 
-rs_get_last_selected_row_index(context = rs_get_context())
+rs_get_last_selected_row_index(selection = c("last", "first"),
+  context = rs_get_context())
 
 rs_get_selected_row_indexes(context = rs_get_context())
-
-rs_get_selection_start_index(context = rs_get_context())
-
-rs_get_selection_end_index(context = rs_get_context())
 }
 \arguments{
 \item{context}{Object with context of active RStudio document
