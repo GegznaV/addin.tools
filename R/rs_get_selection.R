@@ -45,7 +45,7 @@ rs_get_selection_length <- function(selection = c("all", "first", "last"),
 #' @return An integer vector with number of characters in each selection.
 #' @export
 rs_get_row_lengths <- function(row, end_row = NULL, context = rs_get_context()) {
-    nchar(rs_get_rows(row = row, end_row = end_row, context = context))
+    nchar(rs_get_text(row = row, end_row = end_row, context = context))
 }
 
 
@@ -79,7 +79,7 @@ rs_get_selection_range <- function(selection = c("all", "first", "last"),
     "all"   = purrr::map(context$selection, "range"), # returns a list of range objects
     "first" = context$selection[[1]]$range,           # returns range object
     "last"  = {
-        n <- rs_get_n_selections(context)
+        n <- rs_get_n_selections(context = context)
         context$selection[[n]]$range
     }
   )
