@@ -19,11 +19,7 @@
 #' @inheritParams rs_get_index
 #'
 #' @export
-#'
-#'
-# REPLACEMENT:
-# rs_enclose_all_with_lines -> rs_enclose_selected_rows_with
-#
+
 rs_enclose_selected_rows_with <- function(text_above = NA,
                                           text_below = NA,
                                           ensure_blank_above = FALSE,
@@ -62,7 +58,6 @@ rs_enclose_selected_rows_with <- function(text_above = NA,
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_enclose_with_lines
 #' @export
-# rs_enclose_first_row_with_lines -> rs_enclose_first_row_with
 rs_enclose_first_row_with <- function(text_above = NULL,
                                       text_below = NULL,
                                       ensure_blank_above = FALSE,
