@@ -8,8 +8,8 @@
 #' @export
 #'
 rs_select_rows <- function(first, last, context = rs_get_context()) {
-    sel_range <- rstudioapi::document_range(c(first , 1), c(last, Inf))
-    rstudioapi::setSelectionRanges(sel_range, id = context$id)
+    sel_range <- document_range(c(first , 1), c(last, Inf))
+    setSelectionRanges(sel_range, id = context$id)
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
