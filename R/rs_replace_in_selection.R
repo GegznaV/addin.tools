@@ -46,7 +46,7 @@ rs_replace_selection <- function(replacement, keep_selected = TRUE,
 
   old_range <- rs_get_selection_range(selection = selection, context = context)
 
-  rstudioapi::modifyRange(
+  modifyRange(
     location = old_range, text = as.character(replacement), id = context$id
   )
 
@@ -124,5 +124,5 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
     ) %>%
     dplyr::pull(new_range)
 
-  rstudioapi::setSelectionRanges(new_range, id = id)
+  setSelectionRanges(new_range, id = id)
 }
