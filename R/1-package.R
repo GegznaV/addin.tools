@@ -1,8 +1,8 @@
 # TODO:
 #
 # 1) make "insert" and "replace" functions to insert text if there are
-#    several selections (see function rs_get_selection_text() parameter `type`
-#    for details).
+#    several selections (see function rs_get_selection_text() parameter
+#    `selection` for details).
 
 #' @name addin.tools
 #' @docType package
@@ -20,5 +20,6 @@
 #' \code{Author:} Vilmantas Gegzna
 #'
 #' @import rstudioapi
+#' @importFrom dplyr "%>%"
 
 NULL
