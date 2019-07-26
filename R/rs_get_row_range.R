@@ -31,11 +31,12 @@ rs_get_first_selected_row_range <- function(
     context = rs_get_context()
 ) {
 
-    row <- rs_get_first_selected_row_index(context)
+    row <- rs_get_first_selected_row_index(context = context)
+
     if (include_newline) {
         rs_get_row_range_w_newline(row)
     } else {
-        rs_get_row_range(row, context)
+        rs_get_row_range(row, context = context)
     }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
