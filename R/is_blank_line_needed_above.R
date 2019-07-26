@@ -19,3 +19,7 @@ is_blank_line_needed_above <- function(context = rs_get_context()) {
     # then an empty row needs to be added:
     isTRUE(!cond)
 }
+
+is_empty_str <- function(str) {
+    nchar(str) == 0
+}
