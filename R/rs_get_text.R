@@ -31,6 +31,7 @@ rs_get_selected_rows <- function(context = rs_get_context()) {
     structure(context$contents[ind], row_numbers = ind)
 }
 
+
 #' @rdname rs_get_rows
 #' @export
 rs_get_first_selected_row <- function(context = rs_get_context()) {
@@ -41,18 +42,18 @@ rs_get_first_selected_row <- function(context = rs_get_context()) {
 #' @rdname rs_get_rows
 #' @export
 rs_get_first_selected_row_length <- function(context = rs_get_context()) {
-    nchar(rs_get_first_selected_row(context))
+    nchar(rs_get_first_selected_row(context = context))
 }
 
 #' @rdname rs_get_rows
 #' @export
 rs_get_last_selected_row <- function(context = rs_get_context()) {
-    ind <- rs_get_last_selected_row_index(context)
+    ind <- rs_get_last_selected_row_index(context = context)
     structure(context$contents[ind], row_numbers = ind)
 }
 
 #' @rdname rs_get_rows
 #' @export
 rs_get_last_selected_row_length <- function(context = rs_get_context()) {
-    nchar(rs_get_last_selected_row(context))
+    nchar(rs_get_last_selected_row(context = context))
 }
