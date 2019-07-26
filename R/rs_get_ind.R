@@ -10,49 +10,70 @@ NULL
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
-rs_get_first_selected_col_index <- function(context = rs_get_context()) {
-    context$selection[[1]]$range$start["column"]
+rs_get_selection_start_index <- function(selection = c("first", "last"),
+                                         context = rs_get_context()) {
+    selection <- match.arg(selection)
+    rs_get_selection_range(selection, context = context)$start
 }
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
-rs_get_last_selected_col_index <- function(context = rs_get_context()) {
-    context$selection[[1]]$range$end["column"]
+rs_get_selection_end_index <- function(selection = c("last", "first"),
+                                       context = rs_get_context()) {
+    selection <- match.arg(selection)
+    rs_get_selection_range(selection, context = context)$end
 }
+
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
-rs_get_first_selected_row_index <- function(context = rs_get_context()) {
-    context$selection[[1]]$range$start["row"]
+rs_get_first_selected_col_index <- function(selection = c("first", "last"),
+                                            context = rs_get_context()) {
+    selection <- match.arg(selection)
+    rs_get_selection_start_index(selection, context = context)["column"]
 }
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
-rs_get_last_selected_row_index <- function(context = rs_get_context()) {
-    context$selection[[1]]$range$end["row"]
+rs_get_last_selected_col_index <- function(selection = c("last", "first"),
+                                           context = rs_get_context()) {
+    selection <- match.arg(selection)
+    rs_get_selection_end_index(selection, context = context)["column"]
 }
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rs_get_index
+#' @export
+rs_get_first_selected_row_index <- function(selection = c("first", "last"),
+                                            context = rs_get_context()) {
+    rs_get_selection_start_index(selection, context = context)["row"]
+}
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rs_get_index
+#' @export
+rs_get_last_selected_row_index <- function(selection = c("last", "first"),
+                                           context = rs_get_context()) {
+
+    selection <- match.arg(selection)
+    rs_get_selection_range(selection, context = context)$end["row"]
+}
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
 rs_get_selected_row_indexes <- function(context = rs_get_context()) {
-    first <- context$selection[[1]]$range$start["row"]
-    last  <- context$selection[[1]]$range$end["row"]
-    first:last
+
+    ranges <- rs_get_selection_range("all", context = context)
+    rows <- sort(unique(c(
+        purrr::map_dbl(ranges, ~ .[[1]]["row"]),
+        purrr::map_dbl(ranges, ~ .[[2]]["row"]))
+    ))
+    # first <- min(rows)
+    # last  <- max(rows)
+    # rows <- first:last
+    rows
 }
-
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rs_get_index
-#' @export
-rs_get_selection_start_index <- function(context = rs_get_context()) {
-    context$selection[[1]]$range$start
-}
-#' @rdname rs_get_index
-#' @export
-rs_get_selection_end_index <- function(context = rs_get_context()) {
-    context$selection[[1]]$range$end
-}
-
-
-
-

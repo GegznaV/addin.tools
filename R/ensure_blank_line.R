@@ -24,21 +24,21 @@ ensure_blank_line <- function(text,
                               below_selection = FALSE) {
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     if (above) {
-        if (is_blank_line_needed_above(context)) {
+        if (is_blank_line_needed_above(context = context)) {
             text <- paste0("\n", text)
         }
     }
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Checks if blank line is needed below the first selected line
+    # Checks if blank line is needed below the first selected row
     if (below_first_row) {
-        if (is_blank_line_needed_below("first row", context)) {
+        if (is_blank_line_needed_below("first row", context = context)) {
             text <- paste0(text, "\n")
         }
     }
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Checks if blank line is needed below the all selection
+    # Checks if blank line is needed below the last selected row
     if (below_selection) {
-        if (is_blank_line_needed_below("last row", context)) {
+        if (is_blank_line_needed_below("last row", context = context)) {
             text <- paste0(text, "\n")
         }
     }

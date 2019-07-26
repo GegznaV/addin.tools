@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get text in indicated lines. — rs_get_text • addin.tools</title>
+<title>Get number of selections. — rs_get_n_selections • addin.tools</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,9 +32,9 @@
 
 
 
-<meta property="og:title" content="Get text in indicated lines. — rs_get_text" />
+<meta property="og:title" content="Get number of selections. — rs_get_n_selections" />
 
-<meta property="og:description" content="Get text in all indicated consequtive lines." />
+<meta property="og:description" content="Get number of selections." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -104,42 +104,22 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get text in indicated lines.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/rs_get_text.R'><code>R/rs_get_text.R</code></a></small>
-    <div class="hidden name"><code>rs_get_text.Rd</code></div>
+    <h1>Get number of selections.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/rs_get_selection.R'><code>R/rs_get_selection.R</code></a></small>
+    <div class="hidden name"><code>rs_get_n_selections.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Get text in all indicated consequtive lines.</p>
+    <p>Get number of selections.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>rs_get_text</span>(<span class='no'>row</span>, <span class='kw'>end_row</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
-
-<span class='fu'>rs_get_row_lengths</span>(<span class='no'>row</span>, <span class='kw'>end_row</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
-
-<span class='fu'>rs_get_selected_rows</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
-
-<span class='fu'>rs_get_first_selected_row</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
-
-<span class='fu'>rs_get_first_selected_row_length</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
-
-<span class='fu'>rs_get_last_selected_row</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
-
-<span class='fu'>rs_get_last_selected_row_length</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
+    <pre class="usage"><span class='fu'>rs_get_n_selections</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>row</th>
-      <td><p>(integer) Index of the first row of interest.</p></td>
-    </tr>
-    <tr>
-      <th>end_row</th>
-      <td><p>(integer) Index of the last row of interest.</p></td>
-    </tr>
     <tr>
       <th>context</th>
       <td><p>Object with context of active RStudio document
@@ -149,7 +129,7 @@
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Character vector with attribute `row_numbers` indicating which rows were returned.</p>
+    <p>Number of selections.</p>
     
 
   </div>

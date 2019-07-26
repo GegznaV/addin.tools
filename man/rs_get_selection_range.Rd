@@ -2,17 +2,21 @@
 % Please edit documentation in R/rs_get_selection.R
 \name{rs_get_selection_range}
 \alias{rs_get_selection_range}
-\title{Get range of selection}
+\title{Get range of selection.}
 \usage{
-rs_get_selection_range(context = rs_get_context())
+rs_get_selection_range(selection = c("all", "first", "last"),
+  as_list = FALSE, context = rs_get_context())
 }
 \arguments{
+\item{as_list}{(locical) Indicates if output sould be returned as a list.}
+
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 }
 \value{
-"document_range" object.
+Either a "document_range" object, if \code{selection} is "first" or
+"last", and \code{as_list = TRUE}, or a list of those objects otherwise.
 }
 \description{
-Get the range of the first selection.
+Get the range of the first/each selection.
 }

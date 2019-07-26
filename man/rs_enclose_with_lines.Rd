@@ -19,9 +19,9 @@ rs_enclose_first_row_with(text_above = NULL, text_below = NULL,
 (the first row).}
 
 \item{ensure_blank_above}{(logical)
-If \code{TRUE}, checks if there is a
-blank line above the selection. If line is not blank, a blank line
-is added. If \code{FALSE}, blank line is not added.}
+If \code{TRUE}, checks if there is a blank line above the selection.
+If the line is not blank, a blank line will be added.
+If \code{FALSE}, blank line is not added.}
 
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}

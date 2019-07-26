@@ -2,17 +2,18 @@
 % Please edit documentation in R/rs_get_selection.R
 \name{rs_get_selection_text}
 \alias{rs_get_selection_text}
-\title{Get selection text}
+\title{Get selection text.}
 \usage{
-rs_get_selection_text(context = rs_get_context())
+rs_get_selection_text(selection = c("all", "first", "last"),
+  as_list = FALSE, context = rs_get_context())
 }
 \arguments{
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 }
 \value{
-String.
+A character vector.
 }
 \description{
-Get the text in the first selection.
+Get the text in either the first selection or all selections.
 }

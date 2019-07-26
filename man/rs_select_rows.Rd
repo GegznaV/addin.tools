@@ -2,9 +2,18 @@
 % Please edit documentation in R/rs_select_rows.R
 \name{rs_select_rows}
 \alias{rs_select_rows}
+\alias{rs_select_all_selected_rows}
+\alias{rs_select_first_selected_row}
+\alias{rs_select_last_selected_row}
 \title{Select rows}
 \usage{
 rs_select_rows(first, last, context = rs_get_context())
+
+rs_select_all_selected_rows(context = rs_get_context())
+
+rs_select_first_selected_row(context = rs_get_context())
+
+rs_select_last_selected_row(context = rs_get_context())
 }
 \arguments{
 \item{first}{(integer) Index of the first row to select.}

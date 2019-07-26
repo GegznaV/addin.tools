@@ -1,4 +1,4 @@
-#' Get text in indicated lines
+#' Get text in indicated lines.
 #'
 #' Get text in all indicated consequtive lines.
 #'
@@ -9,8 +9,8 @@
 #' @return Character vector with attribute `row_numbers` indicating which rows were returned.
 #' @export
 #'
-rs_get_rows <- function(row, end_row = NULL, context = rs_get_context()) {
-    if (is.null(NULL)) {
+rs_get_text <- function(row, end_row = NULL, context = rs_get_context()) {
+    if (is.null(end_row)) {
         ind <- row
     } else {
         ind <- row:end_row
@@ -18,41 +18,41 @@ rs_get_rows <- function(row, end_row = NULL, context = rs_get_context()) {
     structure(context$contents[ind], row_numbers = ind)
 }
 
-#' @rdname rs_get_rows
+#' @rdname rs_get_text
 #' @export
 rs_get_row_lengths <- function(row, end_row = NULL, context = rs_get_context()) {
-    nchar(rs_get_rows(row = row, end_row = end_row, context = context))
+    nchar(rs_get_text(row = row, end_row = end_row, context = context))
 }
 
-#' @rdname rs_get_rows
+#' @rdname rs_get_text
 #' @export
 rs_get_selected_rows <- function(context = rs_get_context()) {
-    ind <- rs_get_selected_row_indexes(context)
+    ind <- rs_get_selected_row_indexes(context = context)
     structure(context$contents[ind], row_numbers = ind)
 }
 
-#' @rdname rs_get_rows
+#' @rdname rs_get_text
 #' @export
 rs_get_first_selected_row <- function(context = rs_get_context()) {
-    ind <- rs_get_first_selected_row_index(context)
+    ind <- rs_get_first_selected_row_index(selection = "first", context = context)
     structure(context$contents[ind], row_numbers = ind)
 }
 
-#' @rdname rs_get_rows
+#' @rdname rs_get_text
 #' @export
 rs_get_first_selected_row_length <- function(context = rs_get_context()) {
-    nchar(rs_get_first_selected_row(context))
+    nchar(rs_get_first_selected_row(context = context))
 }
 
-#' @rdname rs_get_rows
+#' @rdname rs_get_text
 #' @export
 rs_get_last_selected_row <- function(context = rs_get_context()) {
-    ind <- rs_get_last_selected_row_index(context)
+    ind <- rs_get_last_selected_row_index(selection = "last", context = context)
     structure(context$contents[ind], row_numbers = ind)
 }
 
-#' @rdname rs_get_rows
+#' @rdname rs_get_text
 #' @export
 rs_get_last_selected_row_length <- function(context = rs_get_context()) {
-    nchar(rs_get_last_selected_row(context))
+    nchar(rs_get_last_selected_row(context = context))
 }
