@@ -21,23 +21,16 @@ rs_replace_in_selection <- function(pattern, replacement,
                                     context = rs_get_context()) {
   selection <- match.arg(selection)
 
-  old_text <- rs_get_selection_text(selection = selection, context = context)
+  old_text  <- rs_get_selection_text(selection = selection, context = context)
   old_range <- rs_get_selection_range(
     selection = selection, context = context, as_list = TRUE
   )
 
   new_text <- gsub(
-    pattern = pattern,
-    replacement = replacement,
-    x = old_text,
-    fixed = fixed
+    pattern = pattern, replacement = replacement, x = old_text, fixed = fixed
   )
 
-  rstudioapi::modifyRange(
-    location = old_range,
-    text = new_text,
-    id = context$id
-  )
+  modifyRange(location = old_range, text = new_text, id = context$id)
 
   if (keep_selected) {
     select_correct_range(old_text, new_text, old_range, id = context$id)
@@ -51,14 +44,14 @@ rs_replace_selection <- function(replacement, keep_selected = TRUE,
                                  selection = c("all", "first", "last"),
                                  context = rs_get_context()) {
 
-  old_range <- rs_get_selection_range(selection, context = context)
+  old_range <- rs_get_selection_range(selection = selection, context = context)
 
   rstudioapi::modifyRange(
     location = old_range, text = as.character(replacement), id = context$id
   )
 
   if (keep_selected) {
-    old_text <- rs_get_selection_text(context = context)
+    old_text <- rs_get_selection_text(selection = selection, context = context)
     select_correct_range(old_text, replacement, old_range, id = context$id)
   }
 }
@@ -95,17 +88,18 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
         last_line_segment_size(new_text) - last_line_segment_size(old_text),
       ),
       special =
-        # Check if a selection exists in the same line before the current selection
-      (previous_exist <- start.row == dplyr::lag(end.row, default = 0)) &
-        # Check if this boundary is the first start of selection in the line
-        (first_start_in_line <- start.row != dplyr::lag(start.row, default = 0))
+        # Check if another selection exists in the same line before current selection
+       start.row == dplyr::lag(end.row, default = 0) &
+        # Check if this boundary (column position)
+        # is the first start of selection in the line
+        start.row != dplyr::lag(start.row, default = 0)
     ) %>%
     dplyr::group_by(end.row) %>%
     dplyr::mutate(end_diff = cumsum(difference)) %>%
     dplyr::group_by(start.row) %>%
     dplyr::mutate(
-      # if first selection of line started in previous line, indices
-      # should be modiffied later on.
+      # If the first selection of a line started in the previous line, indices
+      # should be modiffied to indicate correct possitions.
       modify_group = dplyr::first(special),
       start_diff = cumsum(dplyr::lag(difference, default = 0))
     ) %>%
@@ -114,7 +108,7 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
   new_range <-
     new_df %>%
     dplyr::mutate(
-      start_diff = if_else(
+      start_diff = dplyr::if_else(
         modify_group,
         true = as.double(dplyr::lag(end_diff, default = 0)),
         false = start_diff
@@ -125,7 +119,7 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
       new_end.column = end.column + end_diff,
       new_range = purrr::pmap(
         list(start.row, new_start.column, end.row, new_end.column),
-        make_doc_range
+        ~ document_range(c(..1, ..2), c(..3, ..4))
       )
     ) %>%
     dplyr::pull(new_range)
