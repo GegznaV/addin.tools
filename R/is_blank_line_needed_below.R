@@ -14,13 +14,14 @@
 is_blank_line_needed_below <- function(where = c("last row", "first row"),
                                        context = rs_get_context()) {
     where <- match.arg(where)
-    row <- switch(where,
-                  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                  "first" = rs_get_first_selected_row_index(context = context),
-                  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                  "last" = rs_get_last_selected_row_index(context = context),
-                  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                  stop("Incorrect choice of `where`"))
+    row <- switch(
+        where,
+        # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        "first" = rs_get_first_selected_row_index(context = context),
+        # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        "last" = rs_get_last_selected_row_index(context = context),
+        # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        stop("Incorrect choice of `where`"))
 
     # Contents of row below the selection:
     txt <- context$contents[row + 1]
@@ -30,7 +31,7 @@ is_blank_line_needed_below <- function(where = c("last row", "first row"),
         return(TRUE)
     }
     # Remove spaces and check if string is empty:
-    cond <- stringi::stri_isempty(gsub("[[:space:]]", "", txt))
+    cond <- is_empty_or_spaces(txt)
     # If not empty (result: FALSE), then an empty row needs to be added:
     isTRUE(!cond)
 }
