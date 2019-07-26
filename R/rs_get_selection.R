@@ -1,50 +1,92 @@
-#' Get length of selection
+#' Get selection text.
 #'
-#' Calculate number of characters in the each selection.
-#'
-#' @inheritParams rs_get_index
-#'
-#' @return An integer vector with number of characters in each selection.
-#' @export
-rs_get_selection_length <- function(context = rs_get_context(), type = c("first", "all")) {
-    nchar(rs_get_selection_text(context = context, type = type))
-}
-
-rs_get_row_lengths <- function(row, end_row = NULL, context = rs_get_context()) {
-    nchar(rs_get_rows(row = row, end_row = end_row, context = context))
-}
-
-#' Get selection text
-#'
-#' Get the text in either the first selection or all selections
+#' Get the text in either the first selection or all selections.
 #'
 #' @inheritParams rs_get_index
 #'
 #' @return A character vector.
 #' @export
+rs_get_selection_text <- function(selection = c("all", "first", "last"),
+                                  as_list = FALSE,
+                                  context = rs_get_context()) {
 
-rs_get_selection_text <- function(context = rs_get_context(), type = c("first", "all")) {
+  selection <- match.arg(selection)
+  str <- switch(
+    selection,
+    "all"   = purrr::map_chr(context$selection, "text"),
+    "first" = context$selection[[1]]$text,
+    "last"  = context$selection[[rs_get_n_selections(context = context)]]$text
+  )
+  if (isTRUE(as_list)) {
+      str <- as.list(str)
+  }
+  str
+}
 
-    type <- match.arg(type)
-    switch(type,
-           "first" = context$selection[[1]]$text,
-           "all"   = purrr::map_chr(context$selection, "text")
-    )
- }
+#' Get length of selection.
+#'
+#' Calculate number of characters in each selection.
+#'
+#' @inheritParams rs_get_index
+#'
+#' @return An integer vector with number of characters in each selection.
+#' @export
+rs_get_selection_length <- function(selection = c("all", "first", "last"),
+                                    context = rs_get_context()) {
+  nchar(rs_get_selection_text(context = context, selection = selection))
+}
 
-#' Get range of selection
+#' Get lengths of selected rows.
+#'
+#' Calculate number of characters in each selected row.
+#'
+#' @inheritParams rs_get_index
+#'
+#' @return An integer vector with number of characters in each selection.
+#' @export
+rs_get_row_lengths <- function(row, end_row = NULL, context = rs_get_context()) {
+    nchar(rs_get_rows(row = row, end_row = end_row, context = context))
+}
+
+
+#' Get number of selections.
+#'
+#' @inheritParams rs_get_index
+#'
+#' @return Number of selections.
+#' @export
+rs_get_n_selections <- function(context = rs_get_context()) {
+    length(context$selection)
+}
+
+#' Get range of selection.
 #'
 #' Get the range of the first/each selection.
 #'
 #' @inheritParams rs_get_index
-#'
-#' @return Either a "document_range" object or a list of those objects.
+#' @param as_list (locical) Indicates if output sould be returned as a list.
+#' @return Either a "document_range" object, if \code{selection} is "first" or
+#' "last", and \code{as_list = TRUE}, or a list of those objects otherwise.
 #' @export
-rs_get_selection_range <- function(context = rs_get_context(), type = c("first", "all")) {
+rs_get_selection_range <- function(selection = c("all", "first", "last"),
+                                   as_list = FALSE,
+                                   context = rs_get_context()
+                                   ) {
 
-    type <- match.arg(type)
-    switch(type,
-           "first" = context$selection[[1]]$range,            # returns range object
-           "all"   = purrr::map(context$selection, "range")   # returns a list of range objects
-    )
+  selection <- match.arg(selection)
+
+  range_obj <- switch(selection,
+    "all"   = purrr::map(context$selection, "range"), # returns a list of range objects
+    "first" = context$selection[[1]]$range,           # returns range object
+    "last"  = {
+        n <- rs_get_n_selections(context)
+        context$selection[[n]]$range
+    }
+  )
+
+  if (isTRUE(as_list)) {
+      range_obj <- switch(selection, "first" = , "last" = list(range_obj), range_obj)
+  }
+
+  range_obj
 }
