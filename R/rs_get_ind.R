@@ -10,7 +10,7 @@ NULL
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
-rs_get_selection_start_index <- function(selection = c("last", "first"),
+rs_get_selection_start_index <- function(selection = c("first", "last"),
                                          context = rs_get_context()) {
     selection <- match.arg(selection)
     rs_get_selection_range(selection, context = context)$start
@@ -33,6 +33,8 @@ rs_get_first_selected_col_index <- function(selection = c("first", "last"),
                                             context = rs_get_context()) {
     selection <- match.arg(selection)
     rs_get_selection_start_index(selection, context = context)["column"]
+
+
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,8 +49,9 @@ rs_get_last_selected_col_index <- function(selection = c("last", "first"),
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
-rs_get_first_selected_row_index <- function(context = rs_get_context()) {
-    rs_get_selection_start_index(context = context)["row"]
+rs_get_first_selected_row_index <- function(selection = c("first", "last"),
+                                            context = rs_get_context()) {
+    rs_get_selection_start_index(selection, context = context)["row"]
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,6 +59,7 @@ rs_get_first_selected_row_index <- function(context = rs_get_context()) {
 #' @export
 rs_get_last_selected_row_index <- function(selection = c("last", "first"),
                                            context = rs_get_context()) {
+
     selection <- match.arg(selection)
     rs_get_selection_range(selection, context = context)$end["row"]
 }
@@ -64,7 +68,16 @@ rs_get_last_selected_row_index <- function(selection = c("last", "first"),
 #' @rdname rs_get_index
 #' @export
 rs_get_selected_row_indexes <- function(context = rs_get_context()) {
-    first <- rs_get_selection_start_index("first", context = context)["row"]
-    last  <- rs_get_selection_end_index("last",    context = context)["row"]
-    first:last
+
+    ranges <- rs_get_selection_range("all", context = context)
+    rows <- sort(unique(c(
+        purrr::map_dbl(ranges, ~ .[[1]]["row"]),
+        purrr::map_dbl(ranges, ~ .[[2]]["row"]))
+    ))
+
+    # first <- min(rows)
+    # last  <- max(rows)
+    # rows <- first:last
+
+    rows
 }
