@@ -7,21 +7,21 @@
 #'
 #' @inheritParams rs_get_index
 #' @export
-rs_insert_before_first_selected_row <-
-    function(text = "",
-             ensure_blank_above = FALSE,
-             context = rs_get_context()) {
+rs_insert_before_first_selected_row <- function(text = "",
+                                                ensure_blank_above = FALSE,
+                                                context = rs_get_context()) {
 
-        row <- rs_get_first_selected_row_index(selection = "first", context = context)
+    row <-
+        rs_get_first_selected_row_index(selection = "first", context = context)
 
-        location <- document_range(
-            start = c(row, 1),
-            end   = c(row, 1)
-        )
+    location <- document_range(
+        start = c(row, 1),
+        end   = c(row, 1)
+    )
 
-        text <- ensure_blank_line(text, context = context, above = ensure_blank_above)
+    text <-
+        ensure_blank_line(text, context = context, above = ensure_blank_above)
 
-        insertText(location = location, text = text, id = context$id)
-    }
+    insertText(location = location, text = text, id = context$id)
+}
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
