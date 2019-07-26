@@ -16,9 +16,9 @@ is_blank_line_needed_below <- function(where = c("last row", "first row"),
     where <- match.arg(where)
     row <- switch(where,
                   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                  "first" = rs_get_first_selected_row_index(context),
+                  "first" = rs_get_first_selected_row_index(context = context),
                   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                  "last" = rs_get_last_selected_row_index(context),
+                  "last" = rs_get_last_selected_row_index(context = context),
                   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                   stop("Incorrect choice of `where`"))
 
