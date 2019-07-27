@@ -7,6 +7,11 @@
 rs_get_row_lengths(row, end_row = NULL, context = rs_get_context())
 }
 \arguments{
+\item{row}{(numeric) index of the first row of interest.}
+
+\item{end_row}{(numeric | \code{NULL}) index of the last row of interest or
+\code{NULL}}
+
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 }

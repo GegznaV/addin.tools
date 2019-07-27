@@ -2,7 +2,6 @@
 % Please edit documentation in R/rs_get_text.R
 \name{rs_get_text}
 \alias{rs_get_text}
-\alias{rs_get_row_lengths}
 \alias{rs_get_selected_rows}
 \alias{rs_get_first_selected_row}
 \alias{rs_get_first_selected_row_length}
@@ -11,8 +10,6 @@
 \title{Get text in indicated lines.}
 \usage{
 rs_get_text(row, end_row = NULL, context = rs_get_context())
-
-rs_get_row_lengths(row, end_row = NULL, context = rs_get_context())
 
 rs_get_selected_rows(context = rs_get_context())
 

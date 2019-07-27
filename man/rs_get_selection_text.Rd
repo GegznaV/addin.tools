@@ -8,6 +8,12 @@ rs_get_selection_text(selection = c("all", "first", "last"),
   as_list = FALSE, context = rs_get_context())
 }
 \arguments{
+\item{selection}{(string) \cr
+String, that indicates, which selection should be extracted.}
+
+\item{as_list}{(logical) Flag, if result should be a list, if \code{selection}
+is either \code{"first"} or \code{"last"}.}
+
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 }
