@@ -5,6 +5,8 @@
 #'
 #' @param context Object with context of active RStudio document
 #'                (class \code{document_context}).
+#' @param selection (string) \cr
+#'              String, that indicates, which selection should be extracted.
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
