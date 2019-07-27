@@ -8,6 +8,9 @@ rs_get_selection_length(selection = c("all", "first", "last"),
   context = rs_get_context())
 }
 \arguments{
+\item{selection}{(string) \cr
+String, that indicates, which selection should be extracted.}
+
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 }

@@ -20,12 +20,6 @@ rs_get_text <- function(row, end_row = NULL, context = rs_get_context()) {
 
 #' @rdname rs_get_text
 #' @export
-rs_get_row_lengths <- function(row, end_row = NULL, context = rs_get_context()) {
-    nchar(rs_get_text(row = row, end_row = end_row, context = context))
-}
-
-#' @rdname rs_get_text
-#' @export
 rs_get_selected_rows <- function(context = rs_get_context()) {
     ind <- rs_get_selected_row_indexes(context = context)
     structure(context$contents[ind], row_numbers = ind)

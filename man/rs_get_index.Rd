@@ -32,6 +32,9 @@ rs_get_last_selected_row_index(selection = c("last", "first"),
 rs_get_selected_row_indexes(context = rs_get_context())
 }
 \arguments{
+\item{selection}{(string) \cr
+String, that indicates, which selection should be extracted.}
+
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 }

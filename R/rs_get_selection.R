@@ -3,7 +3,8 @@
 #' Get the text in either the first selection or all selections.
 #'
 #' @inheritParams rs_get_index
-#'
+#' @param as_list (logical) Flag, if result should be a list, if \code{selection}
+#'                is either \code{"first"} or \code{"last"}.
 #' @return A character vector.
 #' @export
 rs_get_selection_text <- function(selection = c("all", "first", "last"),
@@ -41,13 +42,15 @@ rs_get_selection_length <- function(selection = c("all", "first", "last"),
 #' Calculate number of characters in each selected row.
 #'
 #' @inheritParams rs_get_index
+#' @param row (numeric) index of the first row of interest.
+#' @param end_row (numeric | \code{NULL}) index of the last row of interest or
+#'            \code{NULL}
 #'
 #' @return An integer vector with number of characters in each selection.
 #' @export
 rs_get_row_lengths <- function(row, end_row = NULL, context = rs_get_context()) {
     nchar(rs_get_text(row = row, end_row = end_row, context = context))
 }
-
 
 #' Get number of selections.
 #'

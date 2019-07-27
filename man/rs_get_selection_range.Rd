@@ -8,6 +8,9 @@ rs_get_selection_range(selection = c("all", "first", "last"),
   as_list = FALSE, context = rs_get_context())
 }
 \arguments{
+\item{selection}{(string) \cr
+String, that indicates, which selection should be extracted.}
+
 \item{as_list}{(locical) Indicates if output sould be returned as a list.}
 
 \item{context}{Object with context of active RStudio document
