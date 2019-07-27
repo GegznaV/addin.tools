@@ -32,4 +32,4 @@ Imports:
     checkmate
 Suggests:
     knitr,
-    testthat
+    testthat (>= 2.1.0)
