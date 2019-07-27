@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get selection text. — rs_get_selection_text • addin.tools</title>
+<title>Data: RStudio decment context data. — rs_document_context • addin.tools</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,9 +32,9 @@
 
 
 
-<meta property="og:title" content="Get selection text. — rs_get_selection_text" />
+<meta property="og:title" content="Data: RStudio decment context data. — rs_document_context" />
 
-<meta property="og:description" content="Get the text in either the first selection or all selections." />
+<meta property="og:description" content="Data: RStudio decment context data." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -104,53 +104,39 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get selection text.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/rs_get_selection.R'><code>R/rs_get_selection.R</code></a></small>
-    <div class="hidden name"><code>rs_get_selection_text.Rd</code></div>
+    <h1>Data: RStudio decment context data.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/data--rs_document_context.R'><code>R/data--rs_document_context.R</code></a></small>
+    <div class="hidden name"><code>rs_document_context.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Get the text in either the first selection or all selections.</p>
+    <p>Data: RStudio decment context data.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>rs_get_selection_text</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"all"</span>, <span class='st'>"first"</span>, <span class='st'>"last"</span>),
-  <span class='kw'>as_list</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
-    
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>selection</th>
-      <td><p>(string) <br />
-String, that indicates, which selection should be extracted.</p></td>
-    </tr>
-    <tr>
-      <th>as_list</th>
-      <td><p>(logical) Flag, if result should be a list, if <code>selection</code>
-is either <code>"first"</code> or <code>"last"</code>.</p></td>
-    </tr>
-    <tr>
-      <th>context</th>
-      <td><p>Object with context of active RStudio document
-(class <code>document_context</code>).</p></td>
-    </tr>
-    </table>
-    
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+        
 
-    <p>A character vector.</p>
-    
-
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>rs_document_context</span></div><div class='output co'>#&gt; Document Context: 
+#&gt; - id:        '35CFBD02'
+#&gt; - path:      ''
+#&gt; - contents:  &lt;15 rows&gt;
+#&gt; Document Selection:
+#&gt; - [10, 3] -- [10, 11]: '# A\\\\\\\\A'
+#&gt; - [10, 18] -- [10, 28]: '# B\\\\\\\\\\\\B'
+#&gt; - [10, 33] -- [11, 12]: '# C\\\\\\\\\\\\ \n  # \\\\\\\\\\\\C &lt;...&gt;'
+#&gt; - [11, 18] -- [11, 30]: '# D\\\\\\\\\\\\\\\\D'
+#&gt; - [11, 33] -- [12, 17]: '# E\\\\\\\\\\\\\\\\\\\\\\\\\n  # \\\\\\\\\\\\\\\\\\\\\\E &lt;...&gt;'
+#&gt; - [13, 3] -- [14, 21]: '# F\\\\\\\\\n  # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\F &lt;...&gt;'
+#&gt; - [15, 3] -- [15, 33]: 'context_103 = rs_get_context() &lt;...&gt;'</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-          </ul>
+            
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>
