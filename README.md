@@ -27,7 +27,9 @@ Status](https://travis-ci.org/GegznaV/addin.tools.svg?branch=master)](https://tr
 
 -----
 
-<img src="https://gegznav.github.io/addin.tools/logo.png" align="right" width="15%" height="15%"/>
+<!-- <img src="https://gegznav.github.io/addin.tools/logo.png" align="right" width="15%" height="15%"/> -->
+
+<img src="https://raw.githubusercontent.com/GegznaV/addin.tools/master/docs/logo.png" align="right" width="15%" height="15%"/>
 
 # R package **addin.tools**
 
