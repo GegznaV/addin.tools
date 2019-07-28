@@ -17,7 +17,7 @@ licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource
 version](https://img.shields.io/badge/GitHub-0.0.5-brightgreen.svg)](https://github.com/GegznaV/addin.tools)
 [![Travis-CI Build
 Status](https://travis-ci.org/GegznaV/addin.tools.png?branch=master)](https://travis-ci.org/GegznaV/addin.tools)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2019--07--26-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2019--07--28-yellowgreen.svg)](/commits/master)
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addin.tools)](http://www.rdocumentation.org/packages/addin.tools) -->
 
