@@ -16,7 +16,7 @@ licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource
 [![GitHub
 version](https://img.shields.io/badge/GitHub-0.0.5-brightgreen.svg)](https://github.com/GegznaV/addin.tools)
 [![Travis-CI Build
-Status](https://travis-ci.org/GegznaV/addin.tools.png?branch=master)](https://travis-ci.org/GegznaV/addin.tools)
+Status](https://travis-ci.org/GegznaV/addin.tools.svg?branch=master)](https://travis-ci.org/GegznaV/addin.tools)
 [![Updated-on](https://img.shields.io/badge/Updated%20on-2019--07--28-yellowgreen.svg)](/commits/master)
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addin.tools)](http://www.rdocumentation.org/packages/addin.tools) -->
@@ -27,7 +27,7 @@ Status](https://travis-ci.org/GegznaV/addin.tools.png?branch=master)](https://tr
 
 -----
 
-<img src="http://gegznav.github.io/addin.tools/logo.png" align="right" width="15%" height="15%"/>
+<img src="https://gegznav.github.io/addin.tools/logo.png" align="right" width="15%" height="15%"/>
 
 # R package **addin.tools**
 
@@ -55,4 +55,4 @@ devtools::install_github("GegznaV/addin.tools")
 
 -----
 
-More information at <http://gegznav.github.io/addin.tools/>
+More information at <https://gegznav.github.io/addin.tools/>
