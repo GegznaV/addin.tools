@@ -11,6 +11,7 @@ Package \code{addin.tools} contains various functions that help to construct
 
 \code{License:} MIT   \cr
 \code{URL:} \url{https://GegznaV.github.io/addin.tools} \cr
-\code{Bug reports and suggestions:} \url{https://github.com/GegznaV/addin.tools/issues} \cr
+\code{Bug reports and suggestions:}
+     \url{https://github.com/GegznaV/addin.tools/issues} \cr
 \code{Author:} Vilmantas Gegzna
 }
