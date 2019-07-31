@@ -26,31 +26,13 @@ rs_insert_at_row_start <- function(rows, text = NULL, id = rs_get_context()$id) 
 #'
 #' @inheritParams rstudioapi::insertText
 #' @export
-rs_insert_text <- function(text = NULL,
-                           context = rs_get_context(),
-                           spaces = FALSE) {
-
-    start <- rs_get_index_selection_start(context = context)
-    end   <- rs_get_index_selection_end(context = context)
-
-    if (spaces) {
-        spc_before <- check_space(postition = start - c(0, 1), context = context)
-        spc_after  <- check_space(postition = end   + c(0, 1), context = context)
-
-        text <- stringr::str_c(" "[!spc_before], text, " "[!spc_after])
-    }
-
-    insertText(text = text, id = context$id)
-}
-
 
 # TODO: Test this function before using it.
-#' @rdname rs_insert_text
-#' @export
-rs_insert_text__2 <- function(text = NULL, # single string
-                              context = rs_get_context(),
-                              spaces = FALSE,
-                              keep_selected = TRUE) {
+
+rs_insert_text <- function(text = NULL, # single string
+                           context = rs_get_context(),
+                           spaces = FALSE,
+                           keep_selected = TRUE) {
 
     old_range <- rs_get_selection_range(context = context)
 
