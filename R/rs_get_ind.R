@@ -67,13 +67,17 @@ rs_get_last_selected_row_index <- function(selection = c("last", "first"),
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
+# Get indices of rows in each selections
+# There may be several coinciding row indices, if there are several selections
+# per row
 rs_get_selected_row_indexes <- function(context = rs_get_context()) {
 
     ranges <- rs_get_selection_range("all", context = context)
-    rows <- sort(unique(c(
-        purrr::map_dbl(ranges, ~ .[[1]]["row"]),
-        purrr::map_dbl(ranges, ~ .[[2]]["row"]))
-    ))
+    rows <-
+        ranges %>%
+        purrr::map(~ .[[1]]["row"]:.[[2]]["row"]) %>%
+        purrr::reduce(c)
+
     # first <- min(rows)
     # last  <- max(rows)
     # rows <- first:last
