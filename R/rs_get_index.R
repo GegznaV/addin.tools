@@ -1,8 +1,3 @@
-# TODO:
-# + 1) rename functions (regex):
-#          from:    (rs_get_)(.*?)_(index).*?( |\()
-#          to:      \1\3_\2\4
-
 #' @name rs_get_index
 #' @title  Get indices related to the selection(s).
 #' @description
