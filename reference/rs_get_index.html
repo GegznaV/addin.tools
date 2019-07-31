@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get indices from the selection. — rs_get_index • addin.tools</title>
+<title>Get indices related to the selection(s). — rs_get_index • addin.tools</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -37,9 +37,9 @@
 
 
 
-<meta property="og:title" content="Get indices from the selection. — rs_get_index" />
+<meta property="og:title" content="Get indices related to the selection(s). — rs_get_index" />
 
-<meta property="og:description" content="Get index of the first/last row/column in the selection." />
+<meta property="og:description" content="Get indices related to the selection(s)." />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">addin.tools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.6</span>
       </span>
     </div>
 
@@ -108,36 +108,30 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get indices from the selection.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/rs_get_ind.R'><code>R/rs_get_ind.R</code></a></small>
+    <h1>Get indices related to the selection(s).</h1>
+    <small class="dont-index">Source: <a href='https://github.com/GegznaV/addin.tools/blob/master/R/rs_get_index.R'><code>R/rs_get_index.R</code></a></small>
     <div class="hidden name"><code>rs_get_index.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Get index of the first/last row/column in the selection.</p>
+    <p>Get indices related to the selection(s).</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>rs_get_selection_start_index</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"first"</span>, <span class='st'>"last"</span>),
+    <pre class="usage"><span class='fu'>rs_get_index_first_selected_col</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"all"</span>, <span class='st'>"first"</span>, <span class='st'>"last"</span>),
   <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
 
-<span class='fu'>rs_get_selection_end_index</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"last"</span>, <span class='st'>"first"</span>),
+<span class='fu'>rs_get_index_last_selected_col</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"all"</span>, <span class='st'>"last"</span>, <span class='st'>"first"</span>),
   <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
 
-<span class='fu'>rs_get_first_selected_col_index</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"first"</span>, <span class='st'>"last"</span>),
+<span class='fu'>rs_get_index_first_selected_row</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"first"</span>, <span class='st'>"last"</span>),
   <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
 
-<span class='fu'>rs_get_last_selected_col_index</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"last"</span>, <span class='st'>"first"</span>),
+<span class='fu'>rs_get_index_last_selected_row</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"last"</span>, <span class='st'>"first"</span>),
   <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
 
-<span class='fu'>rs_get_first_selected_row_index</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"first"</span>, <span class='st'>"last"</span>),
-  <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
-
-<span class='fu'>rs_get_last_selected_row_index</span>(<span class='kw'>selection</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"last"</span>, <span class='st'>"first"</span>),
-  <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
-
-<span class='fu'>rs_get_selected_row_indexes</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
+<span class='fu'>rs_get_index_selected_rows</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -145,12 +139,12 @@
     <tr>
       <th>selection</th>
       <td><p>(string) <br />
-String, that indicates, which selection should be extracted.</p></td>
+String that indicates, which selection should be extracted.</p></td>
     </tr>
     <tr>
       <th>context</th>
-      <td><p>Object with context of active RStudio document
-(class <code>document_context</code>).</p></td>
+      <td><p>(class <code>document_context</code>) <br />
+Object with context of active RStudio document.</p></td>
     </tr>
     </table>
     
