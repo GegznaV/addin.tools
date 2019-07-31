@@ -83,9 +83,15 @@ check_space <- function(postition, context = rs_get_context()) {
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Get text
-# @param start Either \code{"document_position"} object or vector with the coordinates (row and column) of the begining of the selection.
-# @param end Either \code{"document_position"} object or vector with the coordinates (row and column) of the end of the selection.
+#
+# @param start Either \code{"document_position"} object or vector with the
+# coordinates (row and column) of the begining of the selection.
+#
+# @param end Either \code{"document_position"} object or vector with the
+# coordinates (row and column) of the end of the selection.
+#
 # @inheritParams rs_get_index
+#
 # @return Character vector (extracted strings).
 
 get_text <- function(start, end = start, context = rs_get_context()) {
