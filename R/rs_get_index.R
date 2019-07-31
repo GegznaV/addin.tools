@@ -71,7 +71,7 @@ rs_get_index_last_selected_row <- function(selection = c("last", "first"),
 # Get indices of rows in each selections
 # There may be several coinciding row indices, if there are several selections
 # per row.
-rs_get_index_selected_row <- function(context = rs_get_context()) {
+rs_get_index_selected_rows <- function(context = rs_get_context()) {
 
     ranges <- rs_get_selection_range("all", context = context)
     rows <-
