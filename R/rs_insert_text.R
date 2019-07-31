@@ -43,12 +43,45 @@ rs_insert_text <- function(text = NULL,
     insertText(text = text, id = context$id)
 }
 
+
+# TODO: Test this function before using it.
+#' @rdname rs_insert_text
+#' @export
+rs_insert_text__2 <- function(text = NULL, # single string
+                              context = rs_get_context(),
+                              spaces = FALSE,
+                              keep_selected = TRUE) {
+
+    old_range <- rs_get_selection_range(context = context)
+
+    new_text <- if (spaces) {
+        purrr::map_chr(old_range, ~ {
+            # Check if space is not present before and after the selection
+            spc_before <- check_space(postition = .$start - c(0, 1), context = context)
+            spc_after  <- check_space(postition = .$end   + c(0, 1), context = context)
+
+            stringr::str_c(" "[!spc_before], text, " "[!spc_after])
+        })
+
+    } else {
+        text
+    }
+
+    insertText(text = new_text, location = old_range, id = context$id)
+
+    if (keep_selected) {
+        select_correct_range(text, new_text, old_range, id = context$id)
+    }
+}
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Check if the symbol is space at the indicated position
 check_space <- function(postition, context = rs_get_context()) {
     txt <- get_text(postition, context = context)
     isTRUE(stringr::str_detect(txt, " "))
 }
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Get text
 # @param start Either \code{"document_position"} object or vector with the coordinates (row and column) of the begining of the selection.
 # @param end Either \code{"document_position"} object or vector with the coordinates (row and column) of the end of the selection.
