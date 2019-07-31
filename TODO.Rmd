@@ -24,9 +24,9 @@ title: "TODO for the package"
 # Renamed functions
 
 FROM:                               TO:
-----------------------------------  ----------------------------------  ------
-rs_get_selection_start_index        rs_get_index_selection_start
-rs_get_selection_end_index          rs_get_index_selection_end
+----------------------------------  ----------------------------------  ------------------------------------------
+rs_get_selection_start_index        x rs_get_index_selection_start         rs_get_position_selection_start
+rs_get_selection_end_index          x rs_get_index_selection_end           rs_get_position_selection_end
 rs_get_first_selected_col_index     rs_get_index_first_selected_col
 rs_get_last_selected_col_index      rs_get_index_last_selected_col       [!]
 rs_get_first_selected_row_index     rs_get_index_first_selected_row      [.rmd]
