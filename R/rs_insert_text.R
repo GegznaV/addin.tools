@@ -19,20 +19,19 @@ rs_insert_at_row_start <- function(rows, text = NULL, id = rs_get_context()$id) 
 
 #' Insert text at the cursor position.
 #'
-#' @param text (character) The text to insert.
-#' @param spaces (logical) If \code{TRUE}, ensures that text is surrounded by spaces.
+#' @param text (character) \cr
+#'        The text to insert.
+#' @param spaces (logical) \cr
+#'       If \code{TRUE}, ensures that text is surrounded by spaces.
 #'
 #' @inheritParams rs_get_index
 #'
 #' @inheritParams rstudioapi::insertText
 #' @export
 
-# TODO: Test this function before using it.
-
 rs_insert_text <- function(text = NULL, # single string
                            context = rs_get_context(),
-                           spaces = FALSE,
-                           keep_selected = TRUE) {
+                           spaces = FALSE) {
 
     old_range <- rs_get_selection_range(context = context)
 
@@ -50,10 +49,6 @@ rs_insert_text <- function(text = NULL, # single string
     }
 
     insertText(text = new_text, location = old_range, id = context$id)
-
-    if (keep_selected) {
-        select_correct_range(text, new_text, old_range, id = context$id)
-    }
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
