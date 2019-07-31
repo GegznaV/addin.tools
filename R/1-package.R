@@ -16,5 +16,6 @@
 #'
 #' @import rstudioapi
 #' @importFrom dplyr "%>%"
+#' @importFrom utils globalVariables
 
 NULL
