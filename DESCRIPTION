@@ -1,8 +1,8 @@
 Package: addin.tools
 Type: Package
 Title: Helper Functions to Create RStudio Add-ins
-Version: 0.0.5
-Date: 2019-07-25
+Version: 0.0.6
+Date: 2019-07-31
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
@@ -29,7 +29,8 @@ Imports:
     stringi,
     stringr,
     purrr,
-    checkmate
+    checkmate,
+    utils
 Suggests:
     knitr,
     testthat (>= 2.1.0)
