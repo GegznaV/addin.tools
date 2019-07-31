@@ -32,7 +32,7 @@ rs_get_position_selection_end <- function(selection = c("all", "first", "last"),
 
 
 # ============================================================================
-# FIXME: remove these old functions (below) in the future
+# FIXME: remove these old functions (below), when possible.
 # ============================================================================
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
