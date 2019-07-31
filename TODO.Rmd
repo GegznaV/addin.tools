@@ -6,7 +6,11 @@ title: "TODO for the package"
    including multirow selections.
    (NOTE: make "insert" and "replace" functions to insert text if there are
    several selections. See function `rs_get_selection_text()` parameter
-   `selection` for details).
+   `selection` for details):
+   a) rename and check functionality in this and other packages:
+        - rs_get_index_selection_start  ->  rs_get_position_selection_start
+        - rs_get_index_selection_end    ->  rs_get_position_selection_end
+     
 
 2) Add unit tests:
    a) create several contexts to be used in unit testing;
