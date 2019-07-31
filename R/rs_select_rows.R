@@ -19,7 +19,7 @@ rs_select_rows <- function(first, last, context = rs_get_context()) {
 rs_select_all_selected_rows <- function(context = rs_get_context()) {
     rs_select_rows(
         first = rs_get_first_selected_row_index(context = context),
-        last  = rs_get_last_selected_row_index(context = context),
+        last  = rs_get_index_last_selected_row(context = context),
         context = context)
 }
 
@@ -35,7 +35,7 @@ rs_select_first_selected_row <- function(context = rs_get_context()) {
 #' @rdname rs_select_rows
 #' @export
 rs_select_last_selected_row <- function(context = rs_get_context()) {
-    row_ind <- rs_get_last_selected_row_index(context = context)
+    row_ind <- rs_get_index_last_selected_row(context = context)
     rs_select_rows(first = row_ind, last = row_ind, context = context)
 }
 

@@ -42,7 +42,7 @@ rs_get_first_selected_row_length <- function(context = rs_get_context()) {
 #' @rdname rs_get_text
 #' @export
 rs_get_last_selected_row <- function(context = rs_get_context()) {
-    ind <- rs_get_last_selected_row_index(selection = "last", context = context)
+    ind <- rs_get_index_last_selected_row(selection = "last", context = context)
     structure(context$contents[ind], row_numbers = ind)
 }
 
