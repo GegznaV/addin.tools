@@ -1,6 +1,11 @@
-#' @name rs_get_index
-#' @title  Get indices from the selection.
+# Preparing for deprecation of functions
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @name rs_get_ind
+#' @title  Get indices from the selection (DEPRECATED).
 #' @description
+#' NOTE: These functions are DEPRECATED!
+#'
 #' Get index of the first/last row/column in the selection.
 #'
 #' @param context Object with context of active RStudio document
@@ -10,7 +15,7 @@
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rs_get_index
+#' @rdname rs_get_ind
 #' @export
 rs_get_selection_start_index <- function(selection = c("first", "last"),
                                          context = rs_get_context()) {
@@ -19,7 +24,7 @@ rs_get_selection_start_index <- function(selection = c("first", "last"),
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rs_get_index
+#' @rdname rs_get_ind
 #' @export
 rs_get_selection_end_index <- function(selection = c("last", "first"),
                                        context = rs_get_context()) {
@@ -29,7 +34,7 @@ rs_get_selection_end_index <- function(selection = c("last", "first"),
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rs_get_index
+#' @rdname rs_get_ind
 #' @export
 rs_get_first_selected_col_index <- function(selection = c("first", "last"),
                                             context = rs_get_context()) {
@@ -38,7 +43,7 @@ rs_get_first_selected_col_index <- function(selection = c("first", "last"),
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rs_get_index
+#' @rdname rs_get_ind
 #' @export
 rs_get_last_selected_col_index <- function(selection = c("last", "first"),
                                            context = rs_get_context()) {
@@ -47,7 +52,7 @@ rs_get_last_selected_col_index <- function(selection = c("last", "first"),
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rs_get_index
+#' @rdname rs_get_ind
 #' @export
 rs_get_first_selected_row_index <- function(selection = c("first", "last"),
                                             context = rs_get_context()) {
@@ -55,7 +60,7 @@ rs_get_first_selected_row_index <- function(selection = c("first", "last"),
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rs_get_index
+#' @rdname rs_get_ind
 #' @export
 rs_get_last_selected_row_index <- function(selection = c("last", "first"),
                                            context = rs_get_context()) {
@@ -65,11 +70,11 @@ rs_get_last_selected_row_index <- function(selection = c("last", "first"),
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rs_get_index
+#' @rdname rs_get_ind
 #' @export
 # Get indices of rows in each selections
 # There may be several coinciding row indices, if there are several selections
-# per row
+# per row.
 rs_get_selected_row_indexes <- function(context = rs_get_context()) {
 
     ranges <- rs_get_selection_range("all", context = context)
