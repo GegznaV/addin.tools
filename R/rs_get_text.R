@@ -20,8 +20,9 @@ rs_get_text <- function(row, end_row = NULL, context = rs_get_context()) {
 
 #' @rdname rs_get_text
 #' @export
+# Get rows with at least one selection
 rs_get_selected_rows <- function(context = rs_get_context()) {
-    ind <- rs_get_selected_row_indexes(context = context)
+    ind <- unique(rs_get_index_selected_rows(context = context))
     structure(context$contents[ind], row_numbers = ind)
 }
 
