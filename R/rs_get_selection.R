@@ -3,8 +3,9 @@
 #' Get the text in either the first selection or all selections.
 #'
 #' @inheritParams rs_get_index
-#' @param as_list (logical) Flag, if result should be a list, if \code{selection}
-#'                is either \code{"first"} or \code{"last"}.
+#' @param as_list (logical)
+#'        Flag, if result should be a list, if \code{selection} is either
+#'        \code{"first"} or \code{"last"}.
 #' @return A character vector.
 #' @export
 rs_get_selection_text <- function(selection = c("all", "first", "last"),
@@ -42,9 +43,10 @@ rs_get_selection_length <- function(selection = c("all", "first", "last"),
 #' Calculate number of characters in each selected row.
 #'
 #' @inheritParams rs_get_index
-#' @param row (numeric) index of the first row of interest.
-#' @param end_row (numeric | \code{NULL}) index of the last row of interest or
-#'            \code{NULL}
+#' @param row (numeric) \cr
+#'        Index of the first row of interest of a vector of row indices.
+#' @param end_row (numeric | \code{NULL}) \cr
+#'        Index of the last row of interest or \code{NULL}.
 #'
 #' @return An integer vector with number of characters in each selection.
 #' @export
@@ -67,9 +69,11 @@ rs_get_n_selections <- function(context = rs_get_context()) {
 #' Get the range of the first/each selection.
 #'
 #' @inheritParams rs_get_index
-#' @param as_list (locical) Indicates if output sould be returned as a list.
+#' @param as_list (locical) \cr
+#'        Indicates if output sould be returned as a list.
+#'
 #' @return Either a "document_range" object, if \code{selection} is "first" or
-#' "last", and \code{as_list = TRUE}, or a list of those objects otherwise.
+#'         "last", and \code{as_list = TRUE}, or a list of those objects otherwise.
 #' @export
 rs_get_selection_range <- function(selection = c("all", "first", "last"),
                                    as_list = FALSE,
