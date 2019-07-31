@@ -13,16 +13,18 @@ rs_replace_selection(replacement, keep_selected = TRUE,
   selection = c("all", "first", "last"), context = rs_get_context())
 }
 \arguments{
-\item{pattern}{(character) A pattern of text to be replaced.}
+\item{pattern}{(character) \cr
+A pattern of text to be replaced.}
 
-\item{replacement}{(character) The replacement text.}
+\item{replacement}{(character) \cr
+The replacement text.}
 
-\item{fixed}{(logical)
+\item{fixed}{(logical) \cr
 If \code{TRUE}, the pattern is a fixed expression.
 If \code{FALSE}, the pattern is a regular expression.}
 
-\item{keep_selected}{(logical) Flag indicating if the selection should be
-kept after add-in was applied.}
+\item{keep_selected}{(logical) \cr
+Flag indicating if the selection should be kept after add-in is applied.}
 
 \item{selection}{(string) \cr
 String that indicates, which selection should be extracted.}
