@@ -25,8 +25,8 @@ rs_insert_text <- function(text = NULL,
                            context = rs_get_context(),
                            spaces = FALSE) {
 
-    start <- rs_get_selection_start_index(context = context)
-    end   <- rs_get_selection_end_index(context = context)
+    start <- rs_get_index_selection_start(context = context)
+    end   <- rs_get_index_selection_end(context = context)
 
     if (spaces) {
         spc_before <- check_space(postition = start - c(0, 1), context = context)
