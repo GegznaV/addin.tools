@@ -1,13 +1,18 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' Insert text at the beginning of the row.
+#' Insert text at the beginning of the row(s).
 #'
-#' @param row (integer) The index of the row in the document.
-#' @param text (character) The text to insert.
+#' @param rows (integer) \cr
+#'       The index(es) of the row(s) in the document.
+#'
+#' @param text (character)  \cr
+#'       The text to insert. This should either be length one (in which case,
+#'       this text is applied to each specified row); otherwise, it should be
+#'       the same length as the \code{rows} vector.
+#'
 #' @inheritParams rstudioapi::insertText
 #' @export
-rs_insert_at_row_start <- function(row, text = NULL, id = NULL) {
-    row <- row[1]
-    location <- document_range(start = c(row, 1), end = c(row, 1))
+rs_insert_at_row_start <- function(rows, text = NULL, id = rs_get_context()$id) {
+    location <- purrr::map(rows, ~ document_range(start = c(., 1), end = c(., 1)))
     insertText(location = location, text = text, id = id)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
