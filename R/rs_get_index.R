@@ -3,16 +3,20 @@
 #' @description
 #' Get indices related to the selection(s).
 #'
+#' @param selection (string) \cr
+#'  String that indicates, which selection should be extracted.
+#'
 #' @param context (class \code{document_context}) \cr
 #'  Object with context of active RStudio document.
-#'
-#' @param selection (string) \cr
-#'  String, that indicates, which selection should be extracted.
+
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
+#
+# OLD NAME: rs_get_selection_start_index
+
 rs_get_index_selection_start <- function(selection = c("first", "last"),
                                          context = rs_get_context()) {
     selection <- match.arg(selection)
@@ -22,6 +26,9 @@ rs_get_index_selection_start <- function(selection = c("first", "last"),
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
+#
+# OLD NAME: rs_get_selection_end_index
+
 rs_get_index_selection_end <- function(selection = c("last", "first"),
                                        context = rs_get_context()) {
     selection <- match.arg(selection)
@@ -32,6 +39,9 @@ rs_get_index_selection_end <- function(selection = c("last", "first"),
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
+#
+# OLD NAME: rs_get_first_selected_col_index
+
 rs_get_index_first_selected_col <- function(selection = c("first", "last"),
                                             context = rs_get_context()) {
     selection <- match.arg(selection)
@@ -41,6 +51,9 @@ rs_get_index_first_selected_col <- function(selection = c("first", "last"),
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
+#
+# OLD NAME: rs_get_last_selected_col_index
+
 rs_get_index_last_selected_col <- function(selection = c("last", "first"),
                                            context = rs_get_context()) {
     selection <- match.arg(selection)
@@ -50,6 +63,9 @@ rs_get_index_last_selected_col <- function(selection = c("last", "first"),
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
+#
+# OLD NAME: rs_get_first_selected_row_index
+
 rs_get_index_first_selected_row <- function(selection = c("first", "last"),
                                             context = rs_get_context()) {
     rs_get_index_selection_start(selection, context = context)["row"]
@@ -58,6 +74,9 @@ rs_get_index_first_selected_row <- function(selection = c("first", "last"),
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
 #' @export
+#
+# OLD NAME: rs_get_last_selected_row_index
+
 rs_get_index_last_selected_row <- function(selection = c("last", "first"),
                                            context = rs_get_context()) {
 
@@ -71,6 +90,9 @@ rs_get_index_last_selected_row <- function(selection = c("last", "first"),
 # Get indices of rows in each selections
 # There may be several coinciding row indices, if there are several selections
 # per row.
+#
+# OLD NAME: rs_get_selected_row_indexes
+
 rs_get_index_selected_rows <- function(context = rs_get_context()) {
 
     ranges <- rs_get_selection_range("all", context = context)
