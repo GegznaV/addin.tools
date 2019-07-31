@@ -29,7 +29,7 @@ rs_get_selected_rows <- function(context = rs_get_context()) {
 #' @rdname rs_get_text
 #' @export
 rs_get_first_selected_row <- function(context = rs_get_context()) {
-    ind <- rs_get_first_selected_row_index(selection = "first", context = context)
+    ind <- rs_get_index_first_selected_row(selection = "first", context = context)
     structure(context$contents[ind], row_numbers = ind)
 }
 

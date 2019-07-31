@@ -12,7 +12,7 @@ rs_insert_before_first_selected_row <- function(text = "",
                                                 context = rs_get_context()) {
 
     row <-
-        rs_get_first_selected_row_index(selection = "first", context = context)
+        rs_get_index_first_selected_row(selection = "first", context = context)
 
     location <- document_range(
         start = c(row, 1),

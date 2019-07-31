@@ -9,7 +9,7 @@
 #'
 #' @export
 is_blank_line_needed_above <- function(context = rs_get_context()) {
-    row <- rs_get_first_selected_row_index(context = context)
+    row <- rs_get_index_first_selected_row(context = context)
 
     # Contents of row above the selection:
     txt <- context$contents[row - 1]

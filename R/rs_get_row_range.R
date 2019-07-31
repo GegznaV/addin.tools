@@ -30,7 +30,7 @@ rs_get_first_selected_row_range <- function(include_newline = FALSE,
                                             context = rs_get_context()
 ) {
 
-    row <- rs_get_first_selected_row_index(context = context)
+    row <- rs_get_index_first_selected_row(context = context)
 
     if (include_newline) {
         rs_get_row_range_w_newline(row)
