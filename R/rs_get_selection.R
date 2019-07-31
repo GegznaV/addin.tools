@@ -76,7 +76,7 @@ rs_get_n_selections <- function(context = rs_get_context()) {
 #'         "last", and \code{as_list = TRUE}, or a list of those objects otherwise.
 #' @export
 rs_get_selection_range <- function(selection = c("all", "first", "last"),
-                                   as_list = FALSE, # TODO default to TRUE
+                                   as_list = FALSE, # TODO: default to as_list = TRUE
                                    context = rs_get_context()
                                    ) {
 
