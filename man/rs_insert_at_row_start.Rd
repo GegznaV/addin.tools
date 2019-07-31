@@ -2,14 +2,18 @@
 % Please edit documentation in R/rs_insert_at_row_start.R
 \name{rs_insert_at_row_start}
 \alias{rs_insert_at_row_start}
-\title{Insert text at the beginning of the row.}
+\title{Insert text at the beginning of the row(s).}
 \usage{
-rs_insert_at_row_start(row, text = NULL, id = NULL)
+rs_insert_at_row_start(rows, text = NULL, id = rs_get_context()$id)
 }
 \arguments{
-\item{row}{(integer) The index of the row in the document.}
+\item{rows}{(integer) \cr
+The index(es) of the row(s) in the document.}
 
-\item{text}{(character) The text to insert.}
+\item{text}{(character)  \cr
+The text to insert. This should either be length one (in which case,
+this text is applied to each specified row); otherwise, it should be
+the same length as the \code{rows} vector.}
 
 \item{id}{The document id. When \code{NULL} or blank,
 the mutation will apply to the currently open, or last
@@ -18,5 +22,5 @@ from \code{\link{getActiveDocumentContext}()} to ensure
 that the operation is applied on the intended document.}
 }
 \description{
-Insert text at the beginning of the row.
+Insert text at the beginning of the row(s).
 }

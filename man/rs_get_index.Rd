@@ -2,21 +2,17 @@
 % Please edit documentation in R/rs_get_index.R
 \name{rs_get_index}
 \alias{rs_get_index}
-\alias{rs_get_index_selection_start}
-\alias{rs_get_index_selection_end}
 \alias{rs_get_index_first_selected_col}
+\alias{rs_get_index_last_selected_col}
 \alias{rs_get_index_first_selected_row}
 \alias{rs_get_index_last_selected_row}
 \alias{rs_get_index_selected_rows}
 \title{Get indices related to the selection(s).}
 \usage{
-rs_get_index_selection_start(selection = c("first", "last"),
+rs_get_index_first_selected_col(selection = c("all", "first", "last"),
   context = rs_get_context())
 
-rs_get_index_selection_end(selection = c("last", "first"),
-  context = rs_get_context())
-
-rs_get_index_first_selected_col(selection = c("first", "last"),
+rs_get_index_last_selected_col(selection = c("all", "last", "first"),
   context = rs_get_context())
 
 rs_get_index_first_selected_row(selection = c("first", "last"),
@@ -36,10 +32,4 @@ Object with context of active RStudio document.}
 }
 \description{
 Get indices related to the selection(s).
-
-rs_get_index_last_selected_col <- function(selection = c("last", "first"),
-                                           context = rs_get_context()) {
-    selection <- match.arg(selection)
-    rs_get_index_selection_end(selection, context = context)["column"]
-}
 }
