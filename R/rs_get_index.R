@@ -4,10 +4,10 @@
 #' Get indices related to the selection(s).
 #'
 #' @param selection (string) \cr
-#'  String that indicates, which selection should be extracted.
+#'        String that indicates, which selection should be extracted.
 #'
 #' @param context (class \code{document_context}) \cr
-#'  Object with context of active RStudio document.
+#'        Object with context of active RStudio document.
 
 NULL
 
@@ -44,21 +44,24 @@ rs_get_index_selection_end <- function(selection = c("last", "first"),
 
 rs_get_index_first_selected_col <- function(selection = c("first", "last"),
                                             context = rs_get_context()) {
+
     selection <- match.arg(selection)
     rs_get_index_selection_start(selection, context = context)["column"]
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rs_get_index
-#' @export
+# FIXME: function not used
 #
-# OLD NAME: rs_get_last_selected_col_index
-
-rs_get_index_last_selected_col <- function(selection = c("last", "first"),
-                                           context = rs_get_context()) {
-    selection <- match.arg(selection)
-    rs_get_index_selection_end(selection, context = context)["column"]
-}
+#' #' @rdname rs_get_index
+#' #' @export
+#' #
+#' # OLD NAME: rs_get_last_selected_col_index
+#'
+#' rs_get_index_last_selected_col <- function(selection = c("last", "first"),
+#'                                            context = rs_get_context()) {
+#'     selection <- match.arg(selection)
+#'     rs_get_index_selection_end(selection, context = context)["column"]
+#' }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_index
