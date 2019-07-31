@@ -27,7 +27,6 @@ rs_get_index_first_selected_col <- function(selection = c("all", "first", "last"
                                             context = rs_get_context()) {
 
     purrr::map_dbl(rs_get_position_selection_start(selection, context = context), "column")
-    # purrr::map_dbl(rs_get_position_selection_start("all", context = context), "column")
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
