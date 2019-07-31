@@ -26,8 +26,8 @@ rs_get_last_selected_row_length(context = rs_get_context())
 
 \item{end_row}{(integer) Index of the last row of interest.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \value{
 Character vector with attribute `row_numbers` indicating which rows were returned.

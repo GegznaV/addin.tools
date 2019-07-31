@@ -9,16 +9,17 @@ rs_get_selection_range(selection = c("all", "first", "last"),
 }
 \arguments{
 \item{selection}{(string) \cr
-String, that indicates, which selection should be extracted.}
+String that indicates, which selection should be extracted.}
 
-\item{as_list}{(locical) Indicates if output sould be returned as a list.}
+\item{as_list}{(locical) \cr
+Indicates if output sould be returned as a list.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \value{
 Either a "document_range" object, if \code{selection} is "first" or
-"last", and \code{as_list = TRUE}, or a list of those objects otherwise.
+        "last", and \code{as_list = TRUE}, or a list of those objects otherwise.
 }
 \description{
 Get the range of the first/each selection.

@@ -10,8 +10,8 @@ rs_insert_text(text = NULL, context = rs_get_context(),
 \arguments{
 \item{text}{(character) The text to insert.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 
 \item{spaces}{(logical) If \code{TRUE}, ensures that text is surrounded by spaces.}
 }

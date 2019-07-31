@@ -23,8 +23,8 @@ If \code{TRUE}, checks if there is a blank line above the selection.
 If the line is not blank, a blank line will be added.
 If \code{FALSE}, blank line is not added.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \description{
 Enclose selected rows with text: \itemize{

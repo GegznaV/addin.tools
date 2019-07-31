@@ -16,8 +16,8 @@ rs_get_first_selected_row_range(include_newline = FALSE,
 \arguments{
 \item{row}{(ineger) row index.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 
 \item{include_newline}{(logical) indicates if the new line symbol should be included in the range}
 }

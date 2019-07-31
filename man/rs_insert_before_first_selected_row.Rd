@@ -14,8 +14,8 @@ rs_insert_before_first_selected_row(text = "",
 If \code{TRUE}, inserts blank line above the selection if the line is not blank.
 If \code{FALSE}, no blank line is added.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \description{
 Insert text at the beginning of the first selected row.

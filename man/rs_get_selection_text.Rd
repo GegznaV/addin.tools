@@ -9,13 +9,14 @@ rs_get_selection_text(selection = c("all", "first", "last"),
 }
 \arguments{
 \item{selection}{(string) \cr
-String, that indicates, which selection should be extracted.}
+String that indicates, which selection should be extracted.}
 
-\item{as_list}{(logical) Flag, if result should be a list, if \code{selection}
-is either \code{"first"} or \code{"last"}.}
+\item{as_list}{(logical)
+Flag, if result should be a list, if \code{selection} is either
+\code{"first"} or \code{"last"}.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \value{
 A character vector.

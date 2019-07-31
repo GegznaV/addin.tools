@@ -20,8 +20,8 @@ rs_select_last_selected_row(context = rs_get_context())
 
 \item{last}{(integer) Index of the last row to select.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \description{
 Select rows

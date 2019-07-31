@@ -7,13 +7,14 @@
 rs_get_row_lengths(row, end_row = NULL, context = rs_get_context())
 }
 \arguments{
-\item{row}{(numeric) index of the first row of interest.}
+\item{row}{(numeric) \cr
+Index of the first row of interest of a vector of row indices.}
 
-\item{end_row}{(numeric | \code{NULL}) index of the last row of interest or
-\code{NULL}}
+\item{end_row}{(numeric | \code{NULL}) \cr
+Index of the last row of interest or \code{NULL}.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \value{
 An integer vector with number of characters in each selection.

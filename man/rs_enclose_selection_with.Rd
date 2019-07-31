@@ -18,8 +18,8 @@ rs_enclose_selection_with(symbol = "", symbol_before = symbol,
 
 \item{trim}{(logical) Flag if whitespace should be trimmed from both sides of the selection.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \description{
 Enclose selection of text with certain symbols which usually have special

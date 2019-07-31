@@ -14,8 +14,8 @@ rs_insert_symbol_seq(symbol, start_column = 1, end_column = 80,
 
 \item{end_column}{(integer) Column position where the sequence stops.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \description{
 Insert a sequence of symbols.

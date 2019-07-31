@@ -10,8 +10,8 @@ ensure_blank_line(text, context = rs_get_context(), above = FALSE,
 \arguments{
 \item{text}{(character) Text to modify.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 
 \item{above}{(logical) If \code{TRUE}, checks for the blank line above the
 selection and if it is missing, adds blank line before the \code{text}.}

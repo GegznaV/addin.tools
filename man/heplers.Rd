@@ -12,8 +12,8 @@ is_blank_line_needed_below(where = c("last row", "first row"),
 If \code{"first"} - checks for a blank line below the first selected row.
 If \code{"last"} - checks for a blank line below the last selected row.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \description{
 Checks if a blank line should be added below either all selected rows or

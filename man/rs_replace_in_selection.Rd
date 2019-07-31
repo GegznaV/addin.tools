@@ -25,10 +25,10 @@ If \code{FALSE}, the pattern is a regular expression.}
 kept after add-in was applied.}
 
 \item{selection}{(string) \cr
-String, that indicates, which selection should be extracted.}
+String that indicates, which selection should be extracted.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \description{
 Replace text in selection.
