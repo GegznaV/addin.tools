@@ -1,0 +1,34 @@
+---
+title: "TODO for the package"
+---
+
+1) Allow "insert" and "replace" functionality for several selections
+   including multirow selections.
+   (NOTE: make "insert" and "replace" functions to insert text if there are
+   several selections. See function `rs_get_selection_text()` parameter
+   `selection` for details).
+
+2) Add unit tests:
+   a) create several contexts to be used in unit testing;
+   b) create actual tests where possible.
+
+3) Remove:
+   a) ambiguous functions;
+   b) functions that are not used in any package;
+   c) unnecessary/ambiguous functionality (lines of code, parameters).
+
+4) Check if deprecated functions still exist in other packages before removing
+   them.
+
+
+# Renamed functions
+
+FROM:                               TO:
+----------------------------------  ----------------------------------  ------
+rs_get_selection_start_index        rs_get_index_selection_start
+rs_get_selection_end_index          rs_get_index_selection_end
+rs_get_first_selected_col_index     rs_get_index_first_selected_col
+rs_get_last_selected_col_index      rs_get_index_last_selected_col       [!]
+rs_get_first_selected_row_index     rs_get_index_first_selected_row      [.rmd]
+rs_get_last_selected_row_index      rs_get_index_last_selected_row       [!remove]
+rs_get_selected_row_indexes         rs_get_index_selected_rows
