@@ -1,14 +1,29 @@
 #' @name rs_select_rows
 #' @title Select rows
 #'
-#' @param first (integer) Index of the first row to select.
-#' @param last (integer) Index of the last row to select.
+#' @param first (integer) \cr
+#'        Either index of the first row to select or a vector of indices.
+#'        If \code{last} is not \code{NULL}, only the first value is used.
+#' @param last (integer) \cr
+#'        Index of the last row to select or \code{NULL}. If not \code{NULL},
+#'        all lines from the \code{first[1]} to the \code{last[1]} are selected.
 #' @inheritParams rs_get_index
 #'
 #' @export
 #'
-rs_select_rows <- function(first, last, context = rs_get_context()) {
-    sel_range <- document_range(c(first , 1), c(last, Inf))
+
+# TODO: for all functions in this file, write more efficient code.
+# TODO: Fix/Populate the documentation.
+
+rs_select_rows <- function(first, last = NULL, context = rs_get_context()) {
+
+    if (is.null(last)) {
+        sel_range <- purrr::map(first, ~ document_range(c(..1, 1), c(..1, Inf)))
+
+    } else {
+        sel_range <- document_range(c(first[1], 1), c(last[1], Inf))
+    }
+
     setSelectionRanges(sel_range, id = context$id)
 }
 
