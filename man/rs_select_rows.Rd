@@ -7,7 +7,7 @@
 \alias{rs_select_last_selected_row}
 \title{Select rows}
 \usage{
-rs_select_rows(first, last, context = rs_get_context())
+rs_select_rows(first, last = NULL, context = rs_get_context())
 
 rs_select_all_selected_rows(context = rs_get_context())
 
@@ -16,9 +16,13 @@ rs_select_first_selected_row(context = rs_get_context())
 rs_select_last_selected_row(context = rs_get_context())
 }
 \arguments{
-\item{first}{(integer) Index of the first row to select.}
+\item{first}{(integer) \cr
+Either index of the first row to select or a vector of indices.
+If \code{last} is not \code{NULL}, only the first value is used.}
 
-\item{last}{(integer) Index of the last row to select.}
+\item{last}{(integer) \cr
+Index of the last row to select or \code{NULL}. If not \code{NULL},
+all lines from the \code{first[1]} to the \code{last[1]} are selected.}
 
 \item{context}{(class \code{document_context}) \cr
 Object with context of active RStudio document.}
