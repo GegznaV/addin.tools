@@ -2,11 +2,14 @@
 % Please edit documentation in R/rs_get_row_range.R
 \name{rs_get_row_range}
 \alias{rs_get_row_range}
+\alias{rs_get_row_ranges}
 \alias{rs_get_row_range_w_newline}
 \alias{rs_get_first_selected_row_range}
 \title{Get row range of the indicated line}
 \usage{
 rs_get_row_range(row, context = rs_get_context())
+
+rs_get_row_ranges(row, context = rs_get_context())
 
 rs_get_row_range_w_newline(row)
 
@@ -22,7 +25,7 @@ Object with context of active RStudio document.}
 \item{include_newline}{(logical) indicates if the new line symbol should be included in the range}
 }
 \value{
-An object of class "document_range"
+An object of class "document_range" or a list of these objects.
 }
 \description{
 `rs_get_row_range()` gets range of the indicated row from the beginning to the end of the line (excluding the new line symbol).\cr
