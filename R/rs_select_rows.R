@@ -11,10 +11,6 @@
 #'
 #' @export
 #'
-
-# TODO: for all functions in this file, write more efficient code.
-# TODO: Fix/Populate the documentation.
-
 rs_select_rows <- function(first, last = NULL, context = rs_get_context()) {
 
     if (is.null(last)) {
