@@ -9,12 +9,20 @@
 #' @param include_newline (logical) indicates if the new line symbol should be included in the range
 #' @inheritParams rs_get_index
 #'
-#' @return An object of class "document_range"
+#' @return An object of class "document_range" or a list of these objects.
 #'
 #' @export
 rs_get_row_range <- function(row, context = rs_get_context()) {
     last_col <- nchar(context$contents[row]) + 1
     document_range(c(row, 1), c(row, last_col))
+}
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rs_get_row_range
+#' @export
+rs_get_row_ranges <- function(row, context = rs_get_context()) {
+    last_col <- nchar(context$contents[row]) + 1
+    purrr::map2(row, last_col, ~ document_range(c(..1, 1), c(..1, ..2)))
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

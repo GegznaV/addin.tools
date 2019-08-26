@@ -1,15 +1,15 @@
 Package: addin.tools
 Type: Package
 Title: Helper Functions to Create RStudio Add-ins
-Version: 0.0.6
-Date: 2019-07-31
+Version: 0.0.7
+Date: 2019-08-26
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
             )
 Description: Package `addin.tools` contains various functions that are wrappers 
-             arround package `rstudioapi`. They are used as the core functions 
-             for packages `addins.rmd`, `addins.rs` and other.
+             arround package `rstudioapi`. They are used as core functions 
+             for packages such as `addins.rmd`, and `addins.rs`.
 URL: https://github.com/GegznaV/addin.tools
 BugReports: https://github.com/GegznaV/addin.tools/issues
 License: MIT + file LICENSE

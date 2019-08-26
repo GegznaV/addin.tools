@@ -2,11 +2,13 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' Replace text in selection.
 #'
-#' @param pattern (character) A pattern of text to be replaced.
-#' @param replacement (character) The replacement text.
-#' @param keep_selected (logical) Flag indicating if the selection should be
-#'                      kept after add-in was applied.
-#' @param fixed (logical)
+#' @param pattern (character) \cr
+#'        A pattern of text to be replaced.
+#' @param replacement (character) \cr
+#'        The replacement text.
+#' @param keep_selected (logical) \cr
+#'       Flag indicating if the selection should be kept after add-in is applied.
+#' @param fixed (logical) \cr
 #'        If \code{TRUE}, the pattern is a fixed expression.
 #'        If \code{FALSE}, the pattern is a regular expression.
 #'

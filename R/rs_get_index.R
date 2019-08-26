@@ -22,7 +22,7 @@ rs_get_index_first_selected_col <- function(selection = c("first", "last"),
     rs_get_index_selection_start(selection, context = context)["column"]
 }
 
-# FIXME: use new function
+# FIXME: use this new function.
 rs_get_index_first_selected_col <- function(selection = c("all", "first", "last"),
                                             context = rs_get_context()) {
 
@@ -40,7 +40,7 @@ rs_get_index_last_selected_col <- function(selection = c("all", "last", "first")
     rs_get_index_selection_end(selection, context = context)["column"]
 }
 
-# FIXME: use new function
+# FIXME: use this new function.
 rs_get_index_last_selected_col <- function(selection = c("all", "last", "first"),
                                            context = rs_get_context()) {
 
@@ -57,7 +57,7 @@ rs_get_index_first_selected_row <- function(selection = c("first", "last"),
     rs_get_index_selection_start(selection, context = context)["row"]
 }
 
-# FIXME: use new function
+# FIXME: use this new function.
 rs_get_index_first_selected_row__2 <- function(selection = c("all", "first", "last"),
                                             context = rs_get_context()) {
 
@@ -74,7 +74,7 @@ rs_get_index_last_selected_row <- function(selection = c("last", "first"),
     rs_get_selection_range(selection, context = context)$end["row"]
 }
 
-# FIXME: use new function
+# FIXME: use this new function.
 rs_get_index_last_selected_row__2 <- function(selection = c("all", "first", "last"),
                                                context = rs_get_context()) {
 
