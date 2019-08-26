@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">addin.tools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.6</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7</span>
       </span>
     </div>
 
@@ -119,7 +119,7 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>rs_select_rows</span>(<span class='no'>first</span>, <span class='no'>last</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
+    <pre class="usage"><span class='fu'>rs_select_rows</span>(<span class='no'>first</span>, <span class='kw'>last</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
 
 <span class='fu'>rs_select_all_selected_rows</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
 
@@ -132,11 +132,15 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>first</th>
-      <td><p>(integer) Index of the first row to select.</p></td>
+      <td><p>(integer) <br />
+Either index of the first row to select or a vector of indices.
+If <code>last</code> is not <code>NULL</code>, only the first value is used.</p></td>
     </tr>
     <tr>
       <th>last</th>
-      <td><p>(integer) Index of the last row to select.</p></td>
+      <td><p>(integer) <br />
+Index of the last row to select or <code>NULL</code>. If not <code>NULL</code>,
+all lines from the <code>first[1]</code> to the <code>last[1]</code> are selected.</p></td>
     </tr>
     <tr>
       <th>context</th>
