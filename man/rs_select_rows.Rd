@@ -5,6 +5,7 @@
 \alias{rs_select_all_selected_rows}
 \alias{rs_select_first_selected_row}
 \alias{rs_select_last_selected_row}
+\alias{rs_deselect_range}
 \title{Select rows}
 \usage{
 rs_select_rows(first, last = NULL, context = rs_get_context())
@@ -14,10 +15,13 @@ rs_select_all_selected_rows(context = rs_get_context())
 rs_select_first_selected_row(context = rs_get_context())
 
 rs_select_last_selected_row(context = rs_get_context())
+
+rs_deselect_range(context = rs_get_context())
 }
 \arguments{
 \item{first}{(integer) \cr
 Either index of the first row to select or a vector of indices.
+If \code{length(first) == 0} then current selection is deselected.
 If \code{last} is not \code{NULL}, only the first value is used.}
 
 \item{last}{(integer) \cr

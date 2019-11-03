@@ -3,6 +3,7 @@
 #'
 #' @param first (integer) \cr
 #'        Either index of the first row to select or a vector of indices.
+#'        If \code{length(first) == 0} then current selection is deselected.
 #'        If \code{last} is not \code{NULL}, only the first value is used.
 #' @param last (integer) \cr
 #'        Index of the last row to select or \code{NULL}. If not \code{NULL},
@@ -13,14 +14,19 @@
 #'
 rs_select_rows <- function(first, last = NULL, context = rs_get_context()) {
 
-    if (is.null(last)) {
-        sel_range <- purrr::map(first, ~ document_range(c(..1, 1), c(..1, Inf)))
+    if (length(first) == 0) {
+        rs_deselect_range(context)
 
     } else {
-        sel_range <- document_range(c(first[1], 1), c(last[1], Inf))
-    }
+        if (is.null(last)) {
+            sel_range <- purrr::map(first, ~ document_range(c(..1, 1), c(..1, Inf)))
 
-    setSelectionRanges(sel_range, id = context$id)
+        } else {
+            sel_range <- document_range(c(first[1], 1), c(last[1], Inf))
+        }
+
+        setSelectionRanges(sel_range, id = context$id)
+    }
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -50,4 +56,12 @@ rs_select_last_selected_row <- function(context = rs_get_context()) {
     rs_select_rows(first = row_ind, last = row_ind, context = context)
 }
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rs_select_rows
+#' @export
+rs_deselect_range <- function(context = rs_get_context()) {
+    pos <- context$selection[[1]]$range[["start"]]
+    rng <- rstudioapi::document_range(pos, end = pos)
+    rstudioapi::setSelectionRanges(ranges = rng, id = context$id)
+}
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
