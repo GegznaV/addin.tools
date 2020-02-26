@@ -6,11 +6,19 @@
 \alias{rs_enclose_first_row_with}
 \title{Enclose setected rows with text.}
 \usage{
-rs_enclose_selected_rows_with(text_above = NA, text_below = NA,
-  ensure_blank_above = FALSE, context = rs_get_context())
+rs_enclose_selected_rows_with(
+  text_above = NA,
+  text_below = NA,
+  ensure_blank_above = FALSE,
+  context = rs_get_context()
+)
 
-rs_enclose_first_row_with(text_above = NULL, text_below = NULL,
-  ensure_blank_above = FALSE, context = rs_get_context())
+rs_enclose_first_row_with(
+  text_above = NULL,
+  text_below = NULL,
+  ensure_blank_above = FALSE,
+  context = rs_get_context()
+)
 }
 \arguments{
 \item{text_above}{(character) Text to be inserted above the selection.}

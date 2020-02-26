@@ -8,17 +8,25 @@
 \alias{rs_get_index_selection_end}
 \title{Get position(s) related to the selection(s).}
 \usage{
-rs_get_position_selection_start(selection = c("all", "first", "last"),
-  context = rs_get_context())
+rs_get_position_selection_start(
+  selection = c("all", "first", "last"),
+  context = rs_get_context()
+)
 
-rs_get_position_selection_end(selection = c("all", "first", "last"),
-  context = rs_get_context())
+rs_get_position_selection_end(
+  selection = c("all", "first", "last"),
+  context = rs_get_context()
+)
 
-rs_get_index_selection_start(selection = c("first", "last"),
-  context = rs_get_context())
+rs_get_index_selection_start(
+  selection = c("first", "last"),
+  context = rs_get_context()
+)
 
-rs_get_index_selection_end(selection = c("last", "first"),
-  context = rs_get_context())
+rs_get_index_selection_end(
+  selection = c("last", "first"),
+  context = rs_get_context()
+)
 }
 \arguments{
 \item{selection}{(string) \cr

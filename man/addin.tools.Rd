@@ -3,7 +3,6 @@
 \docType{package}
 \name{addin.tools}
 \alias{addin.tools}
-\alias{addin.tools-package}
 \title{Helper functions to create RStudio add-ins.}
 \description{
 Package \code{addin.tools} contains various functions that help to construct

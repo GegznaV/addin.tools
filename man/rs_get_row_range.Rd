@@ -13,8 +13,10 @@ rs_get_row_ranges(row, context = rs_get_context())
 
 rs_get_row_range_w_newline(row)
 
-rs_get_first_selected_row_range(include_newline = FALSE,
-  context = rs_get_context())
+rs_get_first_selected_row_range(
+  include_newline = FALSE,
+  context = rs_get_context()
+)
 }
 \arguments{
 \item{row}{(ineger) row index.}

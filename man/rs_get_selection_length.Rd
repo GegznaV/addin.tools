@@ -4,8 +4,10 @@
 \alias{rs_get_selection_length}
 \title{Get length of selection.}
 \usage{
-rs_get_selection_length(selection = c("all", "first", "last"),
-  context = rs_get_context())
+rs_get_selection_length(
+  selection = c("all", "first", "last"),
+  context = rs_get_context()
+)
 }
 \arguments{
 \item{selection}{(string) \cr

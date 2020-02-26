@@ -4,8 +4,13 @@
 \alias{ensure_blank_line}
 \title{Add blank lines if needed.}
 \usage{
-ensure_blank_line(text, context = rs_get_context(), above = FALSE,
-  below_first_row = FALSE, below_selection = FALSE)
+ensure_blank_line(
+  text,
+  context = rs_get_context(),
+  above = FALSE,
+  below_first_row = FALSE,
+  below_selection = FALSE
+)
 }
 \arguments{
 \item{text}{(character) Text to modify.}
