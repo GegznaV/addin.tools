@@ -9,17 +9,25 @@
 \alias{rs_get_index_selected_rows}
 \title{Get indices related to the selection(s).}
 \usage{
-rs_get_index_first_selected_col(selection = c("all", "first", "last"),
-  context = rs_get_context())
+rs_get_index_first_selected_col(
+  selection = c("all", "first", "last"),
+  context = rs_get_context()
+)
 
-rs_get_index_last_selected_col(selection = c("all", "last", "first"),
-  context = rs_get_context())
+rs_get_index_last_selected_col(
+  selection = c("all", "last", "first"),
+  context = rs_get_context()
+)
 
-rs_get_index_first_selected_row(selection = c("first", "last"),
-  context = rs_get_context())
+rs_get_index_first_selected_row(
+  selection = c("first", "last"),
+  context = rs_get_context()
+)
 
-rs_get_index_last_selected_row(selection = c("last", "first"),
-  context = rs_get_context())
+rs_get_index_last_selected_row(
+  selection = c("last", "first"),
+  context = rs_get_context()
+)
 
 rs_get_index_selected_rows(context = rs_get_context())
 }

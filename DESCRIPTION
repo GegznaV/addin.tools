@@ -1,8 +1,8 @@
 Package: addin.tools
 Type: Package
 Title: Helper Functions to Create RStudio Add-ins
-Version: 0.0.8
-Date: 2019-10-28
+Version: 0.0.9
+Date: 2020-02-26
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
@@ -16,14 +16,14 @@ License: MIT + file LICENSE
 LazyData: TRUE
 ByteCompile: TRUE
 Encoding: UTF-8
-RoxygenNote: 6.1.1.9000
+RoxygenNote: 7.0.2
 VignetteBuilder: knitr
 Depends:
     R (>= 3.2),
     rstudioapi
 Imports:
     dplyr, 
-    tidyr,
+    tidyr (>= 1.0.0),
     tibble,
     magrittr,
     stringi,

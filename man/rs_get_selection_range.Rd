@@ -4,8 +4,11 @@
 \alias{rs_get_selection_range}
 \title{Get range of selection.}
 \usage{
-rs_get_selection_range(selection = c("all", "first", "last"),
-  as_list = FALSE, context = rs_get_context())
+rs_get_selection_range(
+  selection = c("all", "first", "last"),
+  as_list = FALSE,
+  context = rs_get_context()
+)
 }
 \arguments{
 \item{selection}{(string) \cr

@@ -17,10 +17,10 @@
 #' @seealso \code{\link[base]{gsub}}
 #' @export
 rs_replace_in_selection <- function(pattern, replacement,
-                                    fixed = TRUE,
-                                    keep_selected = TRUE,
-                                    selection = c("all", "first", "last"),
-                                    context = rs_get_context()) {
+  fixed = TRUE,
+  keep_selected = TRUE,
+  selection = c("all", "first", "last"),
+  context = rs_get_context()) {
   selection <- match.arg(selection)
 
   old_text  <- rs_get_selection_text(selection = selection, context = context)
@@ -43,8 +43,8 @@ rs_replace_in_selection <- function(pattern, replacement,
 #' @rdname rs_replace_in_selection
 #' @export
 rs_replace_selection <- function(replacement, keep_selected = TRUE,
-                                 selection = c("all", "first", "last"),
-                                 context = rs_get_context()) {
+  selection = c("all", "first", "last"),
+  context = rs_get_context()) {
 
   old_range <- rs_get_selection_range(selection = selection, context = context)
 
@@ -61,6 +61,16 @@ rs_replace_selection <- function(replacement, keep_selected = TRUE,
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Select currently modiffied and inserted pieces of text.
 # (correctly adjust the selection)
+
+#' @rdname rs_replace_in_selection
+#' @param old_text (character) Original text.
+#' @param new_text (character) Text after correction.
+#' @param old_range `document_range` object. See [rstudioapi::document_range].
+#' @param id Document ID. See [getActiveDocumentContext()].
+#' @details
+#' `select_correct_range()` correctly adjust current selection.
+#'
+#' @export
 select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
 
   segment_size <- function(str, pattern) {
@@ -80,8 +90,10 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
 
   new_df <-
     tibble::tibble(old_range = old_range, old_text, new_text) %>%
-    dplyr::mutate(rng = purrr::map(old_range, ~ tibble::as_tibble(t(unlist(.))))) %>%
-    tidyr::unnest(rng) %>%
+    dplyr::mutate(
+      rng = purrr::map(old_range, ~ tibble::as_tibble(t(unlist(.))))
+    ) %>%
+    tidyr::unnest_legacy(rng) %>%
     dplyr::mutate(
       difference = dplyr::coalesce( # Difference in number of characters per selection
         # If selection spans one line
@@ -91,7 +103,7 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
       ),
       special =
         # Check if another selection exists in the same line before current selection
-       start.row == dplyr::lag(end.row, default = 0) &
+        start.row == dplyr::lag(end.row, default = 0) &
         # Check if this boundary (column position)
         # is the first start of selection in the line
         start.row != dplyr::lag(start.row, default = 0)

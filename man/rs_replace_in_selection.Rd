@@ -3,14 +3,26 @@
 \name{rs_replace_in_selection}
 \alias{rs_replace_in_selection}
 \alias{rs_replace_selection}
+\alias{select_correct_range}
 \title{Replace text in selection.}
 \usage{
-rs_replace_in_selection(pattern, replacement, fixed = TRUE,
-  keep_selected = TRUE, selection = c("all", "first", "last"),
-  context = rs_get_context())
+rs_replace_in_selection(
+  pattern,
+  replacement,
+  fixed = TRUE,
+  keep_selected = TRUE,
+  selection = c("all", "first", "last"),
+  context = rs_get_context()
+)
 
-rs_replace_selection(replacement, keep_selected = TRUE,
-  selection = c("all", "first", "last"), context = rs_get_context())
+rs_replace_selection(
+  replacement,
+  keep_selected = TRUE,
+  selection = c("all", "first", "last"),
+  context = rs_get_context()
+)
+
+select_correct_range(old_text, new_text, old_range, id = NULL)
 }
 \arguments{
 \item{pattern}{(character) \cr
@@ -31,9 +43,20 @@ String that indicates, which selection should be extracted.}
 
 \item{context}{(class \code{document_context}) \cr
 Object with context of active RStudio document.}
+
+\item{old_text}{(character) Original text.}
+
+\item{new_text}{(character) Text after correction.}
+
+\item{old_range}{`document_range` object. See [rstudioapi::document_range].}
+
+\item{id}{Document ID. See [getActiveDocumentContext()].}
 }
 \description{
 Replace text in selection.
+}
+\details{
+`select_correct_range()` correctly adjust current selection.
 }
 \seealso{
 \code{\link[base]{gsub}}

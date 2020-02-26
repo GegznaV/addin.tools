@@ -4,8 +4,12 @@
 \alias{rs_insert_symbol_seq}
 \title{Insert a sequence of symbols.}
 \usage{
-rs_insert_symbol_seq(symbol, start_column = 1, end_column = 80,
-  context = rs_get_context())
+rs_insert_symbol_seq(
+  symbol,
+  start_column = 1,
+  end_column = 80,
+  context = rs_get_context()
+)
 }
 \arguments{
 \item{symbol}{(character) A sequence of symbols to be repeated}

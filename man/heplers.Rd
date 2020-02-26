@@ -4,8 +4,10 @@
 \alias{is_blank_line_needed_below}
 \title{' Check if a blank line is needed below.}
 \usage{
-is_blank_line_needed_below(where = c("last row", "first row"),
-  context = rs_get_context())
+is_blank_line_needed_below(
+  where = c("last row", "first row"),
+  context = rs_get_context()
+)
 }
 \arguments{
 \item{where}{(string)

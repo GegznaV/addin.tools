@@ -4,8 +4,13 @@
 \alias{rs_enclose_selection_with}
 \title{Enclose selection of text with indicated symbols.}
 \usage{
-rs_enclose_selection_with(symbol = "", symbol_before = symbol,
-  symbol_after = symbol, trim = FALSE, context = rs_get_context())
+rs_enclose_selection_with(
+  symbol = "",
+  symbol_before = symbol,
+  symbol_after = symbol,
+  trim = FALSE,
+  context = rs_get_context()
+)
 }
 \arguments{
 \item{symbol}{(character) A sequence of symbols to add on both sides of selection.}
