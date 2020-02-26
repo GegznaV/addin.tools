@@ -81,7 +81,7 @@ rs_enclose_first_row_with_lines() - above and below the first selected row only.
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">addin.tools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.8</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.9</span>
       </span>
     </div>
 
@@ -130,11 +130,19 @@ rs_enclose_first_row_with_lines() - above and below the first selected row only.
 
     </div>
 
-    <pre class="usage"><span class='fu'>rs_enclose_selected_rows_with</span>(<span class='kw'>text_above</span> <span class='kw'>=</span> <span class='fl'>NA</span>, <span class='kw'>text_below</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>ensure_blank_above</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())
+    <pre class="usage"><span class='fu'>rs_enclose_selected_rows_with</span>(
+  <span class='kw'>text_above</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
+  <span class='kw'>text_below</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
+  <span class='kw'>ensure_blank_above</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>()
+)
 
-<span class='fu'>rs_enclose_first_row_with</span>(<span class='kw'>text_above</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>text_below</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>ensure_blank_above</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>())</pre>
+<span class='fu'>rs_enclose_first_row_with</span>(
+  <span class='kw'>text_above</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>text_below</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>ensure_blank_above</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'><a href='rs_get_context.html'>rs_get_context</a></span>()
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
