@@ -3,5 +3,5 @@
 #' Wrapper for \code{\link[rstudioapi]{getActiveDocumentContext}()}.
 #' @export
 rs_get_context <- function() {
-    rstudioapi::getActiveDocumentContext()
+  rstudioapi::getActiveDocumentContext()
 }

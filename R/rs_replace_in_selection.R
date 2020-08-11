@@ -17,13 +17,13 @@
 #' @seealso \code{\link[base]{gsub}}
 #' @export
 rs_replace_in_selection <- function(pattern, replacement,
-  fixed = TRUE,
-  keep_selected = TRUE,
-  selection = c("all", "first", "last"),
-  context = rs_get_context()) {
+                                    fixed = TRUE,
+                                    keep_selected = TRUE,
+                                    selection = c("all", "first", "last"),
+                                    context = rs_get_context()) {
   selection <- match.arg(selection)
 
-  old_text  <- rs_get_selection_text(selection = selection, context = context)
+  old_text <- rs_get_selection_text(selection = selection, context = context)
   old_range <- rs_get_selection_range(
     selection = selection, context = context, as_list = TRUE
   )
@@ -43,9 +43,8 @@ rs_replace_in_selection <- function(pattern, replacement,
 #' @rdname rs_replace_in_selection
 #' @export
 rs_replace_selection <- function(replacement, keep_selected = TRUE,
-  selection = c("all", "first", "last"),
-  context = rs_get_context()) {
-
+                                 selection = c("all", "first", "last"),
+                                 context = rs_get_context()) {
   old_range <- rs_get_selection_range(selection = selection, context = context)
 
   modifyRange(
@@ -72,7 +71,6 @@ rs_replace_selection <- function(replacement, keep_selected = TRUE,
 #'
 #' @export
 select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
-
   segment_size <- function(str, pattern) {
     nchar(stringr::str_extract(str, pattern))
   }
@@ -103,7 +101,7 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
       ),
       special =
         # Check if another selection exists in the same line before current selection
-        start.row == dplyr::lag(end.row, default = 0) &
+      start.row == dplyr::lag(end.row, default = 0) &
         # Check if this boundary (column position)
         # is the first start of selection in the line
         start.row != dplyr::lag(start.row, default = 0)

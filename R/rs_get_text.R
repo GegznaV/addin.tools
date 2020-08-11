@@ -10,44 +10,44 @@
 #' @export
 #'
 rs_get_text <- function(row, end_row = NULL, context = rs_get_context()) {
-    if (is.null(end_row)) {
-        ind <- row
-    } else {
-        ind <- row:end_row
-    }
-    structure(context$contents[ind], row_numbers = ind)
+  if (is.null(end_row)) {
+    ind <- row
+  } else {
+    ind <- row:end_row
+  }
+  structure(context$contents[ind], row_numbers = ind)
 }
 
 #' @rdname rs_get_text
 #' @export
 # Get rows with at least one selection
 rs_get_selected_rows <- function(context = rs_get_context()) {
-    ind <- unique(rs_get_index_selected_rows(context = context))
-    structure(context$contents[ind], row_numbers = ind)
+  ind <- unique(rs_get_index_selected_rows(context = context))
+  structure(context$contents[ind], row_numbers = ind)
 }
 
 #' @rdname rs_get_text
 #' @export
 rs_get_first_selected_row <- function(context = rs_get_context()) {
-    ind <- rs_get_index_first_selected_row(selection = "first", context = context)
-    structure(context$contents[ind], row_numbers = ind)
+  ind <- rs_get_index_first_selected_row(selection = "first", context = context)
+  structure(context$contents[ind], row_numbers = ind)
 }
 
 #' @rdname rs_get_text
 #' @export
 rs_get_first_selected_row_length <- function(context = rs_get_context()) {
-    nchar(rs_get_first_selected_row(context = context))
+  nchar(rs_get_first_selected_row(context = context))
 }
 
 #' @rdname rs_get_text
 #' @export
 rs_get_last_selected_row <- function(context = rs_get_context()) {
-    ind <- rs_get_index_last_selected_row(selection = "last", context = context)
-    structure(context$contents[ind], row_numbers = ind)
+  ind <- rs_get_index_last_selected_row(selection = "last", context = context)
+  structure(context$contents[ind], row_numbers = ind)
 }
 
 #' @rdname rs_get_text
 #' @export
 rs_get_last_selected_row_length <- function(context = rs_get_context()) {
-    nchar(rs_get_last_selected_row(context = context))
+  nchar(rs_get_last_selected_row(context = context))
 }

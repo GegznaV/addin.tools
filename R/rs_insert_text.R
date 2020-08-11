@@ -12,8 +12,8 @@
 #' @inheritParams rstudioapi::insertText
 #' @export
 rs_insert_at_row_start <- function(rows, text = NULL, id = rs_get_context()$id) {
-    location <- purrr::map(rows, ~ document_range(start = c(., 1), end = c(., 1)))
-    insertText(location = location, text = text, id = id)
+  location <- purrr::map(rows, ~ document_range(start = c(., 1), end = c(., 1)))
+  insertText(location = location, text = text, id = id)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -32,30 +32,28 @@ rs_insert_at_row_start <- function(rows, text = NULL, id = rs_get_context()$id) 
 rs_insert_text <- function(text = NULL, # single string
                            context = rs_get_context(),
                            spaces = FALSE) {
+  old_range <- rs_get_selection_range(context = context)
 
-    old_range <- rs_get_selection_range(context = context)
+  new_text <- if (spaces) {
+    purrr::map_chr(old_range, ~ {
+      # Check if space is not present before and after the selection
+      spc_before <- check_space(postition = .$start - c(0, 1), context = context)
+      spc_after <- check_space(postition = .$end + c(0, 1), context = context)
 
-    new_text <- if (spaces) {
-        purrr::map_chr(old_range, ~ {
-            # Check if space is not present before and after the selection
-            spc_before <- check_space(postition = .$start - c(0, 1), context = context)
-            spc_after  <- check_space(postition = .$end   + c(0, 1), context = context)
+      stringr::str_c(" "[!spc_before], text, " "[!spc_after])
+    })
+  } else {
+    text
+  }
 
-            stringr::str_c(" "[!spc_before], text, " "[!spc_after])
-        })
-
-    } else {
-        text
-    }
-
-    insertText(text = new_text, location = old_range, id = context$id)
+  insertText(text = new_text, location = old_range, id = context$id)
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Check if the symbol is space at the indicated position
 check_space <- function(postition, context = rs_get_context()) {
-    txt <- get_text(postition, context = context)
-    isTRUE(stringr::str_detect(txt, " "))
+  txt <- get_text(postition, context = context)
+  isTRUE(stringr::str_detect(txt, " "))
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -72,10 +70,9 @@ check_space <- function(postition, context = rs_get_context()) {
 # @return Character vector (extracted strings).
 
 get_text <- function(start, end = start, context = rs_get_context()) {
-    start[start < 0] <- 0
-    end[end < 0]     <- 0
+  start[start < 0] <- 0
+  end[end < 0] <- 0
 
-    text <- context$contents[start[1]:end[1]]
-    stringr::str_sub(text, start[2], end[2])
+  text <- context$contents[start[1]:end[1]]
+  stringr::str_sub(text, start[2], end[2])
 }
-

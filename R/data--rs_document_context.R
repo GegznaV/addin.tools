@@ -6,5 +6,4 @@
 #'
 #' @examples
 #' rs_document_context
-
 NULL

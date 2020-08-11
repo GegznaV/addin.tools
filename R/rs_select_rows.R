@@ -13,20 +13,17 @@
 #' @export
 #'
 rs_select_rows <- function(first, last = NULL, context = rs_get_context()) {
-
-    if (length(first) == 0) {
-        rs_deselect_range(context)
-
+  if (length(first) == 0) {
+    rs_deselect_range(context)
+  } else {
+    if (is.null(last)) {
+      sel_range <- purrr::map(first, ~ document_range(c(..1, 1), c(..1, Inf)))
     } else {
-        if (is.null(last)) {
-            sel_range <- purrr::map(first, ~ document_range(c(..1, 1), c(..1, Inf)))
-
-        } else {
-            sel_range <- document_range(c(first[1], 1), c(last[1], Inf))
-        }
-
-        setSelectionRanges(sel_range, id = context$id)
+      sel_range <- document_range(c(first[1], 1), c(last[1], Inf))
     }
+
+    setSelectionRanges(sel_range, id = context$id)
+  }
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -34,34 +31,35 @@ rs_select_rows <- function(first, last = NULL, context = rs_get_context()) {
 #' @rdname rs_select_rows
 #' @export
 rs_select_all_selected_rows <- function(context = rs_get_context()) {
-    rs_select_rows(
-        first = rs_get_index_first_selected_row(context = context),
-        last  = rs_get_index_last_selected_row(context = context),
-        context = context)
+  rs_select_rows(
+    first = rs_get_index_first_selected_row(context = context),
+    last = rs_get_index_last_selected_row(context = context),
+    context = context
+  )
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_select_rows
 #' @export
 rs_select_first_selected_row <- function(context = rs_get_context()) {
-    row_ind <- rs_get_index_first_selected_row(context = context)
-    rs_select_rows(first = row_ind, last = row_ind, context = context)
+  row_ind <- rs_get_index_first_selected_row(context = context)
+  rs_select_rows(first = row_ind, last = row_ind, context = context)
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_select_rows
 #' @export
 rs_select_last_selected_row <- function(context = rs_get_context()) {
-    row_ind <- rs_get_index_last_selected_row(context = context)
-    rs_select_rows(first = row_ind, last = row_ind, context = context)
+  row_ind <- rs_get_index_last_selected_row(context = context)
+  rs_select_rows(first = row_ind, last = row_ind, context = context)
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_select_rows
 #' @export
 rs_deselect_range <- function(context = rs_get_context()) {
-    pos <- context$selection[[1]]$range[["start"]]
-    rng <- rstudioapi::document_range(pos, end = pos)
-    rstudioapi::setSelectionRanges(ranges = rng, id = context$id)
+  pos <- context$selection[[1]]$range[["start"]]
+  rng <- rstudioapi::document_range(pos, end = pos)
+  rstudioapi::setSelectionRanges(ranges = rng, id = context$id)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

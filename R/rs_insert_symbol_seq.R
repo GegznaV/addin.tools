@@ -10,7 +10,6 @@ rs_insert_symbol_seq <- function(symbol,
                                  start_column = 1,
                                  end_column = 80,
                                  context = rs_get_context()) {
-
-    str = repeat_symbol(as.character(symbol), end_column - start_column)
-    insertText(text = str, id = context$id)
+  str <- repeat_symbol(as.character(symbol), end_column - start_column)
+  insertText(text = str, id = context$id)
 }
