@@ -22,14 +22,14 @@ Depends:
     R (>= 3.2),
     rstudioapi
 Imports:
+    checkmate,
     dplyr, 
-    tidyr (>= 1.0.0),
-    tibble,
     magrittr,
+    purrr,
     stringi,
     stringr,
-    purrr,
-    checkmate,
+    tibble,
+    tidyr (>= 1.0.0),
     utils
 Suggests:
     knitr,
