@@ -15,11 +15,8 @@ The text to insert. This should either be length one (in which case,
 this text is applied to each specified row); otherwise, it should be
 the same length as the \code{rows} vector.}
 
-\item{id}{The document id. When \code{NULL} or blank,
-the mutation will apply to the currently open, or last
-focused, RStudio document. Use the \code{id} returned
-from \code{\link[rstudioapi]{getActiveDocumentContext}()} to ensure
-that the operation is applied on the intended document.}
+\item{id}{The document id. When \code{NULL} or blank, the requested operation
+will apply to the currently open, or last focused, RStudio document.}
 }
 \description{
 Insert text at the beginning of the row(s).

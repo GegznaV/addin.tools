@@ -22,7 +22,7 @@ Object with context of active RStudio document.}
 }
 \value{
 Either a "document_range" object, if \code{selection} is "first" or
-        "last", and \code{as_list = TRUE}, or a list of those objects otherwise.
+"last", and \code{as_list = TRUE}, or a list of those objects otherwise.
 }
 \description{
 Get the range of the first/each selection.

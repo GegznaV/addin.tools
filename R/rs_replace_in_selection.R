@@ -9,12 +9,12 @@
 #' @param keep_selected (logical) \cr
 #'       Flag indicating if the selection should be kept after add-in is applied.
 #' @param fixed (logical) \cr
-#'        If \code{TRUE}, the pattern is a fixed expression.
-#'        If \code{FALSE}, the pattern is a regular expression.
+#'        If `TRUE`, the pattern is a fixed expression.
+#'        If `FALSE`, the pattern is a regular expression.
 #'
 #' @inheritParams rs_get_index
 #'
-#' @seealso \code{\link[base]{gsub}}
+#' @seealso [base::gsub()]
 #' @export
 rs_replace_in_selection <- function(pattern, replacement,
                                     fixed = TRUE,

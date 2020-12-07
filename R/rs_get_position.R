@@ -6,10 +6,10 @@
 #' @param selection (string) \cr
 #'        String that indicates, which selection should be extracted.
 #'
-#' @param context (class \code{document_context}) \cr
+#' @param context (class `document_context`) \cr
 #'        Object with context of active RStudio document.
 #'
-#' @return A list of \code{docdument_position} objects.
+#' @return A list of `docdument_position` objects.
 
 NULL
 

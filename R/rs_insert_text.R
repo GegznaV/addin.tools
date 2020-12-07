@@ -7,7 +7,7 @@
 #' @param text (character)  \cr
 #'       The text to insert. This should either be length one (in which case,
 #'       this text is applied to each specified row); otherwise, it should be
-#'       the same length as the \code{rows} vector.
+#'       the same length as the `rows` vector.
 #'
 #' @inheritParams rstudioapi::insertText
 #' @export
@@ -22,7 +22,7 @@ rs_insert_at_row_start <- function(rows, text = NULL, id = rs_get_context()$id) 
 #' @param text (character) \cr
 #'        The text to insert.
 #' @param spaces (logical) \cr
-#'       If \code{TRUE}, ensures that text is surrounded by spaces.
+#'       If `TRUE`, ensures that text is surrounded by spaces.
 #'
 #' @inheritParams rs_get_index
 #'

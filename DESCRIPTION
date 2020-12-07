@@ -34,3 +34,4 @@ Imports:
 Suggests:
     knitr,
     testthat (>= 2.1.0)
+Roxygen: list(markdown = TRUE)

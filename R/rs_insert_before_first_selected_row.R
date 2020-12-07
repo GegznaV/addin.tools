@@ -2,8 +2,8 @@
 #'
 #' @param text (character) The text to insert.
 #' @param ensure_blank_above (logical)
-#'      If \code{TRUE}, inserts blank line above the selection if the line is not blank.
-#'      If \code{FALSE}, no blank line is added.
+#'      If `TRUE`, inserts blank line above the selection if the line is not blank.
+#'      If `FALSE`, no blank line is added.
 #'
 #' @inheritParams rs_get_index
 #' @export

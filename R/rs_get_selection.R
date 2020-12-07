@@ -4,8 +4,8 @@
 #'
 #' @inheritParams rs_get_index
 #' @param as_list (logical)
-#'        Flag, if result should be a list, if \code{selection} is either
-#'        \code{"first"} or \code{"last"}.
+#'        Flag, if result should be a list, if `selection` is either
+#'        `"first"` or `"last"`.
 #' @return A character vector.
 #' @export
 rs_get_selection_text <- function(selection = c("all", "first", "last"),
@@ -44,8 +44,8 @@ rs_get_selection_length <- function(selection = c("all", "first", "last"),
 #' @inheritParams rs_get_index
 #' @param row (numeric) \cr
 #'        Index of the first row of interest of a vector of row indices.
-#' @param end_row (numeric | \code{NULL}) \cr
-#'        Index of the last row of interest or \code{NULL}.
+#' @param end_row (numeric | `NULL`) \cr
+#'        Index of the last row of interest or `NULL`.
 #'
 #' @return An integer vector with number of characters in each selection.
 #' @export
@@ -71,8 +71,8 @@ rs_get_n_selections <- function(context = rs_get_context()) {
 #' @param as_list (locical) \cr
 #'        Indicates if output sould be returned as a list.
 #'
-#' @return Either a "document_range" object, if \code{selection} is "first" or
-#'         "last", and \code{as_list = TRUE}, or a list of those objects otherwise.
+#' @return Either a "document_range" object, if `selection` is "first" or
+#'         "last", and `as_list = TRUE`, or a list of those objects otherwise.
 #' @export
 rs_get_selection_range <- function(selection = c("all", "first", "last"),
                                    as_list = FALSE, # TODO: default to as_list = TRUE

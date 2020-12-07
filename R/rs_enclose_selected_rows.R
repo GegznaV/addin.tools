@@ -2,8 +2,8 @@
 #' Enclose setected rows with text.
 #'
 #' Enclose selected rows with text: \itemize{
-#'     \item \code{rs_enclose_all_with_lines()} - above and below all selected rows;
-#'     \item \code{rs_enclose_first_row_with_lines()} - above and below the first selected row only.
+#'     \item `rs_enclose_all_with_lines()` - above and below all selected rows;
+#'     \item `rs_enclose_first_row_with_lines()` - above and below the first selected row only.
 #' }
 #' @name rs_enclose_with_lines
 #'
@@ -12,9 +12,9 @@
 #'                               (the first row).
 #'
 #' @param ensure_blank_above (logical)
-#'      If \code{TRUE}, checks if there is a blank line above the selection.
+#'      If `TRUE`, checks if there is a blank line above the selection.
 #'      If the line is not blank, a blank line will be added.
-#'      If \code{FALSE}, blank line is not added.
+#'      If `FALSE`, blank line is not added.
 #'
 #' @inheritParams rs_get_index
 #'

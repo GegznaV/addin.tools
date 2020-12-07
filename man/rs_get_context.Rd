@@ -7,5 +7,5 @@
 rs_get_context()
 }
 \description{
-Wrapper for \code{\link[rstudioapi]{getActiveDocumentContext}()}.
+Wrapper for \code{\link[rstudioapi:rstudio-editors]{rstudioapi::getActiveDocumentContext()}}.
 }

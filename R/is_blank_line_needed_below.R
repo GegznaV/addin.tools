@@ -4,8 +4,8 @@
 #' Checks if a blank line should be added below either all selected rows or
 #' the first selected row.
 #' @param where (string)
-#'      If \code{"first"} - checks for a blank line below the first selected row.
-#'      If \code{"last"} - checks for a blank line below the last selected row.
+#'      If `"first"` - checks for a blank line below the first selected row.
+#'      If `"last"` - checks for a blank line below the last selected row.
 #' @rdname heplers
 #'
 #' @inheritParams rs_get_index

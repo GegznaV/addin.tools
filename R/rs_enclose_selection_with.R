@@ -12,9 +12,9 @@
 #' @param symbol (character) A sequence of symbols to add on both sides of selection.
 #' @param trim (logical) Flag if whitespace should be trimmed from both sides of the selection.
 #' @param symbol_before (character) A sequence of symbols to before the selection
-#'                      (overrides value of \code{symbol}).
+#'                      (overrides value of `symbol`).
 #' @param symbol_after  (character) A sequence of symbols to add after the selection
-#'                      (overrides value of \code{symbol}).
+#'                      (overrides value of `symbol`).
 #'
 #' @inheritParams rs_get_index
 #'

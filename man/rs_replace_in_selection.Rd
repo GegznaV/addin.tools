@@ -48,16 +48,16 @@ Object with context of active RStudio document.}
 
 \item{new_text}{(character) Text after correction.}
 
-\item{old_range}{`document_range` object. See [rstudioapi::document_range].}
+\item{old_range}{\code{document_range} object. See \link[rstudioapi:document_range]{rstudioapi::document_range}.}
 
-\item{id}{Document ID. See [getActiveDocumentContext()].}
+\item{id}{Document ID. See \code{\link[=getActiveDocumentContext]{getActiveDocumentContext()}}.}
 }
 \description{
 Replace text in selection.
 }
 \details{
-`select_correct_range()` correctly adjust current selection.
+\code{select_correct_range()} correctly adjust current selection.
 }
 \seealso{
-\code{\link[base]{gsub}}
+\code{\link[base:grep]{base::gsub()}}
 }

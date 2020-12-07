@@ -36,7 +36,7 @@ repeat_symbol_2 <- function(text = " ", times) {
 #'
 #' @param n (integer) A vertor of integers indicating number of scoaaces to generate.
 #'
-#' @return A character vector of length \code{length(n)} with spaces.
+#' @return A character vector of length `length(n)` with spaces.
 #' @export
 #'
 #' @examples
