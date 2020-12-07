@@ -5,7 +5,7 @@
 \alias{addin.tools}
 \title{Helper functions to create RStudio add-ins.}
 \description{
-Package \code{addin.tools} contains various functions that help to construct
+Package \strong{\code{addin.tools}} contains various functions that help to construct
 "RStudio" add-ins.
 
 \verb{License:} MIT   \cr
