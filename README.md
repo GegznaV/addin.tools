@@ -7,25 +7,24 @@ TO DO:
 (for %>% and similar operators
 
 -->
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
 
 [![MIT
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/addin.tools)](https://cran.r-project.org/package=addin.tools)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addin.tools)](https://cran.r-project.org/package=addin.tools)
+[![R-CMD-check](https://github.com/GegznaV/addin.tools/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addin.tools/actions)
 [![GitHub
-version](https://img.shields.io/badge/GitHub-0.0.5-brightgreen.svg)](https://github.com/GegznaV/addin.tools)
-[![Travis-CI Build
-Status](https://travis-ci.org/GegznaV/addin.tools.svg?branch=master)](https://travis-ci.org/GegznaV/addin.tools)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2019--07--28-yellowgreen.svg)](/commits/master)
+version](https://img.shields.io/badge/GitHub-0.0.9.1-brightgreen.svg)](https://github.com/GegznaV/addin.tools)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2022--03--23-yellowgreen.svg)](/commits/master)
+<!-- badges: end -->
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addin.tools)](http://www.rdocumentation.org/packages/addin.tools) -->
-
 <!--
 
 -->
 
------
+------------------------------------------------------------------------
 
 <!-- <img src="https://gegznav.github.io/addin.tools/logo.png" align="right" width="15%" height="15%"/> -->
 
@@ -41,11 +40,8 @@ Package `addin.tools` contains various functions that help to construct
 ## Install package
 
 <!-- Install released version from CRAN: -->
-
 <!-- ```{r Install package from CRAN, eval=FALSE} -->
-
 <!-- install.packages("addin.tools") -->
-
 <!-- ``` -->
 
 Install development version from GitHub:
@@ -55,6 +51,6 @@ if (!require(devtools)) install.packages("devtools")
 devtools::install_github("GegznaV/addin.tools")
 ```
 
------
+------------------------------------------------------------------------
 
 More information at <https://gegznav.github.io/addin.tools/>
