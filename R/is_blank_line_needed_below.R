@@ -14,8 +14,7 @@
 is_blank_line_needed_below <- function(where = c("last row", "first row"),
                                        context = rs_get_context()) {
   where <- match.arg(where)
-  row <- switch(
-    where,
+  row <- switch(where,
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     "first" = rs_get_index_first_selected_row(context = context),
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

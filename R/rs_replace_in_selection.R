@@ -100,11 +100,11 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
         last_line_segment_size(new_text) - last_line_segment_size(old_text),
       ),
       special =
-        # Check if another selection exists in the same line before current selection
-      start.row == dplyr::lag(end.row, default = 0) &
-        # Check if this boundary (column position)
-        # is the first start of selection in the line
-        start.row != dplyr::lag(start.row, default = 0)
+      # Check if another selection exists in the same line before current selection
+        start.row == dplyr::lag(end.row, default = 0) &
+          # Check if this boundary (column position)
+          # is the first start of selection in the line
+          start.row != dplyr::lag(start.row, default = 0)
     ) %>%
     dplyr::group_by(end.row) %>%
     dplyr::mutate(end_diff = cumsum(difference)) %>%

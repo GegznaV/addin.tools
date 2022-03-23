@@ -12,8 +12,7 @@ rs_get_selection_text <- function(selection = c("all", "first", "last"),
                                   as_list = FALSE,
                                   context = rs_get_context()) {
   selection <- match.arg(selection)
-  str <- switch(
-    selection,
+  str <- switch(selection,
     "all"   = purrr::map_chr(context$selection, "text"),
     "first" = context$selection[[1]]$text,
     "last"  = context$selection[[rs_get_n_selections(context = context)]]$text
@@ -89,7 +88,11 @@ rs_get_selection_range <- function(selection = c("all", "first", "last"),
   )
 
   if (isTRUE(as_list)) {
-    range_obj <- switch(selection, "first" = , "last" = list(range_obj), range_obj)
+    range_obj <- switch(selection,
+      "first" = ,
+      "last" = list(range_obj),
+      range_obj
+    )
   }
 
   range_obj
