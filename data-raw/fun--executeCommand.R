@@ -26,7 +26,7 @@ rstudioapi::executeCommand("editRmdFormatOptions")
 rstudioapi::executeCommand("showFolder")
 
 show_folder_in_files_pane <- function(.dir) {
-    old_wd <- setwd(.dir)
-    rstudioapi::executeCommand("goToWorkingDir")
-    setwd(old_wd)
+  old_wd <- setwd(.dir)
+  rstudioapi::executeCommand("goToWorkingDir")
+  setwd(old_wd)
 }

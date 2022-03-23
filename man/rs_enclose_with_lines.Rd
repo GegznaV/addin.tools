@@ -36,7 +36,7 @@ Object with context of active RStudio document.}
 }
 \description{
 Enclose selected rows with text: \itemize{
-    \item \code{rs_enclose_all_with_lines()} - above and below all selected rows;
-    \item \code{rs_enclose_first_row_with_lines()} - above and below the first selected row only.
+\item \code{rs_enclose_all_with_lines()} - above and below all selected rows;
+\item \code{rs_enclose_first_row_with_lines()} - above and below the first selected row only.
 }
 }

@@ -1,7 +1,7 @@
 #' Retrieve information about an active RStudio document.
 #'
-#' Wrapper for \code{\link[rstudioapi]{getActiveDocumentContext}()}.
+#' Wrapper for [rstudioapi::getActiveDocumentContext()].
 #' @export
 rs_get_context <- function() {
-    rstudioapi::getActiveDocumentContext()
+  rstudioapi::getActiveDocumentContext()
 }

@@ -30,7 +30,7 @@ rs_get_last_selected_row_length(context = rs_get_context())
 Object with context of active RStudio document.}
 }
 \value{
-Character vector with attribute `row_numbers` indicating which rows were returned.
+Character vector with attribute \code{row_numbers} indicating which rows were returned.
 }
 \description{
 Get text in all indicated consequtive lines.

@@ -13,37 +13,35 @@
 #'
 #' @export
 rs_get_row_range <- function(row, context = rs_get_context()) {
-    last_col <- nchar(context$contents[row]) + 1
-    document_range(c(row, 1), c(row, last_col))
+  last_col <- nchar(context$contents[row]) + 1
+  document_range(c(row, 1), c(row, last_col))
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_row_range
 #' @export
 rs_get_row_ranges <- function(row, context = rs_get_context()) {
-    last_col <- nchar(context$contents[row]) + 1
-    purrr::map2(row, last_col, ~ document_range(c(..1, 1), c(..1, ..2)))
+  last_col <- nchar(context$contents[row]) + 1
+  purrr::map2(row, last_col, ~ document_range(c(..1, 1), c(..1, ..2)))
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_row_range
 #' @export
 rs_get_row_range_w_newline <- function(row) {
-    document_range(c(row, 1), c(row + 1, 1))
+  document_range(c(row, 1), c(row + 1, 1))
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_get_row_range
 #' @export
 rs_get_first_selected_row_range <- function(include_newline = FALSE,
-                                            context = rs_get_context()
-) {
+                                            context = rs_get_context()) {
+  row <- rs_get_index_first_selected_row(context = context)
 
-    row <- rs_get_index_first_selected_row(context = context)
-
-    if (include_newline) {
-        rs_get_row_range_w_newline(row)
-    } else {
-        rs_get_row_range(row, context = context)
-    }
+  if (include_newline) {
+    rs_get_row_range_w_newline(row)
+  } else {
+    rs_get_row_range(row, context = context)
+  }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

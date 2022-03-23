@@ -30,7 +30,7 @@ Object with context of active RStudio document.}
 An object of class "document_range" or a list of these objects.
 }
 \description{
-`rs_get_row_range()` gets range of the indicated row from the beginning to the end of the line (excluding the new line symbol).\cr
-`rs_get_row_range_w_newline()` gets range of the indicated row from the beggining of the line to the beginning to the next line.\cr
-`rs_get_first_selected_row_range()` gets range of the first selected line.
+\code{rs_get_row_range()} gets range of the indicated row from the beginning to the end of the line (excluding the new line symbol).\cr
+\code{rs_get_row_range_w_newline()} gets range of the indicated row from the beggining of the line to the beginning to the next line.\cr
+\code{rs_get_first_selected_row_range()} gets range of the first selected line.
 }
