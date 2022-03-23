@@ -52,3 +52,34 @@ rs_enclose_selection_with <- function(symbol = "",
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Legacy version of the function
+rs_enclose_selection_with__old <- function(symbol = "",
+                                           symbol_before = symbol,
+                                           symbol_after = symbol,
+                                           trim = FALSE,
+                                           context = rs_get_context()) {
+
+  # For the first selection only
+  sel <- context$selection[[1]]
+  old_text <- sel$text
+  Encoding(old_text) <- "UTF-8"
+
+  if (trim) {
+    new_text <- stringr::str_trim(old_text)
+  } else {
+    new_text <- old_text
+  }
+
+  new_text <- paste0(symbol_before, new_text, symbol_after)
+
+  insertText(location = sel$range, text = new_text, id = context$id)
+
+  # If no text is selected, cursor is placed between the symbols.
+  if (stringi::stri_isempty(old_text)) {
+    rng <- sel$range
+    rng[[1]]["column"] <- rng[[1]]["column"] + nchar(symbol_before)
+
+    setCursorPosition(position = rng[[1]], id = context$id)
+  }
+}
+# ============================================================================
