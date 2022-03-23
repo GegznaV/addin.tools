@@ -26,8 +26,7 @@ rs_enclose_selection_with <- function(symbol = "",
                                       context = rs_get_context()) {
 
   # For the first selection only
-  sel <- context$selection[[1]]
-  old_text <- sel$text
+  old_text <- rstudioapi::selectionGet(id = context$id)$value
   Encoding(old_text) <- "UTF-8"
 
   if (trim) {
@@ -38,14 +37,18 @@ rs_enclose_selection_with <- function(symbol = "",
 
   new_text <- paste0(symbol_before, new_text, symbol_after)
 
-  insertText(location = sel$range, text = new_text, id = context$id)
+  rstudioapi::selectionSet(new_text, context$id)
 
   # If no text is selected, cursor is placed between the symbols.
   if (stringi::stri_isempty(old_text)) {
-    rng <- sel$range
-    rng[[1]]["column"] <- rng[[1]]["column"] + nchar(symbol_before)
+    # "try" function is needed to avoid error in Rmd Visual mode
+    try(silent = TRUE, {
+      sel <- context$selection[[1]]
+      rng <- sel$range
+      rng[[1]]["column"] <- rng[[1]]["column"] + nchar(symbol_before)
 
-    setCursorPosition(position = rng[[1]], id = context$id)
+      setCursorPosition(position = rng[[1]], id = context$id)
+    })
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
