@@ -14,7 +14,8 @@ rs_get_selection_text <- function(selection = c("all", "first", "last"),
   selection <- match.arg(selection)
   str <- switch(selection,
     "all"   = purrr::map_chr(context$selection, "text"),
-    "first" = context$selection[[1]]$text,
+    # "first" = context$selection[[1]]$text,
+    "first" = rstudioapi::selectionGet(id = context$id)$value,
     "last"  = context$selection[[rs_get_n_selections(context = context)]]$text
   )
   if (isTRUE(as_list)) {
