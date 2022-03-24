@@ -4,7 +4,7 @@ on:
   push:
     branches: [main, master, devel, develop, development]
   pull_request:
-    branches: [main, master]
+    branches: [main, master, devel, develop, development]
 
 name: R-CMD-check
 
@@ -13,6 +13,7 @@ jobs:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (R-${{ matrix.config.r }})
+
 
     strategy:
       fail-fast: false
@@ -39,8 +40,18 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-r-dependencies@v1
+      - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: rcmdcheck
+
+      # - name: Render README
+      #   run: Rscript -e 'rmarkdown::render("README.Rmd")'
+
+      # - name: Commit results
+      #   run: |
+      #     git config --local user.email "actions@github.com"
+      #     git config --local user.name "GitHub Actions"
+      #     git commit README.md -m 'Re-build README.Rmd before pkgdown' || echo "No changes to commit"
+      #     git push origin || echo "No changes to commit (README)"
 
       - uses: r-lib/actions/check-r-package@v1
