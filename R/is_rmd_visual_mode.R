@@ -1,4 +1,4 @@
-#' Check if Visual Markdown Editor is used
+#' Check if Visual Markdown Editor (VME) is used
 #'
 #' Check if RStudio addins should treat the current selection of active document
 #' as being in RStudio Visual Markdown Editor mode (RS VME) or not.
