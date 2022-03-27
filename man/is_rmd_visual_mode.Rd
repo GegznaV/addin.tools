@@ -2,7 +2,7 @@
 % Please edit documentation in R/is_rmd_visual_mode.R
 \name{is_rmd_visual_mode}
 \alias{is_rmd_visual_mode}
-\title{Check if Visual Markdown Editor is used}
+\title{Check if Visual Markdown Editor (VME) is used}
 \usage{
 is_rmd_visual_mode()
 }
@@ -10,19 +10,18 @@ is_rmd_visual_mode()
 Logical:
 \itemize{
 \item \code{TRUE} if an active document is in Visual Markdown Editor mode and
-current cursor position or selection is outside code chunk.
+current cursor position or selection is outside a code chunk.
 \item \code{FALSE} if an active document is:
 a.  not in the Visual Markdown Editor mode;
 b.  in Visual Markdown Editor mode but current cursor position or
-selection is inside code chunk.
+selection is inside a code chunk.
 }
 }
 \description{
-Check if RStudio addins should threat the current selection as document being
-in RStudio Visual Markdown Editor mode (RS VME) or not.
+Check if RStudio addins should treat the current selection of active document
+as being in RStudio Visual Markdown Editor mode (RS VME) or not.
 }
 \details{
 The document \link[rstudioapi:rstudio-editors]{context} from RS VME
-is different than regular RStudio
-document context.
+is different than regular RStudio document context.
 }
