@@ -20,13 +20,13 @@ knitr::opts_chunk$set(
   fig.path = "README-"
 )
 ```
-
+<!-- badges: start -->
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addin.tools)](https://cran.r-project.org/package=addin.tools)
+[![R-CMD-check](https://github.com/GegznaV/addin.tools/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addin.tools/actions)
 [![GitHub version](https://img.shields.io/badge/GitHub-`r packageVersion("addin.tools")`-brightgreen.svg)](https://github.com/GegznaV/addin.tools)
-[![Travis-CI Build Status](https://travis-ci.org/GegznaV/addin.tools.svg?branch=master)](https://travis-ci.org/GegznaV/addin.tools)
 [![Updated-on](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
-
+<!-- badges: end -->
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addin.tools)](http://www.rdocumentation.org/packages/addin.tools) -->
 

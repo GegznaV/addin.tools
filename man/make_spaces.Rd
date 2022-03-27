@@ -7,7 +7,7 @@
 make_spaces(n)
 }
 \arguments{
-\item{n}{(integer) A vertor of integers indicating number of scoaaces to generate.}
+\item{n}{(integer) A vector of integers indicating number of spaces to generate.}
 }
 \value{
 A character vector of length \code{length(n)} with spaces.

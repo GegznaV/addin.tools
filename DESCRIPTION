@@ -1,11 +1,11 @@
 Package: addin.tools
 Type: Package
 Title: Helper Functions to Create RStudio Add-ins
-Version: 0.0.9.1
-Date: 2020-02-26
+Version: 0.0.10
+Date: 2022-03-27
 Authors@R: person("Vilmantas", "Gegzna",
-                    email = "GegznaV@gmail.com",
-                    role = c("aut", "cre","cph")
+                  email = "GegznaV@gmail.com",
+                  role = c("aut", "cre","cph")
             )
 Description: Package 'addin.tools' contains various functions that are wrappers 
              arround package 'rstudioapi'. They are used as core functions 
@@ -20,7 +20,7 @@ RoxygenNote: 7.1.2
 VignetteBuilder: knitr
 Depends:
     R (>= 3.2),
-    rstudioapi
+    rstudioapi (>= 0.13)
 Imports:
     checkmate,
     dplyr, 
