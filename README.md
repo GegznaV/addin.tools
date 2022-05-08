@@ -54,3 +54,4 @@ devtools::install_github("GegznaV/addin.tools")
 ------------------------------------------------------------------------
 
 More information at <https://gegznav.github.io/addin.tools/>
+
