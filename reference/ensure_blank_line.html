@@ -56,37 +56,48 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">ensure_blank_line</span><span class="op">(</span>
-  <span class="va">text</span>,
-  context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span>,
-  above <span class="op">=</span> <span class="cn">FALSE</span>,
-  below_first_row <span class="op">=</span> <span class="cn">FALSE</span>,
-  below_selection <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">ensure_blank_line</span><span class="op">(</span></span>
+<span>  <span class="va">text</span>,</span>
+<span>  context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  above <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  below_first_row <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  below_selection <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>text</dt>
 <dd><p>(character) Text to modify.</p></dd>
+
+
 <dt>context</dt>
 <dd><p>(class <code>document_context</code>) <br>
 Object with context of active RStudio document.</p></dd>
+
+
 <dt>above</dt>
 <dd><p>(logical) If <code>TRUE</code>, checks for the blank line above the
 selection and if it is missing, adds blank line before the <code>text</code>.</p></dd>
+
+
 <dt>below_first_row</dt>
 <dd><p>(logical) If <code>TRUE</code>, checks for the blank line below
 the first selected row and if it is missing, adds blank line after
 the <code>text</code>.</p></dd>
+
+
 <dt>below_selection</dt>
 <dd><p>(logical) If <code>TRUE</code>, checks for the blank line
 below the last selected row and if it is missing, adds blank line after
 the <code>text</code>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>String.</p>
+    
+
+<p>String.</p>
     </div>
 
   </div>
@@ -101,7 +112,7 @@ the <code>text</code>.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

@@ -56,7 +56,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">rs_insert_at_row_start</span><span class="op">(</span><span class="va">rows</span>, text <span class="op">=</span> <span class="cn">NULL</span>, id <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">id</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">rs_insert_at_row_start</span><span class="op">(</span><span class="va">rows</span>, text <span class="op">=</span> <span class="cn">NULL</span>, id <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">id</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -64,14 +64,19 @@
     <dl><dt>rows</dt>
 <dd><p>(integer) <br>
 The index(es) of the row(s) in the document.</p></dd>
+
+
 <dt>text</dt>
 <dd><p>(character)  <br>
 The text to insert. This should either be length one (in which case,
 this text is applied to each specified row); otherwise, it should be
 the same length as the <code>rows</code> vector.</p></dd>
+
+
 <dt>id</dt>
 <dd><p>The document id. When <code>NULL</code> or blank, the requested operation
 will apply to the currently open, or last focused, RStudio document.</p></dd>
+
 </dl></div>
 
   </div>
@@ -86,7 +91,7 @@ will apply to the currently open, or last focused, RStudio document.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

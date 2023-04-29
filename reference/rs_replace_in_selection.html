@@ -56,23 +56,23 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">rs_replace_in_selection</span><span class="op">(</span>
-  <span class="va">pattern</span>,
-  <span class="va">replacement</span>,
-  fixed <span class="op">=</span> <span class="cn">TRUE</span>,
-  keep_selected <span class="op">=</span> <span class="cn">TRUE</span>,
-  selection <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"all"</span>, <span class="st">"first"</span>, <span class="st">"last"</span><span class="op">)</span>,
-  context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="fu">rs_replace_selection</span><span class="op">(</span>
-  <span class="va">replacement</span>,
-  keep_selected <span class="op">=</span> <span class="cn">TRUE</span>,
-  selection <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"all"</span>, <span class="st">"first"</span>, <span class="st">"last"</span><span class="op">)</span>,
-  context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="fu">select_correct_range</span><span class="op">(</span><span class="va">old_text</span>, <span class="va">new_text</span>, <span class="va">old_range</span>, id <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">rs_replace_in_selection</span><span class="op">(</span></span>
+<span>  <span class="va">pattern</span>,</span>
+<span>  <span class="va">replacement</span>,</span>
+<span>  fixed <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  keep_selected <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  selection <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"all"</span>, <span class="st">"first"</span>, <span class="st">"last"</span><span class="op">)</span>,</span>
+<span>  context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rs_replace_selection</span><span class="op">(</span></span>
+<span>  <span class="va">replacement</span>,</span>
+<span>  keep_selected <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  selection <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"all"</span>, <span class="st">"first"</span>, <span class="st">"last"</span><span class="op">)</span>,</span>
+<span>  context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">select_correct_range</span><span class="op">(</span><span class="va">old_text</span>, <span class="va">new_text</span>, <span class="va">old_range</span>, id <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -80,30 +80,49 @@
     <dl><dt>pattern</dt>
 <dd><p>(character) <br>
 A pattern of text to be replaced.</p></dd>
+
+
 <dt>replacement</dt>
 <dd><p>(character) <br>
 The replacement text.</p></dd>
+
+
 <dt>fixed</dt>
 <dd><p>(logical) <br>
 If <code>TRUE</code>, the pattern is a fixed expression.
 If <code>FALSE</code>, the pattern is a regular expression.</p></dd>
+
+
 <dt>keep_selected</dt>
 <dd><p>(logical) <br>
 Flag indicating if the selection should be kept after add-in is applied.</p></dd>
+
+
 <dt>selection</dt>
 <dd><p>(string) <br>
 String that indicates, which selection should be extracted.</p></dd>
+
+
 <dt>context</dt>
 <dd><p>(class <code>document_context</code>) <br>
 Object with context of active RStudio document.</p></dd>
+
+
 <dt>old_text</dt>
 <dd><p>(character) Original text.</p></dd>
+
+
 <dt>new_text</dt>
 <dd><p>(character) Text after correction.</p></dd>
+
+
 <dt>old_range</dt>
-<dd><p><code>document_range</code> object. See <a href="https://rdrr.io/pkg/rstudioapi/man/document_range.html" class="external-link">rstudioapi::document_range</a>.</p></dd>
+<dd><p><code>document_range</code> object. See <a href="https://rstudio.github.io/rstudioapi/reference/document_range.html" class="external-link">rstudioapi::document_range</a>.</p></dd>
+
+
 <dt>id</dt>
 <dd><p>Document ID. See <code>getActiveDocumentContext()</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -126,7 +145,7 @@ Object with context of active RStudio document.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

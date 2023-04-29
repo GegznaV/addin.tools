@@ -58,30 +58,39 @@ meaning in R Markdown files.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">rs_enclose_selection_with</span><span class="op">(</span>
-  symbol <span class="op">=</span> <span class="st">""</span>,
-  symbol_before <span class="op">=</span> <span class="va">symbol</span>,
-  symbol_after <span class="op">=</span> <span class="va">symbol</span>,
-  trim <span class="op">=</span> <span class="cn">FALSE</span>,
-  context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">rs_enclose_selection_with</span><span class="op">(</span></span>
+<span>  symbol <span class="op">=</span> <span class="st">""</span>,</span>
+<span>  symbol_before <span class="op">=</span> <span class="va">symbol</span>,</span>
+<span>  symbol_after <span class="op">=</span> <span class="va">symbol</span>,</span>
+<span>  trim <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>symbol</dt>
 <dd><p>(character) A sequence of symbols to add on both sides of selection.</p></dd>
+
+
 <dt>symbol_before</dt>
 <dd><p>(character) A sequence of symbols to before the selection
 (overrides value of <code>symbol</code>).</p></dd>
+
+
 <dt>symbol_after</dt>
 <dd><p>(character) A sequence of symbols to add after the selection
 (overrides value of <code>symbol</code>).</p></dd>
+
+
 <dt>trim</dt>
 <dd><p>(logical) Flag if whitespace should be trimmed from both sides of the selection.</p></dd>
+
+
 <dt>context</dt>
 <dd><p>(class <code>document_context</code>) <br>
 Object with context of active RStudio document.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -101,7 +110,7 @@ If no text is selected, the cursor is placed between the inserted symbols.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

@@ -56,10 +56,10 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">rs_get_selection_length</span><span class="op">(</span>
-  selection <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"all"</span>, <span class="st">"first"</span>, <span class="st">"last"</span><span class="op">)</span>,
-  context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">rs_get_selection_length</span><span class="op">(</span></span>
+<span>  selection <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"all"</span>, <span class="st">"first"</span>, <span class="st">"last"</span><span class="op">)</span>,</span>
+<span>  context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -67,13 +67,18 @@
     <dl><dt>selection</dt>
 <dd><p>(string) <br>
 String that indicates, which selection should be extracted.</p></dd>
+
+
 <dt>context</dt>
 <dd><p>(class <code>document_context</code>) <br>
 Object with context of active RStudio document.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>An integer vector with number of characters in each selection.</p>
+    
+
+<p>An integer vector with number of characters in each selection.</p>
     </div>
 
   </div>
@@ -88,7 +93,7 @@ Object with context of active RStudio document.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

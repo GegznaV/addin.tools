@@ -56,15 +56,15 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">rs_select_rows</span><span class="op">(</span><span class="va">first</span>, last <span class="op">=</span> <span class="cn">NULL</span>, context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rs_select_all_selected_rows</span><span class="op">(</span>context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rs_select_first_selected_row</span><span class="op">(</span>context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rs_select_last_selected_row</span><span class="op">(</span>context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rs_deselect_range</span><span class="op">(</span>context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">rs_select_rows</span><span class="op">(</span><span class="va">first</span>, last <span class="op">=</span> <span class="cn">NULL</span>, context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rs_select_all_selected_rows</span><span class="op">(</span>context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rs_select_first_selected_row</span><span class="op">(</span>context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rs_select_last_selected_row</span><span class="op">(</span>context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rs_deselect_range</span><span class="op">(</span>context <span class="op">=</span> <span class="fu"><a href="rs_get_context.html">rs_get_context</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -74,13 +74,18 @@
 Either index of the first row to select or a vector of indices.
 If <code>length(first) == 0</code> then current selection is deselected.
 If <code>last</code> is not <code>NULL</code>, only the first value is used.</p></dd>
+
+
 <dt>last</dt>
 <dd><p>(integer) <br>
 Index of the last row to select or <code>NULL</code>. If not <code>NULL</code>,
 all lines from the <code>first[1]</code> to the <code>last[1]</code> are selected.</p></dd>
+
+
 <dt>context</dt>
 <dd><p>(class <code>document_context</code>) <br>
 Object with context of active RStudio document.</p></dd>
+
 </dl></div>
 
   </div>
@@ -95,7 +100,7 @@ Object with context of active RStudio document.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
