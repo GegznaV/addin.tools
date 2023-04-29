@@ -15,8 +15,8 @@ licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addin.tools)](https://cran.r-project.org/package=addin.tools)
 [![R-CMD-check](https://github.com/GegznaV/addin.tools/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addin.tools/actions)
 [![GitHub
-version](https://img.shields.io/badge/GitHub-0.0.9.1-brightgreen.svg)](https://github.com/GegznaV/addin.tools)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2022--03--23-yellowgreen.svg)](/commits/master)
+version](https://img.shields.io/badge/GitHub-0.0.10-brightgreen.svg)](https://github.com/GegznaV/addin.tools)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2023--04--29-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addin.tools)](http://www.rdocumentation.org/packages/addin.tools) -->
