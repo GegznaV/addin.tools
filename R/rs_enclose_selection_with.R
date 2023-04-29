@@ -24,7 +24,6 @@ rs_enclose_selection_with <- function(symbol = "",
                                       symbol_after = symbol,
                                       trim = FALSE,
                                       context = rs_get_context()) {
-
   # For the first selection only
   old_text <- rstudioapi::selectionGet(id = context$id)$value
   Encoding(old_text) <- "UTF-8"
@@ -58,7 +57,6 @@ rs_enclose_selection_with__old <- function(symbol = "",
                                            symbol_after = symbol,
                                            trim = FALSE,
                                            context = rs_get_context()) {
-
   # For the first selection only
   sel <- context$selection[[1]]
   old_text <- sel$text
