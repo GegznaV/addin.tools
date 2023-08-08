@@ -16,7 +16,7 @@ licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource
 [![R-CMD-check](https://github.com/GegznaV/addin.tools/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addin.tools/actions)
 [![GitHub
 version](https://img.shields.io/badge/GitHub-0.0.10-brightgreen.svg)](https://github.com/GegznaV/addin.tools)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2023--04--29-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2023--08--08-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addin.tools)](http://www.rdocumentation.org/packages/addin.tools) -->
@@ -54,4 +54,3 @@ devtools::install_github("GegznaV/addin.tools")
 ------------------------------------------------------------------------
 
 More information at <https://gegznav.github.io/addin.tools/>
-
