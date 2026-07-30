@@ -1,0 +1,10 @@
+linters: linters_with_defaults(
+  line_length_linter = line_length_linter(120)
+)
+encoding: "UTF-8"
+exclusions: list(
+  "^docs/",
+  "^pkgdown/",
+  "^man/",
+  "^data-raw/"
+)
