@@ -22,5 +22,11 @@ is_visual_editor <- function() {
   length(rstudioapi::getActiveDocumentContext()$selection) == 0
 }
 
+#' Backward-compatible alias for `is_visual_editor()`.
+#'
+#' `is_rmd_visual_mode()` was renamed to `is_visual_editor()`.
+#' Keep this alias for compatibility with downstream addins.
+#'
+#' @rdname is_visual_editor
 #' @export
 is_rmd_visual_mode <- is_visual_editor
