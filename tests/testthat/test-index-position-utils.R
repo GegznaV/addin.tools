@@ -14,6 +14,18 @@ test_that("index helpers return expected rows and columns", {
   expect_equal(rs_get_index_selected_rows(context), c(1, 2, 3))
 })
 
+test_that("rs_get_index_selected_rows preserves duplicate row indices", {
+  context <- make_test_context(
+    contents = c("abc", "def"),
+    selections = list(
+      make_test_selection(1, 1, 1, 2, text = "ab"),
+      make_test_selection(1, 2, 1, 3, text = "bc")
+    )
+  )
+
+  expect_equal(rs_get_index_selected_rows(context), c(1, 1))
+})
+
 test_that("position helpers return start and end positions", {
   context <- make_test_context(
     contents = c("abc", "def"),
