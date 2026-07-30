@@ -20,12 +20,12 @@ rs_get_index_last_selected_col(
 )
 
 rs_get_index_first_selected_row(
-  selection = c("first", "last"),
+  selection = c("first", "last", "all"),
   context = rs_get_context()
 )
 
 rs_get_index_last_selected_row(
-  selection = c("last", "first"),
+  selection = c("last", "first", "all"),
   context = rs_get_context()
 )
 
