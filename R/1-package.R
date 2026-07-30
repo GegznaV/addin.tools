@@ -1,6 +1,5 @@
 # ============================================================================
 #' @name addin.tools
-#' @docType package
 #'
 #' @title Helper functions to create RStudio add-ins.
 #'
@@ -18,4 +17,4 @@
 #' @importFrom dplyr "%>%"
 #' @importFrom utils globalVariables
 
-NULL
+"_PACKAGE"
