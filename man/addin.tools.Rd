@@ -2,6 +2,7 @@
 % Please edit documentation in R/1-package.R
 \docType{package}
 \name{addin.tools}
+\alias{addin.tools-package}
 \alias{addin.tools}
 \title{Helper functions to create RStudio add-ins.}
 \description{
@@ -13,4 +14,21 @@ Package \strong{\code{addin.tools}} contains various functions that help to cons
 \verb{Bug reports and suggestions:}
 \url{https://github.com/GegznaV/addin.tools/issues} \cr
 \verb{Author:} Vilmantas Gegzna
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/GegznaV/addin.tools}
+  \item Report bugs at \url{https://github.com/GegznaV/addin.tools/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Vilmantas Gegzna \email{GegznaV@gmail.com} [copyright holder]
+
+Authors:
+\itemize{
+  \item Vilmantas Gegzna \email{GegznaV@gmail.com} [copyright holder]
+}
+
 }

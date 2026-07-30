@@ -50,7 +50,7 @@ Object with context of active RStudio document.}
 
 \item{old_range}{\code{document_range} object. See \link[rstudioapi:document_range]{rstudioapi::document_range}.}
 
-\item{id}{Document ID. See \code{\link[=getActiveDocumentContext]{getActiveDocumentContext()}}.}
+\item{id}{Document ID. See \code{\link[rstudioapi:getActiveDocumentContext]{getActiveDocumentContext()}}.}
 }
 \description{
 Replace text in selection.
@@ -59,5 +59,5 @@ Replace text in selection.
 \code{select_correct_range()} correctly adjust current selection.
 }
 \seealso{
-\code{\link[base:grep]{base::gsub()}}
+\code{\link[base:gsub]{base::gsub()}}
 }

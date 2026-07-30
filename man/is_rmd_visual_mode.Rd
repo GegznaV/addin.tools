@@ -22,6 +22,6 @@ Check if RStudio addins should treat the current selection of active document
 as being in RStudio Visual Markdown Editor mode (RS VME) or not.
 }
 \details{
-The document \link[rstudioapi:rstudio-editors]{context} from RS VME
+The document \link[rstudioapi:getActiveDocumentContext]{context} from RS VME
 is different than regular RStudio document context.
 }
