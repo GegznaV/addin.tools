@@ -12,3 +12,8 @@
 ^docs$
 ^TODO.Rmd$
 ^\.github$
+^\.prompts$
+^\.prompts[\\/].*
+^TODO\.qmd$
+^ai-context\.qmd$
+^improvement-plan.*\.qmd$
