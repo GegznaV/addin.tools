@@ -16,7 +16,6 @@ licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource
 [![R-CMD-check](https://github.com/GegznaV/addin.tools/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addin.tools/actions)
 [![GitHub
 version](https://img.shields.io/badge/GitHub-0.0.10-brightgreen.svg)](https://github.com/GegznaV/addin.tools)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2023--04--29-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addin.tools)](http://www.rdocumentation.org/packages/addin.tools) -->
@@ -33,9 +32,9 @@ version](https://img.shields.io/badge/GitHub-0.0.10-brightgreen.svg)](https://gi
 # R package **addin.tools**
 
 Package `addin.tools` contains various functions that help to construct
-*RStudio* addins. The functions are wrappers arround package
+*RStudio* addins. The functions are wrappers around package
 `rstudioapi`. They are used as the core functions for packages
-`addins.rmd`, `addins.rs` and other.
+`addins.qmd`, `addins.rs` and other packages.
 
 ## Install package
 
@@ -47,8 +46,8 @@ Package `addin.tools` contains various functions that help to construct
 Install development version from GitHub:
 
 ``` r
-if (!require(devtools)) install.packages("devtools")
-devtools::install_github("GegznaV/addin.tools")
+if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
+remotes::install_github("GegznaV/addin.tools")
 ```
 
 ------------------------------------------------------------------------
