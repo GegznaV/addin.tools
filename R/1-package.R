@@ -20,16 +20,16 @@
 "_PACKAGE"
 
 utils::globalVariables(c(
-	"difference",
-	"end.column",
-	"end.row",
-	"end_diff",
-	"modify_group",
-	"new_end.column",
-	"new_start.column",
-	"rng",
-	"special",
-	"start.column",
-	"start.row",
-	"start_diff"
+  "difference",
+  "end.column",
+  "end.row",
+  "end_diff",
+  "modify_group",
+  "new_end.column",
+  "new_start.column",
+  "rng",
+  "special",
+  "start.column",
+  "start.row",
+  "start_diff"
 ))
