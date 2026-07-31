@@ -22,7 +22,6 @@ Depends:
 Imports:
     checkmate,
     dplyr, 
-    magrittr,
     purrr,
     rstudioapi (>= 0.13),
     stringi,
