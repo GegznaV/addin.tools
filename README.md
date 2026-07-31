@@ -54,3 +54,6 @@ remotes::install_github("GegznaV/addin.tools")
 
 More information at <https://gegznav.github.io/addin.tools/>
 
+Package architecture and helper-family notes are documented in the vignette
+[Package Architecture and Helper Families](articles/helper-families.html).
+
