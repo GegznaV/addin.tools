@@ -23,11 +23,11 @@ selection is inside a code chunk.
 \description{
 Check if RStudio addins should treat the current selection of active document
 as being in RStudio Visual Editor mode (RS VE) or not.
+
+\code{is_rmd_visual_mode()} was renamed to \code{is_visual_editor()}.
+Keep this alias for compatibility with downstream addins.
 }
 \details{
 The document \link[rstudioapi:getActiveDocumentContext]{context} from RS VE
 is different than regular RStudio document context.
-
-\code{is_rmd_visual_mode()} was renamed to \code{is_visual_editor()}.
-The alias is kept for backward compatibility but issues a deprecation warning.
 }
