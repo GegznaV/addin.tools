@@ -9,8 +9,8 @@ Authors@R: person("Vilmantas", "Gegzna",
             )
 Description: Package 'addin.tools' contains various functions that are wrappers 
              around package 'rstudioapi'. They are used as core functions 
-             for packages such as 'addins.rmd', and 'addins.rs'.
-URL: https://github.com/GegznaV/addin.tools
+             for packages such as 'addins.qmd', and 'addins.rs'.
+URL: https://github.com/GegznaV/addin.tools, https://gegznav.github.io/addin.tools/
 BugReports: https://github.com/GegznaV/addin.tools/issues
 License: MIT + file LICENSE
 LazyData: TRUE
