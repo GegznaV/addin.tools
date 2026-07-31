@@ -1,17 +1,4 @@
-favicon: "favicon.png"
+url: https://gegznav.github.io/addin.tools/
 template:
-  params:
-    bootswatch: united
-navbar:
-  title: "addin.tools | R package"
-  type: default
-  left:
-  - icon: fa-home fa-lg
-    href: index.html
-  - text: Functions
-    href: reference/index.html
-  right:
-  - icon: fa-github fa-lg
-    href: https://github.com/GegznaV/addin.tools
-destination: docs
+  bootstrap: 5
 
