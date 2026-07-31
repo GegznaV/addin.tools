@@ -19,6 +19,7 @@ Package \strong{\code{addin.tools}} contains various functions that help to cons
 Useful links:
 \itemize{
   \item \url{https://github.com/GegznaV/addin.tools}
+  \item \url{https://gegznav.github.io/addin.tools/}
   \item Report bugs at \url{https://github.com/GegznaV/addin.tools/issues}
 }
 
