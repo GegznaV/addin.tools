@@ -13,6 +13,8 @@
 ^\.github$
 ^\.prompts$
 ^\.prompts[\\/].*
+^\.lintr$
+^\.Rprofile$
 ^TODO\.qmd$
 ^ai-context\.qmd$
 ^improvement-plan.*\.qmd$
