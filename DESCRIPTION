@@ -32,6 +32,7 @@ Imports:
     utils
 Suggests:
     knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Roxygen: list(markdown = TRUE)
 Config/roxygen2/version: 8.0.0
