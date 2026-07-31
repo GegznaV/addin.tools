@@ -87,11 +87,11 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
   }
 
   new_df <-
-    tibble::tibble(old_range = old_range, old_text, new_text) %>%
+    tibble::tibble(old_range = old_range, old_text, new_text) |>
     dplyr::mutate(
       rng = purrr::map(old_range, ~ tibble::as_tibble(t(unlist(.))))
-    ) %>%
-    tidyr::unnest_legacy(rng) %>%
+    ) |>
+    tidyr::unnest_legacy(rng) |>
     dplyr::mutate(
       difference = dplyr::coalesce( # Difference in number of characters per selection
         # If selection spans one line
@@ -105,20 +105,20 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
           # Check if this boundary (column position)
           # is the first start of selection in the line
           start.row != dplyr::lag(start.row, default = 0)
-    ) %>%
-    dplyr::group_by(end.row) %>%
-    dplyr::mutate(end_diff = cumsum(difference)) %>%
-    dplyr::group_by(start.row) %>%
+    ) |>
+    dplyr::group_by(end.row) |>
+    dplyr::mutate(end_diff = cumsum(difference)) |>
+    dplyr::group_by(start.row) |>
     dplyr::mutate(
       # If the first selection of a line started in the previous line, indices
       # should be modiffied to indicate correct possitions.
       modify_group = dplyr::first(special),
       start_diff = cumsum(dplyr::lag(difference, default = 0))
-    ) %>%
+    ) |>
     dplyr::ungroup()
 
   new_range <-
-    new_df %>%
+    new_df |>
     dplyr::mutate(
       start_diff = dplyr::if_else(
         modify_group,
@@ -133,7 +133,7 @@ select_correct_range <- function(old_text, new_text, old_range, id = NULL) {
         list(start.row, new_start.column, end.row, new_end.column),
         ~ document_range(c(..1, ..2), c(..3, ..4))
       )
-    ) %>%
+    ) |>
     dplyr::pull(new_range)
 
   setSelectionRanges(new_range, id = id)
