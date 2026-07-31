@@ -3,13 +3,16 @@
 
 <!-- badges: start -->
 
+<!-- [![CRAN status](https://www.r-pkg.org/badges/version/addin.tools)](https://CRAN.R-project.org/package=addin.tools) -->
+
 [![MIT
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/addin.tools)](https://CRAN.R-project.org/package=addin.tools)
 [![R-CMD-check](https://github.com/GegznaV/addin.tools/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addin.tools/actions)
 [![GitHub
 version](https://img.shields.io/badge/GitHub-0.0.11-brightgreen.svg)](https://github.com/GegznaV/addin.tools)
+[![Codecov test
+coverage](https://codecov.io/gh/GegznaV/addin.tools/graph/badge.svg)](https://app.codecov.io/gh/GegznaV/addin.tools)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2026--07--31-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 ------------------------------------------------------------------------

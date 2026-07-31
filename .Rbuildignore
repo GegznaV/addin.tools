@@ -18,3 +18,4 @@
 ^TODO\.qmd$
 ^ai-context\.qmd$
 ^improvement-plan.*\.qmd$
+^codecov\.yml$
