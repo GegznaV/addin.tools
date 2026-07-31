@@ -14,7 +14,6 @@
 #' `Author:` Vilmantas Gegzna
 #'
 #' @import rstudioapi
-#' @importFrom dplyr "%>%"
 #' @importFrom utils globalVariables
 
 "_PACKAGE"
