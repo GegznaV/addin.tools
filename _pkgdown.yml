@@ -1,9 +1,23 @@
 url: https://gegznav.github.io/addin.tools/
 template:
   bootstrap: 5
+  light-switch: true
   bootswatch: sandstone
   bootswatch_dark: darkly
 
 # Search settings
 search:
   backend: docsearch
+
+# -------------------------------------------------------------------------
+# Automatically switches, which verion should be built:
+# released or in-development
+
+development:
+  mode: auto
+
+# development:
+#   mode: unreleased
+#   destination: devel
+#   version_label: default
+#   version_tooltip: "Github version"
