@@ -1,7 +1,7 @@
 Package: addin.tools
 Type: Package
-Title: Helper Functions to Create RStudio Add-ins
-Version: 0.0.10
+Title: Helper Functions to Create RStudio Add-Ins
+Version: 0.0.11
 Date: 2026-07-31
 Authors@R: person("Vilmantas", "Gegzna",
                   email = "GegznaV@gmail.com",
