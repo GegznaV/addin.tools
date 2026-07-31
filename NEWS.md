@@ -1,7 +1,3 @@
-# addin.tools 0.0.9
-
-* Initial CRAN submission.
-
 
 # addin.tools 0.0.11
 
