@@ -1,0 +1,44 @@
+---
+title: "Package Architecture and Helper Families"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Package Architecture and Helper Families}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+## Overview
+
+`addin.tools` is a helper layer for RStudio addin packages. It focuses on
+editor context, selection ranges, text extraction, and text mutation helpers.
+
+## Helper families
+
+- Context and state helpers: `rs_get_context()`, `is_visual_editor()`
+- Selection helpers: `rs_get_selection_text()`, `rs_get_selection_range()`,
+  `rs_get_n_selections()`
+- Row and position helpers: `rs_get_row_range()`, `rs_get_index_*()`,
+  `rs_get_position_*()`
+- Text modification helpers: `rs_insert_text()`, `rs_replace_in_selection()`,
+  `rs_select_rows()`
+- Formatting helpers: `ensure_blank_line()`, `make_spaces()`,
+  `repeat_symbol()`
+
+## Migration notes
+
+- Use `is_visual_editor()` in new code.
+- `is_rmd_visual_mode()` is retained as a deprecated wrapper for downstream
+  compatibility.
+- When adding new helpers, prefer a small focused API and add regression tests
+  around selection and mutation behavior.
+
+## Release notes for maintainers
+
+- Use the release prep script under `data-raw/release-prep.R` for the standard
+  release sequence.
+- Use the CRAN checklist under `.github/cran-submission-checklist.md` before
+  tagging a release.
