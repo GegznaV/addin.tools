@@ -35,3 +35,4 @@ vignettes/*.pdf
 docs/
 docs
 /.tmp
+/.github/.prompts
