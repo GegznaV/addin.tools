@@ -36,3 +36,4 @@ docs/
 docs
 /.tmp
 /.github/.prompts
+*.code-workspace
