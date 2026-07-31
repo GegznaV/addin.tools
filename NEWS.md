@@ -3,6 +3,14 @@
 * Initial CRAN submission.
 
 
+# addin.tools 0.0.11
+
+* Migrated runtime pipelines in package code from magrittr `%>%` to native R pipe `|>`.
+* Removed stale `%>%` import annotations and cleaned dependency metadata to drop unused `magrittr` from `Imports`.
+* Kept `%>%` references only in user-facing documentation contexts where the operator is discussed as inserted text.
+* Validated migration safety with package-local tests and a clean maintainer `R CMD check` run.
+
+
 # addin.tools 0.0.10
 
 * Fixed package documentation to use `"_PACKAGE"` instead of deprecated roxygen `@docType package`.
