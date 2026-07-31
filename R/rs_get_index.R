@@ -83,7 +83,7 @@ rs_get_index_last_selected_row <- function(selection = c("last", "first", "all")
 rs_get_index_selected_rows <- function(context = rs_get_context()) {
   ranges <- rs_get_selection_range("all", context = context)
 
-  ranges %>%
-    purrr::map(~ .[[1]]["row"]:.[[2]]["row"]) %>%
+  ranges |>
+    purrr::map(\(x) x[[1]]["row"]:x[[2]]["row"]) |>
     purrr::reduce(c)
 }
