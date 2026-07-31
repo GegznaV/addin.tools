@@ -8,7 +8,7 @@
 #' "RStudio" add-ins.
 #'
 #' `License:` MIT   \cr
-#' `URL:` <https://GegznaV.github.io/addin.tools> \cr
+#' `URL:` <https://gegznav.github.io/addin.tools> \cr
 #' `Bug reports and suggestions:`
 #'      <https://github.com/GegznaV/addin.tools/issues> \cr
 #' `Author:` Vilmantas Gegzna
