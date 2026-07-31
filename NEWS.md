@@ -21,6 +21,9 @@
 * Added a CRAN submission checklist and downstream deprecation migration guidance under `.github/`.
 * Added GitHub Actions lint workflow to run `lintr` and a non-destructive `styler` check.
 * Added a release prep helper script in `data-raw/release-prep.R`, a support matrix note under `.github/`, and a helper-family vignette for onboarding and discoverability.
+* Added a maintainer-facing revdep smoke-check helper in `data-raw/revdep-smoke-check.R` and documented when to run it before release tagging.
+* Expanded downstream deprecation guidance with an explicit timetable for `is_rmd_visual_mode()` and future compatibility wrappers.
+* Expanded the helper-family vignette with concrete examples for common addin tasks and a build-time package setup chunk.
 * Added a helper-family link to the README so discoverability paths surface the new vignette from the package homepage.
 
 
