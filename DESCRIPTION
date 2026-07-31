@@ -1,31 +1,29 @@
 Package: addin.tools
 Type: Package
-Title: Helper Functions to Create RStudio Add-ins
-Version: 0.0.10
-Date: 2022-04-29
+Title: Helper Functions to Create RStudio Add-Ins
+Version: 0.0.11
+Date: 2026-07-31
 Authors@R: person("Vilmantas", "Gegzna",
                   email = "GegznaV@gmail.com",
                   role = c("aut", "cre","cph")
             )
 Description: Package 'addin.tools' contains various functions that are wrappers 
-             arround package 'rstudioapi'. They are used as core functions 
-             for packages such as 'addins.rmd', and 'addins.rs'.
-URL: https://github.com/GegznaV/addin.tools
+             around package 'rstudioapi'. They are used as core functions 
+             for packages such as 'addins.qmd', and 'addins.rs'.
+URL: https://github.com/GegznaV/addin.tools, https://gegznav.github.io/addin.tools/
 BugReports: https://github.com/GegznaV/addin.tools/issues
 License: MIT + file LICENSE
 LazyData: TRUE
 ByteCompile: TRUE
 Encoding: UTF-8
-RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 Depends:
-    R (>= 3.2),
-    rstudioapi (>= 0.13)
+    R (>= 4.1)
 Imports:
     checkmate,
     dplyr, 
-    magrittr,
     purrr,
+    rstudioapi (>= 0.13),
     stringi,
     stringr,
     tibble,
@@ -33,5 +31,9 @@ Imports:
     utils
 Suggests:
     knitr,
-    testthat (>= 2.1.0)
+    rmarkdown,
+    testthat (>= 3.0.0)
 Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.0.0
+Config/testthat/edition: 3
+RoxygenNote: 8.0.0
