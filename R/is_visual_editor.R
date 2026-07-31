@@ -29,4 +29,7 @@ is_visual_editor <- function() {
 #'
 #' @rdname is_visual_editor
 #' @export
-is_rmd_visual_mode <- is_visual_editor
+is_rmd_visual_mode <- function() {
+  .Deprecated("is_visual_editor", package = "addin.tools")
+  is_visual_editor()
+}
