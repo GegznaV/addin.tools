@@ -7,7 +7,7 @@
 \usage{
 is_visual_editor()
 
-is_rmd_visual_mode
+is_rmd_visual_mode()
 }
 \value{
 Logical:
@@ -29,5 +29,5 @@ The document \link[rstudioapi:getActiveDocumentContext]{context} from RS VE
 is different than regular RStudio document context.
 
 \code{is_rmd_visual_mode()} was renamed to \code{is_visual_editor()}.
-The alias is kept for backward compatibility.
+The alias is kept for backward compatibility but issues a deprecation warning.
 }
