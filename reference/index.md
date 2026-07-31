@@ -1,0 +1,81 @@
+# Package index
+
+## All functions
+
+- [`addin.tools-package`](https://gegznav.github.io/addin.tools/reference/addin.tools.md)
+  [`addin.tools`](https://gegznav.github.io/addin.tools/reference/addin.tools.md)
+  : Helper functions to create RStudio add-ins.
+- [`ensure_blank_line()`](https://gegznav.github.io/addin.tools/reference/ensure_blank_line.md)
+  : Add blank lines if needed.
+- [`is_blank_line_needed_below()`](https://gegznav.github.io/addin.tools/reference/heplers.md)
+  : ' Check if a blank line is needed below.
+- [`is_blank_line_needed_above()`](https://gegznav.github.io/addin.tools/reference/is_blank_line_needed_above.md)
+  : Check if a blank line is needed above.
+- [`is_visual_editor()`](https://gegznav.github.io/addin.tools/reference/is_visual_editor.md)
+  [`is_rmd_visual_mode()`](https://gegznav.github.io/addin.tools/reference/is_visual_editor.md)
+  : Check if Visual Editor (VE) is used
+- [`make_spaces()`](https://gegznav.github.io/addin.tools/reference/make_spaces.md)
+  : Generate spaces of certain length
+- [`repeat_symbol()`](https://gegznav.github.io/addin.tools/reference/repeat_symbol.md)
+  [`repeat_symbol_2()`](https://gegznav.github.io/addin.tools/reference/repeat_symbol.md)
+  : Repeat sequence of symbols.
+- [`rs_document_context`](https://gegznav.github.io/addin.tools/reference/rs_document_context.md)
+  : Data: RStudio decment context data.
+- [`rs_enclose_selection_with()`](https://gegznav.github.io/addin.tools/reference/rs_enclose_selection_with.md)
+  : Enclose selection of text with indicated symbols.
+- [`rs_enclose_selected_rows_with()`](https://gegznav.github.io/addin.tools/reference/rs_enclose_with_lines.md)
+  [`rs_enclose_first_row_with()`](https://gegznav.github.io/addin.tools/reference/rs_enclose_with_lines.md)
+  : Enclose setected rows with text.
+- [`rs_get_context()`](https://gegznav.github.io/addin.tools/reference/rs_get_context.md)
+  : Retrieve information about an active RStudio document.
+- [`rs_get_index_first_selected_col()`](https://gegznav.github.io/addin.tools/reference/rs_get_index.md)
+  [`rs_get_index_last_selected_col()`](https://gegznav.github.io/addin.tools/reference/rs_get_index.md)
+  [`rs_get_index_first_selected_row()`](https://gegznav.github.io/addin.tools/reference/rs_get_index.md)
+  [`rs_get_index_last_selected_row()`](https://gegznav.github.io/addin.tools/reference/rs_get_index.md)
+  [`rs_get_index_selected_rows()`](https://gegznav.github.io/addin.tools/reference/rs_get_index.md)
+  : Get indices related to the selection(s).
+- [`rs_get_n_selections()`](https://gegznav.github.io/addin.tools/reference/rs_get_n_selections.md)
+  : Get number of selections.
+- [`rs_get_position_selection_start()`](https://gegznav.github.io/addin.tools/reference/rs_get_position.md)
+  [`rs_get_position_selection_end()`](https://gegznav.github.io/addin.tools/reference/rs_get_position.md)
+  [`rs_get_index_selection_start()`](https://gegznav.github.io/addin.tools/reference/rs_get_position.md)
+  [`rs_get_index_selection_end()`](https://gegznav.github.io/addin.tools/reference/rs_get_position.md)
+  : Get position(s) related to the selection(s).
+- [`rs_get_row_lengths()`](https://gegznav.github.io/addin.tools/reference/rs_get_row_lengths.md)
+  : Get lengths of selected rows.
+- [`rs_get_row_range()`](https://gegznav.github.io/addin.tools/reference/rs_get_row_range.md)
+  [`rs_get_row_ranges()`](https://gegznav.github.io/addin.tools/reference/rs_get_row_range.md)
+  [`rs_get_row_range_w_newline()`](https://gegznav.github.io/addin.tools/reference/rs_get_row_range.md)
+  [`rs_get_first_selected_row_range()`](https://gegznav.github.io/addin.tools/reference/rs_get_row_range.md)
+  : Get row range of the indicated line
+- [`rs_get_selection_length()`](https://gegznav.github.io/addin.tools/reference/rs_get_selection_length.md)
+  : Get length of selection.
+- [`rs_get_selection_range()`](https://gegznav.github.io/addin.tools/reference/rs_get_selection_range.md)
+  : Get range of selection.
+- [`rs_get_selection_text()`](https://gegznav.github.io/addin.tools/reference/rs_get_selection_text.md)
+  : Get selection text.
+- [`rs_get_text()`](https://gegznav.github.io/addin.tools/reference/rs_get_text.md)
+  [`rs_get_selected_rows()`](https://gegznav.github.io/addin.tools/reference/rs_get_text.md)
+  [`rs_get_first_selected_row()`](https://gegznav.github.io/addin.tools/reference/rs_get_text.md)
+  [`rs_get_first_selected_row_length()`](https://gegznav.github.io/addin.tools/reference/rs_get_text.md)
+  [`rs_get_last_selected_row()`](https://gegznav.github.io/addin.tools/reference/rs_get_text.md)
+  [`rs_get_last_selected_row_length()`](https://gegznav.github.io/addin.tools/reference/rs_get_text.md)
+  : Get text in indicated lines.
+- [`rs_insert_at_row_start()`](https://gegznav.github.io/addin.tools/reference/rs_insert_at_row_start.md)
+  : Insert text at the beginning of the row(s).
+- [`rs_insert_before_first_selected_row()`](https://gegznav.github.io/addin.tools/reference/rs_insert_before_first_selected_row.md)
+  : Insert text at the beginning of the first selected row.
+- [`rs_insert_symbol_seq()`](https://gegznav.github.io/addin.tools/reference/rs_insert_symbol_seq.md)
+  : Insert a sequence of symbols.
+- [`rs_insert_text()`](https://gegznav.github.io/addin.tools/reference/rs_insert_text.md)
+  : Insert text at the cursor position.
+- [`rs_replace_in_selection()`](https://gegznav.github.io/addin.tools/reference/rs_replace_in_selection.md)
+  [`rs_replace_selection()`](https://gegznav.github.io/addin.tools/reference/rs_replace_in_selection.md)
+  [`select_correct_range()`](https://gegznav.github.io/addin.tools/reference/rs_replace_in_selection.md)
+  : Replace text in selection.
+- [`rs_select_rows()`](https://gegznav.github.io/addin.tools/reference/rs_select_rows.md)
+  [`rs_select_all_selected_rows()`](https://gegznav.github.io/addin.tools/reference/rs_select_rows.md)
+  [`rs_select_first_selected_row()`](https://gegznav.github.io/addin.tools/reference/rs_select_rows.md)
+  [`rs_select_last_selected_row()`](https://gegznav.github.io/addin.tools/reference/rs_select_rows.md)
+  [`rs_deselect_range()`](https://gegznav.github.io/addin.tools/reference/rs_select_rows.md)
+  : Select rows

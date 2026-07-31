@@ -1,96 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/addin.tools.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ensure_blank_line.html</loc>
-  </url>
-  <url>
-    <loc>/reference/heplers.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/is_blank_line_needed_above.html</loc>
-  </url>
-  <url>
-    <loc>/reference/is_rmd_visual_mode.html</loc>
-  </url>
-  <url>
-    <loc>/reference/make_spaces.html</loc>
-  </url>
-  <url>
-    <loc>/reference/repeat_symbol.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_document_context.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_enclose_selection_with.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_enclose_with_lines.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_get_context.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_get_index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_get_n_selections.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_get_position.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_get_row_lengths.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_get_row_range.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_get_selection_length.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_get_selection_range.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_get_selection_text.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_get_text.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_insert_at_row_start.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_insert_before_first_selected_row.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_insert_symbol_seq.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_insert_text.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_replace_in_selection.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rs_select_rows.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://gegznav.github.io/addin.tools/404.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/LICENSE-text.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/articles/helper-families.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/articles/index.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/authors.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/cran-submission-checklist.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/downstream-deprecation-guidance.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/index.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/news/index.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/addin.tools.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/ensure_blank_line.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/heplers.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/index.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/is_blank_line_needed_above.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/is_visual_editor.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/make_spaces.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/repeat_symbol.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_document_context.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_enclose_selection_with.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_enclose_with_lines.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_get_context.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_get_index.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_get_n_selections.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_get_position.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_get_row_lengths.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_get_row_range.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_get_selection_length.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_get_selection_range.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_get_selection_text.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_get_text.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_insert_at_row_start.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_insert_before_first_selected_row.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_insert_symbol_seq.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_insert_text.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_replace_in_selection.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/reference/rs_select_rows.html</loc></url>
+<url><loc>https://gegznav.github.io/addin.tools/support-matrix.html</loc></url>
 </urlset>
+
