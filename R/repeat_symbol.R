@@ -8,16 +8,14 @@
 #' @return Sting of defined length.
 #' @export
 #'
-#' @importFrom magrittr "%>%"
-#'
 #' @examples
 #'
 #' repeat_symbol(".", 10)
 #'
 #' repeat_symbol("..+", 10)
 repeat_symbol <- function(text, length.out) {
-  rep_len(text, length.out) %>%
-    paste0(collapse = "") %>%
+  rep_len(text, length.out) |>
+    paste0(collapse = "") |>
     substr(1, length.out)
 }
 
