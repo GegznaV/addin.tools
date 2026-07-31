@@ -9,6 +9,8 @@
 * Removed stale `%>%` import annotations and cleaned dependency metadata to drop unused `magrittr` from `Imports`.
 * Kept `%>%` references only in user-facing documentation contexts where the operator is discussed as inserted text.
 * Validated migration safety with package-local tests and a clean maintainer `R CMD check` run.
+* Updated GitHub Actions workflows to replace deprecated `actions/checkout@v3` and `actions/upload-artifact@v3` with `@v4` variants.
+* Fixed lint workflow failures by correcting `.lintr` configuration format and using current `styler` dry-run API in CI.
 * Fixed package documentation to use `"_PACKAGE"` instead of deprecated roxygen `@docType package`.
 * Fixed `is_blank_line_needed_below()` argument matching for `"first row"` and `"last row"` call sites.
 * Improved package-check readiness by excluding prompt/planning artifacts from package build inputs via `.Rbuildignore`.
