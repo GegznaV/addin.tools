@@ -84,6 +84,17 @@ test_that("rs_replace_in_selection updates text and can preserve selection", {
   )
 
   testthat::local_mocked_bindings(
+    selectionGet = function(id) {
+      list(value = "abc")
+    },
+    setSelectionRanges = function(ranges, id = NULL) {
+      captured_ranges <<- ranges
+      invisible(NULL)
+    },
+    .package = "rstudioapi"
+  )
+
+  testthat::local_mocked_bindings(
     modifyRange = function(location, text, id = NULL) {
       captured_location <<- location
       captured_text <<- text
@@ -155,6 +166,15 @@ test_that("rs_select_rows handles vectors, ranges, and deselection", {
       invisible(NULL)
     },
     .package = "addin.tools"
+  )
+
+  testthat::local_mocked_bindings(
+    setSelectionRanges = function(ranges, id = NULL) {
+      captured_ranges <<- ranges
+      captured_id <<- id
+      invisible(NULL)
+    },
+    .package = "rstudioapi"
   )
 
   rs_select_rows(first = c(1, 3), context = context)
