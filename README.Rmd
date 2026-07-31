@@ -43,7 +43,7 @@ R package **addin.tools**
 =========================================================================
 
 Package `addin.tools` contains various functions that help to construct *RStudio* addins. 
-The functions are wrappers around package `rstudioapi`. They are used as the core functions for packages `addins.rmd`, `addins.rs` and other packages.
+The functions are wrappers around package `rstudioapi`. They are used as the core functions for packages `addins.qmd`, `addins.rs` and other packages.
 
 
 Install package
